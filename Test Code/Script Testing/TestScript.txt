@@ -1,0 +1,4 @@
+WAIT(1000);
+INKDRAWING("Test.isf","ViewerPresentationLayout\\MainSlideViewer");
+WAIT(10000);
+CLICK("MainToolBar");

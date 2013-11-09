@@ -1,0 +1,50 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnLoad">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabAddIns">
+        <group id="CP3Group" label="Classroom Presenter 3.0">
+          <box id="box1" boxStyle="vertical">
+            <toggleButton id="ProjectedView" 
+                          size="normal"
+                          label="Projected View"
+                          screentip="Set the slide to show the projected view of the slide"
+                          getPressed="OnGetPressed" 
+                          getEnabled="OnGetEnabled" 
+                          onAction="OnClick" />
+            <toggleButton id="InstructorView" 
+                          size="normal"
+                          label="Instructor View"
+                          screentip="Set the slide to show the instructors view of the slide"
+                          getPressed="OnGetPressed" 
+                          getEnabled="OnGetEnabled" 
+                          onAction="OnClick" />
+          </box>
+          <separator id="separator1"/>
+          <box id="box2" boxStyle="vertical">
+            <toggleButton id="ProjectedSet" 
+                          size="normal"
+                          label="Unrestricted"
+                          screentip="Set the selected objects to be viewable in the projected view"
+                          getPressed="OnGetPressed"                         
+                          getEnabled="OnGetEnabled" 
+                          onAction="OnClick" />
+            <toggleButton id="InstructorSet" 
+                          size="normal"
+                          label="Instructor Note"
+                          screentip="Set the selected objects to be viewable only by the instructor"
+                          getPressed="OnGetPressed" 
+                          getEnabled="OnGetEnabled" 
+                          onAction="OnClick" />
+          </box>
+          <separator id="separator2"/>
+          <button id="Export" 
+                          label="Export To CP3..." 
+                          imageMso="HappyFace"
+                          size="large"
+                          screentip="Export this document as a CP3 file" 
+                          onAction="OnExport"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

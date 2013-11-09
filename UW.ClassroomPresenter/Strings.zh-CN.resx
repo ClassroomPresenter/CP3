@@ -1,0 +1,903 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutClassroomPresenter" xml:space="preserve">
+    <value>关于Classroom Presenter</value>
+  </data>
+  <data name="AcceptStudentSubmissions" xml:space="preserve">
+    <value>接受学生提交</value>
+  </data>
+  <data name="AdapterType" xml:space="preserve">
+    <value>显卡类型 :</value>
+  </data>
+  <data name="AddEditText" xml:space="preserve">
+    <value>添加或编辑文本</value>
+  </data>
+  <data name="AdvancedConnectionOptions" xml:space="preserve">
+    <value>高级连接选项</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="AutoScroll" xml:space="preserve">
+    <value>自动滚动</value>
+  </data>
+  <data name="AvailablePresentations" xml:space="preserve">
+    <value>可加入的讲座</value>
+  </data>
+  <data name="BackwardTooltipPreviousSlide" xml:space="preserve">
+    <value>上一张幻灯片</value>
+  </data>
+  <data name="BlackText" xml:space="preserve">
+    <value>黑色文本</value>
+  </data>
+  <data name="BlueText" xml:space="preserve">
+    <value>蓝色文本</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>下</value>
+  </data>
+  <data name="BroadcastedPresentations" xml:space="preserve">
+    <value>讲座列表广播</value>
+  </data>
+  <data name="BroadcastIP" xml:space="preserve">
+    <value>IP广播</value>
+  </data>
+  <data name="BroadcastIPAddress" xml:space="preserve">
+    <value>IP广播地址</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Classmate" xml:space="preserve">
+    <value>右侧</value>
+  </data>
+  <data name="Classroom" xml:space="preserve">
+    <value>课堂</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="Clients" xml:space="preserve">
+    <value>客户端</value>
+  </data>
+  <data name="CloneCommand" xml:space="preserve">
+    <value>复制模式命令</value>
+  </data>
+  <data name="CloseDeck" xml:space="preserve">
+    <value>关闭课件...</value>
+  </data>
+  <data name="ConfirmRestoreDefaults" xml:space="preserve">
+    <value>恢复默认设置确认</value>
+  </data>
+  <data name="ConfirmRestoreDialog" xml:space="preserve">
+    <value>确定要恢复默认值么?
+
+修改后立即生效。</value>
+  </data>
+  <data name="ConnectToTCPServer" xml:space="preserve">
+    <value>连接到TCP服务器...</value>
+  </data>
+  <data name="CreateBlankWhiteboardDeck" xml:space="preserve">
+    <value>新建白板(&amp;W)</value>
+  </data>
+  <data name="CustomColorText" xml:space="preserve">
+    <value>自定义文本颜色</value>
+  </data>
+  <data name="CustomCommands" xml:space="preserve">
+    <value>自定义命令</value>
+  </data>
+  <data name="CXPCapabilityConnected" xml:space="preserve">
+    <value>CXP扩展连接</value>
+  </data>
+  <data name="DeckMatcher" xml:space="preserve">
+    <value>课件匹配(&amp;D)</value>
+  </data>
+  <data name="Decks" xml:space="preserve">
+    <value>课件(&amp;D)</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="DefaultHLWidth" xml:space="preserve">
+    <value>荧光笔粗细</value>
+  </data>
+  <data name="DefaultPenWidth" xml:space="preserve">
+    <value>普通笔粗细</value>
+  </data>
+  <data name="DefaultSettings" xml:space="preserve">
+    <value>默认设置</value>
+  </data>
+  <data name="DeleteSlide" xml:space="preserve">
+    <value>删除幻灯片</value>
+  </data>
+  <data name="DisableAdvertisementBroadcast" xml:space="preserve">
+    <value>关闭课堂信息广播(&amp;B)</value>
+  </data>
+  <data name="DisableNavigationIndInstructor" xml:space="preserve">
+    <value>关闭自由浏览，锁定到教师当前幻灯片</value>
+  </data>
+  <data name="DisableStudentNavigation" xml:space="preserve">
+    <value>关闭学生浏览功能</value>
+  </data>
+  <data name="DisableStudentSubmissions" xml:space="preserve">
+    <value>不允许学生提交</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>连接断开</value>
+  </data>
+  <data name="Displays" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="DualMonitor" xml:space="preserve">
+    <value>双显示器</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>编辑(&amp;E)</value>
+  </data>
+  <data name="EnableLogging" xml:space="preserve">
+    <value>保存日志(&amp;L)</value>
+  </data>
+  <data name="EnableNavigationIndInstructor" xml:space="preserve">
+    <value>允许自由浏览课件</value>
+  </data>
+  <data name="EnablePreviews" xml:space="preserve">
+    <value>允许预览</value>
+  </data>
+  <data name="EnableQuickPolling" xml:space="preserve">
+    <value>允许随堂测验</value>
+  </data>
+  <data name="EnableSecondMonitor" xml:space="preserve">
+    <value>允许双显示器输出</value>
+  </data>
+  <data name="EnableStudentNavigation" xml:space="preserve">
+    <value>允许学生浏览功能</value>
+  </data>
+  <data name="EnableStudentSubmissions" xml:space="preserve">
+    <value>允许学生提交</value>
+  </data>
+  <data name="EndQuickPoll" xml:space="preserve">
+    <value>关闭随堂测验</value>
+  </data>
+  <data name="EraseAllToolTip" xml:space="preserve">
+    <value>擦除当前幻灯片中的全部墨水</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>退出(&amp;x)</value>
+  </data>
+  <data name="ExportAsHTML" xml:space="preserve">
+    <value>导出为网页(&amp;H)...</value>
+  </data>
+  <data name="ExportAsImage" xml:space="preserve">
+    <value>导出为图片(&amp;I)...</value>
+  </data>
+  <data name="ExportInk" xml:space="preserve">
+    <value>导出数字墨水(&amp;I)...</value>
+  </data>
+  <data name="ExtendedCommand" xml:space="preserve">
+    <value>扩展模式命令</value>
+  </data>
+  <data name="FilmStrip" xml:space="preserve">
+    <value>导航栏</value>
+  </data>
+  <data name="FilmStripAlignment" xml:space="preserve">
+    <value>导航栏位置(&amp;A)</value>
+  </data>
+  <data name="FilmStripWidth" xml:space="preserve">
+    <value>导航栏宽度</value>
+  </data>
+  <data name="ForceLinkedNavigation" xml:space="preserve">
+    <value>强制关联导航</value>
+  </data>
+  <data name="ForwardErrorCorrection" xml:space="preserve">
+    <value>前向纠错</value>
+  </data>
+  <data name="ForwardTooltipAddBlank" xml:space="preserve">
+    <value>添加白板幻灯片</value>
+  </data>
+  <data name="ForwardTooltipNextSlide" xml:space="preserve">
+    <value>下一张幻灯片</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>全屏(&amp;F)</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>基本</value>
+  </data>
+  <data name="GreenText" xml:space="preserve">
+    <value>绿色文本</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>帮助(&amp;H)</value>
+  </data>
+  <data name="Highlighter" xml:space="preserve">
+    <value>荧光笔</value>
+  </data>
+  <data name="InsertSlidesFromDeck" xml:space="preserve">
+    <value>从课件中插入幻灯片</value>
+  </data>
+  <data name="InstructorRole" xml:space="preserve">
+    <value>教师</value>
+  </data>
+  <data name="InstructorStartTCPServer" xml:space="preserve">
+    <value>以教师角色建立TCP服务器</value>
+  </data>
+  <data name="InterpacketDelay" xml:space="preserve">
+    <value>报文时间延迟</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>IP地址(&amp;I)</value>
+  </data>
+  <data name="IPAddressIs" xml:space="preserve">
+    <value>本机的IP地址为:</value>
+  </data>
+  <data name="JoinClassroom" xml:space="preserve">
+    <value>加入课程-教师:</value>
+  </data>
+  <data name="JoinSelectedPresentation" xml:space="preserve">
+    <value>加入
+选定的讲座</value>
+  </data>
+  <data name="LaunchGettingStartedGuid" xml:space="preserve">
+    <value>开始指南...</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>授权(&amp;L)</value>
+  </data>
+  <data name="LightblueText" xml:space="preserve">
+    <value>淡蓝色文本</value>
+  </data>
+  <data name="LightgreenText" xml:space="preserve">
+    <value>淡绿色文本</value>
+  </data>
+  <data name="LogFilePath" xml:space="preserve">
+    <value>日志文件路径</value>
+  </data>
+  <data name="Logging" xml:space="preserve">
+    <value>日志</value>
+  </data>
+  <data name="LoggingOptions" xml:space="preserve">
+    <value>日志选项</value>
+  </data>
+  <data name="ManualConnectionVenues" xml:space="preserve">
+    <value>手动连接课堂</value>
+  </data>
+  <data name="MinimizeCurrentSlide" xml:space="preserve">
+    <value>最小化当前幻灯片，利用更多空间做笔记</value>
+  </data>
+  <data name="MonitorSetNote" xml:space="preserve">
+    <value>注意：请不要随意修改，仅面向高级用户。</value>
+  </data>
+  <data name="MultiCast" xml:space="preserve">
+    <value>多播</value>
+  </data>
+  <data name="MultiMonitorSwitching" xml:space="preserve">
+    <value>多显示器切换</value>
+  </data>
+  <data name="Network" xml:space="preserve">
+    <value>网络</value>
+  </data>
+  <data name="NetworkedMode" xml:space="preserve">
+    <value>网络</value>
+  </data>
+  <data name="NewSlide" xml:space="preserve">
+    <value>新建幻灯片</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="NonStandardMannulConnect" xml:space="preserve">
+    <value>由于Presenter的默认端口已被占用，当前Presenter正在使用一个非默认的端口。如果学生手动连接需要指定端口号：</value>
+  </data>
+  <data name="NoSlide" xml:space="preserve">
+    <value>无幻灯片</value>
+  </data>
+  <data name="NotYetImplemented" xml:space="preserve">
+    <value>尚未实现！</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="OneSlide" xml:space="preserve">
+    <value>1页幻灯片</value>
+  </data>
+  <data name="OnlineHelp" xml:space="preserve">
+    <value>在线帮助(&amp;H)...</value>
+  </data>
+  <data name="OpenDeck" xml:space="preserve">
+    <value>打开课件(&amp;O)</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>选项(&amp;O)...</value>
+  </data>
+  <data name="PageSetup" xml:space="preserve">
+    <value>页面设置(&amp;U)...</value>
+  </data>
+  <data name="PagesPerSheet" xml:space="preserve">
+    <value>每页幻灯片数量</value>
+  </data>
+  <data name="Pen" xml:space="preserve">
+    <value>笔</value>
+  </data>
+  <data name="PenColor" xml:space="preserve">
+    <value>笔颜色</value>
+  </data>
+  <data name="PenCustomColor" xml:space="preserve">
+    <value>自定义颜色</value>
+  </data>
+  <data name="PenHeight" xml:space="preserve">
+    <value>高 :</value>
+  </data>
+  <data name="PenRoundShape" xml:space="preserve">
+    <value>圆形</value>
+  </data>
+  <data name="PenShape" xml:space="preserve">
+    <value>笔尖形状</value>
+  </data>
+  <data name="PenSquareShape" xml:space="preserve">
+    <value>方形</value>
+  </data>
+  <data name="PenTip" xml:space="preserve">
+    <value>笔尖大小</value>
+  </data>
+  <data name="PenType" xml:space="preserve">
+    <value>笔类型</value>
+  </data>
+  <data name="PenWidth" xml:space="preserve">
+    <value>宽 :</value>
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="PinkText" xml:space="preserve">
+    <value>粉色文本</value>
+  </data>
+  <data name="Poll" xml:space="preserve">
+    <value>测验(&amp;P)...</value>
+  </data>
+  <data name="PollType" xml:space="preserve">
+    <value>测验类型设定</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>端口</value>
+  </data>
+  <data name="PresentationsInChosenVenue" xml:space="preserve">
+    <value>选定课堂的讲座</value>
+  </data>
+  <data name="PresenterStartupStepThree" xml:space="preserve">
+    <value>第三步：开始讲座</value>
+  </data>
+  <data name="PresenterStartupStepTwo" xml:space="preserve">
+    <value>第二步：选择网络连接</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>打印(&amp;P)</value>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>打印设置</value>
+  </data>
+  <data name="PrintPreview" xml:space="preserve">
+    <value>打印预览(&amp;V)</value>
+  </data>
+  <data name="PromptOnClose" xml:space="preserve">
+    <value>关闭提醒</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>属性</value>
+  </data>
+  <data name="PublicDisplayRole" xml:space="preserve">
+    <value>公共显示</value>
+  </data>
+  <data name="QuickPoll" xml:space="preserve">
+    <value>测验</value>
+  </data>
+  <data name="QuickPollBoth" xml:space="preserve">
+    <value>全是</value>
+  </data>
+  <data name="QuickPollNeither" xml:space="preserve">
+    <value>全否</value>
+  </data>
+  <data name="QuickPollNo" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="QuickPollYes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>恢复(&amp;R)</value>
+  </data>
+  <data name="RedoTooltipText" xml:space="preserve">
+    <value>重复上次撤消的操作</value>
+  </data>
+  <data name="RedText" xml:space="preserve">
+    <value>红色文本</value>
+  </data>
+  <data name="Reenter" xml:space="preserve">
+    <value>重新输入</value>
+  </data>
+  <data name="RestoreDefaults" xml:space="preserve">
+    <value>恢复默认设置</value>
+  </data>
+  <data name="RestoreSlideSize" xml:space="preserve">
+    <value>当前幻灯片大小还原</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="RTPBeaconInterval" xml:space="preserve">
+    <value>RTP侦测报文时间间隔</value>
+  </data>
+  <data name="RTPConnected" xml:space="preserve">
+    <value>RTP 连接</value>
+  </data>
+  <data name="SaveAllDecks" xml:space="preserve">
+    <value>保存所有课件</value>
+  </data>
+  <data name="SaveAllDecksAs" xml:space="preserve">
+    <value>所有课件另存为...</value>
+  </data>
+  <data name="SaveDeck" xml:space="preserve">
+    <value>保存课件(&amp;S)</value>
+  </data>
+  <data name="SaveDeckAs" xml:space="preserve">
+    <value>课件另存为(&amp;A)...</value>
+  </data>
+  <data name="SavingFiles" xml:space="preserve">
+    <value>文件保存</value>
+  </data>
+  <data name="ScribbleArea" xml:space="preserve">
+    <value>涂鸦板</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>秒</value>
+  </data>
+  <data name="SelectBlackPen" xml:space="preserve">
+    <value>选择黑色笔</value>
+  </data>
+  <data name="SelectBluePen" xml:space="preserve">
+    <value>选择蓝色笔</value>
+  </data>
+  <data name="SelectCustomColorHighlighter" xml:space="preserve">
+    <value>自定义荧光笔颜色</value>
+  </data>
+  <data name="SelectCustomColorPen" xml:space="preserve">
+    <value>自定义笔颜色</value>
+  </data>
+  <data name="SelectCyanHighlighter" xml:space="preserve">
+    <value>选择青色荧光笔</value>
+  </data>
+  <data name="SelectEraser" xml:space="preserve">
+    <value>选择橡皮擦</value>
+  </data>
+  <data name="SelectGreenHighlighter" xml:space="preserve">
+    <value>选择绿色荧光笔</value>
+  </data>
+  <data name="SelectGreenPen" xml:space="preserve">
+    <value>选择绿色笔</value>
+  </data>
+  <data name="SelectHighlighterStylus" xml:space="preserve">
+    <value>选择荧光笔</value>
+  </data>
+  <data name="SelectLightbluePen" xml:space="preserve">
+    <value>选择淡蓝色笔</value>
+  </data>
+  <data name="SelectLightgreenPen" xml:space="preserve">
+    <value>选择淡绿色笔</value>
+  </data>
+  <data name="SelectMagentaHighlighter" xml:space="preserve">
+    <value>选择洋红色荧光笔</value>
+  </data>
+  <data name="SelectOrangeHighlighter" xml:space="preserve">
+    <value>选择桔黄色荧光笔</value>
+  </data>
+  <data name="SelectPenStylus" xml:space="preserve">
+    <value>选择普通笔</value>
+  </data>
+  <data name="SelectPinkPen" xml:space="preserve">
+    <value>选择粉色笔</value>
+  </data>
+  <data name="SelectRedPen" xml:space="preserve">
+    <value>选择红色笔</value>
+  </data>
+  <data name="SelectWhitePen" xml:space="preserve">
+    <value>选择白色笔</value>
+  </data>
+  <data name="SelectYellowHighlighter" xml:space="preserve">
+    <value>选择黄色荧光笔</value>
+  </data>
+  <data name="SelectYellowPen" xml:space="preserve">
+    <value>选择黄色笔</value>
+  </data>
+  <data name="ServerNameAddress" xml:space="preserve">
+    <value>服务器名称或IP地址</value>
+  </data>
+  <data name="SetDeckBkgColor" xml:space="preserve">
+    <value>设置课件背景颜色 ...</value>
+  </data>
+  <data name="SetSlideBkgColor" xml:space="preserve">
+    <value>设置幻灯片背景颜色 ...</value>
+  </data>
+  <data name="SSDeckFilmStripWidth" xml:space="preserve">
+    <value>学生提交导航栏宽度</value>
+  </data>
+  <data name="StandAloneInstrStartupStepTwo" xml:space="preserve">
+    <value>第二步： 开始讲座</value>
+  </data>
+  <data name="StandAloneMode" xml:space="preserve">
+    <value>单机</value>
+  </data>
+  <data name="StartNewPresentation" xml:space="preserve">
+    <value>开始新的讲座</value>
+  </data>
+  <data name="StartQuickPoll" xml:space="preserve">
+    <value>开始随堂测验</value>
+  </data>
+  <data name="StartupFormText" xml:space="preserve">
+    <value>Classroom Presenter 3: 连接步骤</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>帮助...</value>
+  </data>
+  <data name="StartupStepOne" xml:space="preserve">
+    <value>第一步：选择角色</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>学生(&amp;S)</value>
+  </data>
+  <data name="StudentRole" xml:space="preserve">
+    <value>学生</value>
+  </data>
+  <data name="StudentSubmissions" xml:space="preserve">
+    <value>学生提交</value>
+  </data>
+  <data name="SwitchToNonWhiteboardDeck" xml:space="preserve">
+    <value>切换到非白板课件</value>
+  </data>
+  <data name="SwitchWhiteboardDeck" xml:space="preserve">
+    <value>切换到白板</value>
+  </data>
+  <data name="TCPClientAttemptingConnect" xml:space="preserve">
+    <value>TCP客户端正尝试连接</value>
+  </data>
+  <data name="TCPClientConnected" xml:space="preserve">
+    <value>TCP客户端已连接到服务器</value>
+  </data>
+  <data name="TCPServerConnected" xml:space="preserve">
+    <value>TCP服务器已启动</value>
+  </data>
+  <data name="ThreeSlides" xml:space="preserve">
+    <value>3页幻灯片</value>
+  </data>
+  <data name="TitleRoleInstructor" xml:space="preserve">
+    <value>教师</value>
+  </data>
+  <data name="TitleRolePublic" xml:space="preserve">
+    <value>公共显示</value>
+  </data>
+  <data name="TitleRoleStudent" xml:space="preserve">
+    <value>学生</value>
+  </data>
+  <data name="Toolbar" xml:space="preserve">
+    <value>工具栏位置</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>工具(&amp;T)</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>上</value>
+  </data>
+  <data name="ToSaveDeck" xml:space="preserve">
+    <value>你想保存当前课件么？</value>
+  </data>
+  <data name="TwoSlides" xml:space="preserve">
+    <value>2页幻灯片</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>撤消(&amp;U)</value>
+  </data>
+  <data name="UndoChanges" xml:space="preserve">
+    <value>取消更改</value>
+  </data>
+  <data name="UndoTooltipText" xml:space="preserve">
+    <value>撤消上次的修改操作</value>
+  </data>
+  <data name="Unicast" xml:space="preserve">
+    <value>单播</value>
+  </data>
+  <data name="UnknownConnectionStatus" xml:space="preserve">
+    <value>连接状态未知.</value>
+  </data>
+  <data name="UntitledPresentation" xml:space="preserve">
+    <value>未命名课件</value>
+  </data>
+  <data name="UseCustomCommands" xml:space="preserve">
+    <value>使用自定义命令</value>
+  </data>
+  <data name="UseLightColorSet" xml:space="preserve">
+    <value>浅颜色设置</value>
+  </data>
+  <data name="UseWindowAPIs" xml:space="preserve">
+    <value>使用Windows APIs</value>
+  </data>
+  <data name="UsingNonStandardPort" xml:space="preserve">
+    <value>Presenter正在使用非默认端口</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="VersionInfo" xml:space="preserve">
+    <value>版本兼容信息(&amp;V)...</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>视图(&amp;V)</value>
+  </data>
+  <data name="ViewerStartupStepThree" xml:space="preserve">
+    <value>第三步：加入讲座</value>
+  </data>
+  <data name="ViewerStartupStepTwo" xml:space="preserve">
+    <value>第二步：选择讲座</value>
+  </data>
+  <data name="WhiteBoard" xml:space="preserve">
+    <value>白板</value>
+  </data>
+  <data name="WhiteText" xml:space="preserve">
+    <value>白色文本</value>
+  </data>
+  <data name="WidthOfPreview" xml:space="preserve">
+    <value>预览宽度</value>
+  </data>
+  <data name="YellowText" xml:space="preserve">
+    <value>黄色文本</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="ZoomSlide" xml:space="preserve">
+    <value>幻灯片比例(&amp;Z)</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="NeedRestart" xml:space="preserve">
+    <value>* 重启后生效</value>
+  </data>
+  <data name="QuickPollLocalVersionWarning" xml:space="preserve">
+    <value>远程CP3版本不支持随堂测验功能。</value>
+  </data>
+  <data name="QuickPollVersionWarning" xml:space="preserve">
+    <value>本机CP3版本不支持随堂测验功能。</value>
+  </data>
+  <data name="AddEditImages" xml:space="preserve">
+    <value>移动图片或调整图片大小</value>
+  </data>
+  <data name="Clone" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="Extend" xml:space="preserve">
+    <value>扩展</value>
+  </data>
+  <data name="MoreInfo" xml:space="preserve">
+    <value>获取更多信息，请访问</value>
+  </data>
+  <data name="SendSubmission" xml:space="preserve">
+    <value>正在提交 ...</value>
+  </data>
+  <data name="SubmissionFailed" xml:space="preserve">
+    <value>提交失败！</value>
+  </data>
+  <data name="SubmissionReceived" xml:space="preserve">
+    <value>提交成功！</value>
+  </data>
+  <data name="Camera" xml:space="preserve">
+    <value>摄像头：</value>
+  </data>
+  <data name="Capture" xml:space="preserve">
+    <value>获取</value>
+  </data>
+  <data name="CaptureWindow" xml:space="preserve">
+    <value>获取图片</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>大小：</value>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>插入(&amp;I)</value>
+  </data>
+  <data name="InsertImageFromCamera" xml:space="preserve">
+    <value>插入摄像头图片(&amp;C)</value>
+  </data>
+  <data name="InsertImageFromClipboard" xml:space="preserve">
+    <value>插入剪切板图片(&amp;B)</value>
+  </data>
+  <data name="InsertImageFromFile" xml:space="preserve">
+    <value>插入文件图片(&amp;F)</value>
+  </data>
+  <data name="InsertImageFromSnapshot" xml:space="preserve">
+    <value>插入窗口截屏图片(&amp;S)</value>
+  </data>
+  <data name="BackgroundPropertiesFormTitle" xml:space="preserve">
+    <value>背景设置</value>
+  </data>
+  <data name="BkgChooseTemplate" xml:space="preserve">
+    <value> 选择背景模板</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>颜色</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="SetDeckBackgroundTemplate" xml:space="preserve">
+    <value>设置课件背景模板 ...</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="NoBackgroundTemplate" xml:space="preserve">
+    <value>空背景模板</value>
+  </data>
+  <data name="SetSlideBackgroundTemplate" xml:space="preserve">
+    <value>设置幻灯片背景模板 ...</value>
+  </data>
+  <data name="DuplicateSlide" xml:space="preserve">
+    <value>复制幻灯片</value>
+  </data>
+  <data name="CopyToPublic" xml:space="preserve">
+    <value>复制幻灯片到公开栏</value>
+  </data>
+  <data name="PublicSubmissions" xml:space="preserve">
+    <value>公开栏</value>
+  </data>
+  <data name="SSTimerPropertiesGroup" xml:space="preserve">
+    <value>学生提交</value>
+  </data>
+  <data name="StudentSubmissionTimerProperties" xml:space="preserve">
+    <value>学生提交</value>
+  </data>
+  <data name="SubmissionIntervalLabel" xml:space="preserve">
+    <value>学生提交时间间隔</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>文件(&amp;F)</value>
+  </data>
+  <data name="FullNavigation" xml:space="preserve">
+    <value>全浏览</value>
+  </data>
+  <data name="NoNavigation" xml:space="preserve">
+    <value>禁止浏览</value>
+  </data>
+  <data name="SSTimerPropertiesGroup1" xml:space="preserve">
+    <value>学生提交时间间隔</value>
+  </data>
+  <data name="StudentClient" xml:space="preserve">
+    <value>学生</value>
+  </data>
+  <data name="StudentNavigationType" xml:space="preserve">
+    <value>学生浏览类型</value>
+  </data>
+  <data name="UnvisitedSlide" xml:space="preserve">
+    <value>未访问幻灯片</value>
+  </data>
+  <data name="VisitedSlidesNavigation" xml:space="preserve">
+    <value>已访问的幻灯片浏览</value>
+  </data>
+</root>

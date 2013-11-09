@@ -1,0 +1,76 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}{\f1\fmodern\fprq1\fcharset0 Courier New;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\fnil\fcharset2 Symbol;}}
+{\*\generator Msftedit 5.41.15.1507;}\viewkind4\uc1\pard\b\f0\fs20 Multithreaded Access to the Model\par
+\b0\f1 $Id: Threading.rtf 102 2005-07-03 10:04:30Z pediddle $\f2\par
+\par
+\f0 Whenever a state variable in a model object is changed, it dispatches events to a set of listeners.  Because this dispatch is performed synchronously in the thread that set the state variable, and given that there may be multiple UI threads, networking threads, \f1 RealTimeStylus\f0  threads, etc. that may all share access to the model, we \i must\i0  consider thread safety whenever accessing the model.  It's not enough just to lock on the UI control (or other object) which accesses the model, since it would be impossible for readers of multiple properties of a model object to be guaranteed a consistent state.  One solution would be to have a single global lock, but we need to have a fine-grained locking policy to keep contention as infrequent as possible so that multiple UI threads don't temporarily "freeze", delaying ink feedback and annoying the user.  This is especially important since there are poor time bounds on most network broadcast operations which read from the model.\par
+\par
+Most times, accesses to the model will be read-only.  This suggests that we should take advantage of the \f1 System.Threading.ReaderWriterLock\f0  class for our locking needs.  Will this actually increase performance?  Probably not (see \i http://www.interact-sw.co.uk/iangblog/2004/04/26/rwlockvsmonitor\i0  and the links therein).  But the \f1 ReaderWriterLock\f0  class gives us much greater control than the standard \f1 Monitor\f0  class.  On the negative side, the code required to obtain and release a lock is a little more complex than the standard C# \f1 lock(object)\f0  construct.  On the positive side, with \f1 ReaderWriterLock.IsReaderLockHeld\f0  and \f1 IsWriterLockHeld\f0 , we can allow the model hierarchy to detect when it is being used improperly, throwing an exception immediately if the caller has not obtained the appropriate lock instead of allowing subtle threading bugs.  This automatic detection is not possible (as far as I know) with the standard \f1 Monitor\f0  class.\par
+\par
+Since most of the model simply stores low-bandwidth state used by the UI, the heavier-weight \f1 ReaderWriterLock\f0  shouldn't affect performance.  There might be exceptions to the use of \f1 ReaderWriterLock\f0  (especially regarding the automatic lock verification) for "high-bandwitdth" properties of the model, such as ink collection, where a different type of producer-consumer threading would be more practical.\par
+\par
+\b Classroom Presenter Thread-Safety Guidelines\par
+\b0\i (Breaking these rules will result in broken kneecaps!)\par
+\i0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-720\li720 Whenever you read a property of a model object, you must first request a reader lock.  This will be enforced by the throwing of an exception if you don't.  This also applies to getting a member from \i collection\i0  properties of the model, and most importantly when using iterators of such collections.  For example,\par
+\pard\li720\par
+\f1 MyModelObject model = ...;  // model is a subclass of PropertyPublisher.\par
+\par
+model.RWL.AquireReaderLock(Timeout.Infinite);\par
+try \{\par
+\pard\li1080 // Perform operations requiring read access to one or more\par
+// properties of MyModelObject.\par
+\pard\li720\} finally \{\par
+\pard\li1080 model.RWL.ReleaseReaderLock();\par
+\pard\li720\}\f0\par
+\pard\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-720\li720 Whenever you write a property of a model object, you must first request a writer lock.  This will be enforced.  This also applies to adding, removing, setting, inserting, clearing, etc. of members of \i collection\i0  properties of the model.  For example,\par
+\pard\li720\par
+\f1 model.RWL.AquireWriterLock(Timeout.Infinite);\par
+try \{\par
+\pard\li1080 // Perform operations requiring read or write access to one \par
+// or more properties of MyModelObject.\par
+\pard\li720\} finally \{\par
+\pard\li1080 model.RWL.ReleaseWriterLock();\par
+\pard\li720\}\f0\par
+\par
+You can also use \f1 UpgradeToWriterLock\f0  and \f1 DowngradeFromWriterLock\f0  if you already hold a reader lock to the same model object.\par
+\par
+In any case, \i always\i0  aquire the lock \i outside\i0  of the \f1 try\f0  block, \i never\i0  have \i any\i0  code between aquiring the lock and the \f1 try\f0 , and \i always\i0  release the lock in a \f1 finally\f0  block.  This ensures that it is impossible to fail to release a lock, since unreleased locks are a particularly nasty problem to debug.\par
+\pard\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-720\li720 One advantage of \f1 ReaderWriterLock\f0  is, of course, that reader locks are not exclusive, so code consisting only of reader locks cannot deadlock.  Any thread that uses writer locks, on the other hand, can deadlock \i both\i0  with other threads using reader \i or\i0  writer locks.\par
+\pard\li720\par
+According to \i http://birrell.org/andrew/papers/ThreadsCSharp.pdf\i0  (page 13),\par
+\par
+\pard\li1440\ri1440 The most effective rule for avoiding [deadlocks] is to \i have a partial order for the acquisition of locks\i0  in your program. In other words, arrange that for any pair of objects \{M1, M2\}, each thread that needs to have M1 and M2 locked simultaneously does so by locking the objects in the same order (for example, M1 is always locked before M2). This rule completely avoids deadlocks involving only locks.\par
+\pard\li720\par
+\pard\li720\qr * The other of that paper notes that this does not solve all deadlocks involving \f1 Monitor.Wait\f0 .\par
+\pard\li720\par
+\pard\li720 What we need to worry about is the following situation, which is a restatement of the "ordering" problem in the context of \f1 ReaderWriterLock\f0  (from the \f1 ReaderWriterLock\f0  MSDN documentation):\par
+\pard\li720\par
+\pard\li1440\ri1440 A thread might acquire the writer lock on one resource and then request a reader lock on a second resource; in the meantime, another thread might acquire the writer lock on the second resource, and request a reader lock on the first. Unless time-outs are used, the threads deadlock.\par
+\pard\li720\par
+Timeouts seem like a pretty crappy solution.  Have you ever noticed how Windows Explorer will simply freeze for about 15 seconds sometimes?  Timeouts can always be added later, so if we can't avoid deadlocks in Classroom Presenter even after obeying the rules below, we'll reconsider their use.\par
+\par
+\i So what should our "partial order" be in Classroom Presenter code?\i0\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-720\li1440 The simplest answer, and the one that will naturally apply in most cases, is to \i never\i0  aquire a writer lock to a "child" model object in the model hierarchy before aquiring any type of lock on its parent.  Similarly, \i never\i0  aquire a writer lock on the parent after aquiring a lock of any type on the child (if you must, release the child and then re-aquire locks on both in the proper order).\par
+\pard\li720\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-720\li1440 If you need to aquire writer locks on two children of the same parent (or a writer lock on one while holding a reader lock on the other), you \i must first\i0  aquire a writer lock on the parent.  This rule exists because there is likely no natural order for the children (alphabetical order, perhaps?), so aquiring the lock on the parent ensures no contention between threads that aquire locks on the children, regardless of order (assuming everybody follows the rules).\par
+\pard\li720\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-720\li1440 If you need writer locks on two independent model objects simultaneously (or, again, a writer lock on one and a reader lock on the other), and if it is impossible to find a common parent or ancestor in the hierarchy, consider carefully the potential implications and \i document\i0  the order you choose.  Attempt to ensure that no other code in the Classroom Presenter codebase uses the same two objects in a different order.  If you find code that does lock the same two objects, first, obviously, make sure it does so in the same order (and if not, redesign one of the two methods), and second, \i document in both places\i0  the existence of the other place, so anyone making changes to either code later can double-check consistency.\par
+\pard\li1440\par
+The safer solution is always to follow the hierarchy all the way up to find a common parent on which to lock, but this might not always be possible in cases where the model does not adhere to a tree structure.\par
+\par
+\i I'm tempted to suggest that this should be solved with a lock on the global \f1 PresenterModel\f0  object... comments?  Would doing so require a lock on all of the model objects "in between" the root and the leaf in the tree?\i0\par
+\pard\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-720\li720 All accesses to read/write properties of the model will cause an exception if the appropriate lock has not been obtained by the caller (with perhaps a few documented exceptions)\f2 .  This will force you to think about the threading issues involved, and will also help ensure that no mysterious threading bugs will develop as we build Classroom Presenter.  (Read-only properties (with only a \f1 get\f0  method) do not apply here.)\par
+\pard\li720\par
+Similarly, reading, adding, or removing elements from a \f1 PropertyCollectionBase\f0  that is attached to a model object requires obtaining the appropriate lock on the model object to which the collection belongs (even if the collection property itself is read-only).\par
+\par
+Recall that model events are dispatched from the thread which triggered them.  This implies that you don't technically need to obtain a lock for the sender of an event in your event handler, since a writer lock must have been obtained in order to have caused the event to be fired.  \i However\i0 , this is not true if you share your event handler with your initializer \emdash  ie., if your event handler is called by any other context than the model's event dispatcher.  In other words, it's always best to aquire the lock if you're not confident about the contexts in which your event handler may be called.  (You shouldn't try to cheat by aquiring the lock in the code that calls the event handler.)\par
+\par
+To avoid obtaining a reader lock \i and\i0  to make your event handler thread safe, it's therefore prudent to use the \f1 PropertyChangeEvent.NewValue\f0 , \f1 PropertyCollectionEvent.Added\f0  and \f1 PropertyCollectionEvent.Removed\f0  accessors, which are immutible and therefore don't require a lock.  Remember that it's not safe to blindly downcast to a \f1 PropertyCollectionEvent\f0  in a handler for a collection property \emdash  the event arguments might be of a different type if more than a single index of the collection is modified (for example, if the whole collection is replaced or cleared).\par
+\pard\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-720\li720 The \f1 Windows.System.Forms\f0  classes do not force you to obtain a lock when updating a control's UI.  The accessor methods to Windows Forms controls are usually thread-safe, but only across a single invocation.  If you do anything non-atomic, remember to lock on \f1 this\f0  (ie., lock the control, regardless of any locks you hold on the model object).  Use a regular C#  \f1 lock(this\}\f0  construct, not with the \f1 ReaderWriterLock\f0  class.  Within your control, ensure that you are \i always\i0  consistent in the order in which you aquire locks on \f1 this\f0  and any model objects.  It's recommended that you aquire the lock on \f1 this\f0  \i first\i0 .\par
+}
+ 

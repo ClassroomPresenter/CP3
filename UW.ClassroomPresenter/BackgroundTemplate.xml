@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BackgroundTemplates>
+	<BackgroundTemplate name="BasicGraphPaper" width="800" height="600" name.zh-CN="简单图纸" name.es-ES="Gráfico documento de base" name.pt-BR="Gráfico papel básico" name.fr-FR="Graphique document de base">
+		<BackgroundBrush>   
+        <!--
+      <LinearGradientBrush color1="black" color2="white" point1="( 0    ,  0.5 )" point2=" (1 ,  0.5)   "/>
+      <SolidBrush color="#FFFF00"/>
+      -->
+		</BackgroundBrush>
+		<PrimitivePens>
+			<Pen index="0" width="1" color="gray" dashstyle="Solid"/>
+		</PrimitivePens>
+		<Geometry>
+      <Iterator times="0">
+        <GeometryTransform>
+          <OffsetTransform offsetX="0" offsetY="20"/>
+        </GeometryTransform>
+        <Geometry>
+          <Line point1="(150,50)" point2="(650,50)" pen="0" type="line" />
+        </Geometry>
+      </Iterator>
+      <Iterator times="0">
+        <GeometryTransform>
+          <OffsetTransform offsetX="20" offsetY="0"/>
+        </GeometryTransform>
+        <Geometry>
+          <Line point1="(150,50)" point2="(150,550)" pen="0" type="line" />
+        </Geometry>
+      </Iterator>
+		</Geometry>		
+	</BackgroundTemplate>
+  
+  <BackgroundTemplate name="GraphPaper" width="800" height="600" name.zh-CN="方形图纸" name.es-ES="papel cuadriculado" name.pt-BR="papel milimetrado" name.fr-FR="papier graphique">
+    <BackgroundBrush>
+      <!--
+      <LinearGradientBrush color1="black" color2="white" point1="( 0    ,  0.5 )" point2=" (1 ,  0.5)   "/>
+      <SolidBrush color="#FFFF00"/>
+      -->
+    </BackgroundBrush>
+    <PrimitivePens>
+      <Pen index="0" width="1" color="gray" dashstyle="Solid"/>
+    </PrimitivePens>
+    <Geometry>
+      <Iterator times="26">
+        <GeometryTransform>
+          <OffsetTransform offsetX="0" offsetY="20"/>
+        </GeometryTransform>
+        <Geometry>
+          <Line point1="(150,50)" point2="(650,50)" pen="0" type="segment" />
+        </Geometry>
+      </Iterator>
+      <Iterator times="26">
+        <GeometryTransform>
+          <OffsetTransform offsetX="20" offsetY="0"/>
+        </GeometryTransform>
+        <Geometry>
+          <Line point1="(150,50)" point2="(150,550)" pen="0" type="segment" />
+        </Geometry>
+      </Iterator>
+    </Geometry>
+  </BackgroundTemplate>
+
+  <BackgroundTemplate name="CollegeRuledPaper" width="800" height="600" name.zh-CN="划线格纸" name.es-ES="Colegio dictaminó papel" name.pt-BR="Colégio deliberou Livro" name.fr-FR="Collège a décidé de papier">
+    <BackgroundBrush>
+      <!--
+      <LinearGradientBrush color1="black" color2="white" point1="( 0    ,  0.5 )" point2=" (1 ,  0.5)   "/>
+      <SolidBrush color="#FFFF00"/>
+      -->
+    </BackgroundBrush>
+    <PrimitivePens>
+      <Pen index="0" width="2" color="black" dashstyle="Solid"/>
+      <Pen index="1" width="1" color="gray" dashstyle="Solid"/>
+      <Pen index="2" width="3" color="red" dashstyle="Solid"/>
+    </PrimitivePens>
+    <Geometry>
+      <Line point1="(150,10)" point2="(150,600)" pen="2" type="line" />
+      <Iterator times="0">
+        <GeometryTransform>
+          <OffsetTransform offsetX="0" offsetY="20"/>
+        </GeometryTransform>
+        <Geometry>
+          <Line point1="(0,10)" point2="(800,10)" pen="1" type="line" />
+        </Geometry>
+      </Iterator>
+      <Iterator times="0">
+        <GeometryTransform>
+          <OffsetTransform offsetX="0" offsetY="60"/>
+        </GeometryTransform>
+        <Geometry>
+          <Line point1="(0,10)" point2="(800,10)" pen="0" type="line" />
+        </Geometry>
+      </Iterator>
+    </Geometry>
+  </BackgroundTemplate>
+
+  <BackgroundTemplate name="WideRuledPaper" width="800" height="600" name.zh-CN="宽格纸" name.es-ES="Amplia dictaminó papel" name.pt-BR="Wide deliberou Livro" name.fr-FR="Wide statué papier">
+    <BackgroundBrush>
+      <!--
+      <LinearGradientBrush color1="black" color2="white" point1="( 0    ,  0.5 )" point2=" (1 ,  0.5)   "/>
+      <SolidBrush color="#FFFF00"/>
+      -->
+    </BackgroundBrush>
+    <PrimitivePens>
+      <Pen index="0" width="2" color="LightGreen" dashstyle="Solid"/>
+      <Pen index="1" width="1" color="red" dashstyle="Solid"/>
+    </PrimitivePens>
+    <Geometry>
+      <Iterator times="0">
+        <GeometryTransform>
+          <OffsetTransform offsetX="0" offsetY="30"/>
+        </GeometryTransform>
+        <Geometry>
+          <Line point1="(0,50)" point2="(800,50)" pen="0" type="line" />
+        </Geometry>
+      </Iterator>
+      <Line point1="(150,10)" point2="(150,600)" pen="1" type="line" />
+    </Geometry>
+  </BackgroundTemplate>  
+  <BackgroundTemplate name="MusicStaves" width="800" height="600" name.zh-CN="五线谱" name.es-ES="Música Pentagrama" name.pt-BR="Música Pautas" name.fr-FR="Musique Portées">
+    <BackgroundBrush>
+      <!--
+      <LinearGradientBrush color1="black" color2="white" point1="( 0    ,  0.5 )" point2=" (1 ,  0.5)   "/>
+      <SolidBrush color="#FFFF00"/>
+      -->
+    </BackgroundBrush>
+    <PrimitivePens>
+      <Pen index="0" width="1" color="black" dashstyle="Solid"/>
+    </PrimitivePens>
+    <Geometry>
+      <Iterator times="7">
+        <GeometryTransform>
+          <OffsetTransform offsetX="0" offsetY="80"/>
+        </GeometryTransform>
+        <Geometry>
+          <Iterator times="5">
+            <GeometryTransform>
+              <OffsetTransform offsetX="0" offsetY="10"/>
+            </GeometryTransform>
+            <Geometry>
+              <Line point1="(50,30)" point2="(750,30)" pen="0" type="segment" />
+            </Geometry>
+          </Iterator>          
+        </Geometry>
+      </Iterator>
+    </Geometry>
+  </BackgroundTemplate>  
+</BackgroundTemplates>
+ 

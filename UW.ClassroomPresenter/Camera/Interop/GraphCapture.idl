@@ -1,0 +1,18 @@
+import "qedit.idl";
+[
+    uuid(97196a5d-7d48-4d40-8703-0e783ac474fa),
+    helpstring("Camera Graph Capture Library"),
+    version(1.0)
+]
+library GraphCapture
+{
+    importlib("STDOLE2.TLB");
+
+    interface IGraphBuilder;
+    interface IMediaSeeking;
+    interface ICreateDevEnum;
+    interface ICaptureGraphBuilder2;
+    interface ISampleGrabber;
+    interface IAMStreamConfig;
+    interface IPropertyBag;
+};

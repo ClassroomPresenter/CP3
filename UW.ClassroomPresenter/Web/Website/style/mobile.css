@@ -1,0 +1,134 @@
+.goog-inline-block {
+  position: relative;
+  display: -moz-inline-box;
+  display: inline-block;
+}
+
+* html .goog-inline-block {
+  display: inline;
+}
+
+*:first-child+html .goog-inline-block {
+  display: inline;
+}
+
+body {
+  background-color: #D4D0C8;
+  margin: 0;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.cp-toolbar {
+  position: absolute;
+  background-color: #D4D0C8;
+  z-index: 20;
+  width: 100%;
+  height: 542px;
+}
+
+.cp-buttons div {
+  background-image:url('../images/buttons-large.png');
+  width: 88px;
+  height: 88px;
+}
+
+div.cp-buttons-send div {
+  width: 136px;
+  height: 88px;
+}
+
+.cp-toolbar div.cp-buttons-min {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  width: 88px;
+  height: 88px;
+}
+
+.cp-toolbar .cp-buttons {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.cp-slide {
+  float: left;
+}
+
+.cp-sidebar {
+  float: left;
+  height: 542px;
+  margin: 0;
+}
+
+.cp-sidebar div.cp-buttons-max {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.tmbur-up {background-position: 0 0}
+.tmbur-dn {background-position: 0 -88px}
+.tmbul-up {background-position: -88px 0}
+.tmbul-dn {background-position: -88px -88px}
+.tmblr-up {background-position: -176px 0}
+.tmblr-dn {background-position: -176px -88px}
+.tmbll-up {background-position: -264px 0}
+.tmbll-dn {background-position: -264px -88px}
+.tmbno-up {background-position: -352px 0}
+.tmbno-dn {background-position: -352px -88px}
+
+.pn-up {background-position: -440px 0}
+.pn-dn {background-position: -440px -88px}
+.hl-up {background-position: -528px 0}
+.hl-dn {background-position: -528px -88px}
+.er-up {background-position: -616px 0}
+.er-dn {background-position: -616px -88px}
+.lnk-up {background-position: -704px 0}
+.lnk-dn {background-position: -704px -88px}
+.lnk-off {background-position: -704px -176px}
+
+.c1-up {background-position: 0 -176px}
+.c1-dn {background-position: 0 -264px}
+.c2-up {background-position: -88px -176px}
+.c2-dn {background-position: -88px -264px}
+.c3-up {background-position: -176px -176px}
+.c3-dn {background-position: -176px -264px}
+.c4-up {background-position: -264px -176px}
+.c4-dn {background-position: -264px -264px}
+.c5-up {background-position: -352px -176px}
+.c5-dn {background-position: -352px -264px}
+
+.prv-up {background-position: -440px -176px}
+.prv-off {background-position: -440px -264px}
+.nxt-up {background-position: -528px -176px}
+.nxt-off {background-position: -528px -264px}
+.era-up {background-position: -616px -176px}
+.minmax {background-position: -616px -264px}
+
+.dbg-up {background-position: -704px -264px}
+
+.h1-up {background-position: 0 -352px}
+.h1-dn {background-position: 0 -440px}
+.h2-up {background-position: -88px -352px}
+.h2-dn {background-position: -88px -440px}
+.h3-up {background-position: -176px -352px}
+.h3-dn {background-position: -176px -440px}
+.h4-up {background-position: -264px -352px}
+.h4-dn {background-position: -264px -440px}
+.h5-up {background-position: -352px -352px}
+.h5-dn {background-position: -352px -440px}
+
+.smt-up {background-position: -440px -352px}
+.smt-dn {background-position: -440px -440px}
+.drw-up {background-position: -616px -352px}
+.drw-dn {background-position: -616px -440px}
+.mv-up {background-position: -704px -352px}
+.mv-dn {background-position: -704px -440px}

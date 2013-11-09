@@ -1,0 +1,5 @@
+WAIT(3000);
+INKDRAWING("Test.isf","ViewerPresentationLayout\\MainSlideViewer");
+WAIT(3000);
+CLICK("ViewerPresentationLayout\\MainToolBar\\StudentSubmissionToolBarButton");
+WAIT(2000);

@@ -1,0 +1,91 @@
+.goog-inline-block {
+  position: relative;
+  display: -moz-inline-box;
+  display: inline-block;
+}
+
+* html .goog-inline-block {
+  display: inline;
+}
+
+*:first-child+html .goog-inline-block {
+  display: inline;
+}
+
+body {
+  background-color: #D4D0C8;
+  margin: 0;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.cp-toolbar {
+  background-color: #D4D0C8;
+}
+
+.cp-buttons div {
+  background-image:url('../images/buttons.png');
+  width: 44px;
+  height: 44px;
+}
+
+div.cp-buttons-send div {
+  width: 68px;
+  height: 44px;
+}
+
+.cp-toolbar .cp-buttons {
+  margin-right: 20px;
+  margin-bottom: 3px;
+}
+
+.cp-slide {
+  float: left;
+}
+
+.pn-up {background-position: -220px 0}
+.pn-dn {background-position: -220px -44px}
+.hl-up {background-position: -264px 0}
+.hl-dn {background-position: -264px -44px}
+.er-up {background-position: -308px 0}
+.er-dn {background-position: -308px -44px}
+.lnk-up {background-position: -352px 0}
+.lnk-dn {background-position: -352px -44px}
+.lnk-off {background-position: -352px -88px}
+
+.c1-up {background-position: 0 -88px}
+.c1-dn {background-position: 0 -132px}
+.c2-up {background-position: -44px -88px}
+.c2-dn {background-position: -44px -132px}
+.c3-up {background-position: -88px -88px}
+.c3-dn {background-position: -88px -132px}
+.c4-up {background-position: -132px -88px}
+.c4-dn {background-position: -132px -132px}
+.c5-up {background-position: -176px -88px}
+.c5-dn {background-position: -176px -132px}
+
+.prv-up {background-position: -220px -88px}
+.prv-off {background-position: -220px -132px}
+.nxt-up {background-position: -264px -88px}
+.nxt-off {background-position: -264px -132px}
+.era-up {background-position: -308px -88px}
+.minmax {background-position: -308px -132px}
+
+.dbg-up {background-position: -352px -132px}
+
+.h1-up {background-position: 0 -176px}
+.h1-dn {background-position: 0 -220px}
+.h2-up {background-position: -44px -176px}
+.h2-dn {background-position: -44px -220px}
+.h3-up {background-position: -88px -176px}
+.h3-dn {background-position: -88px -220px}
+.h4-up {background-position: -132px -176px}
+.h4-dn {background-position: -132px -220px}
+.h5-up {background-position: -176px -176px}
+.h5-dn {background-position: -176px -220px}
+
+.smt-up {background-position: -220px -176px}
+.smt-dn {background-position: -220px -220px}

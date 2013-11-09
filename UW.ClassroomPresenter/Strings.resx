@@ -1,0 +1,945 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutClassroomPresenter" xml:space="preserve">
+    <value>About Classroom Presenter</value>
+  </data>
+  <data name="AcceptStudentSubmissions" xml:space="preserve">
+    <value>Accept Student Submissions</value>
+  </data>
+  <data name="AdapterType" xml:space="preserve">
+    <value>Adapter Type:</value>
+  </data>
+  <data name="AddEditText" xml:space="preserve">
+    <value>Add/Edit Text.</value>
+  </data>
+  <data name="AdvancedConnectionOptions" xml:space="preserve">
+    <value>Advanced Connection Options</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="AutoScroll" xml:space="preserve">
+    <value>Auto Scroll</value>
+  </data>
+  <data name="AvailablePresentations" xml:space="preserve">
+    <value>Available Presentations</value>
+  </data>
+  <data name="BackwardTooltipPreviousSlide" xml:space="preserve">
+    <value>Go to the previous slide.</value>
+  </data>
+  <data name="BlackText" xml:space="preserve">
+    <value>Black text.</value>
+  </data>
+  <data name="BlueText" xml:space="preserve">
+    <value>Blue text.</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="BroadcastedPresentations" xml:space="preserve">
+    <value>Broadcasted Presentations</value>
+  </data>
+  <data name="BroadcastIP" xml:space="preserve">
+    <value>Broadcast IP</value>
+  </data>
+  <data name="BroadcastIPAddress" xml:space="preserve">
+    <value>Broadcast IP Address</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Classmate" xml:space="preserve">
+    <value>Classmate</value>
+  </data>
+  <data name="Classroom" xml:space="preserve">
+    <value>Classroom</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Clients" xml:space="preserve">
+    <value>Client(s)</value>
+  </data>
+  <data name="CloneCommand" xml:space="preserve">
+    <value>Clone Command:</value>
+  </data>
+  <data name="CloseDeck" xml:space="preserve">
+    <value>Close Deck...</value>
+  </data>
+  <data name="ConfirmRestoreDefaults" xml:space="preserve">
+    <value>Confirm Restore Defaults</value>
+  </data>
+  <data name="ConfirmRestoreDialog" xml:space="preserve">
+    <value>Reset all properties to their default values?
+
+Changes will take effect immediately.</value>
+  </data>
+  <data name="ConnectToTCPServer" xml:space="preserve">
+    <value>Connect to TCP Server...</value>
+  </data>
+  <data name="CreateBlankWhiteboardDeck" xml:space="preserve">
+    <value>Create a Blank &amp;Whiteboard Deck</value>
+  </data>
+  <data name="CustomColorText" xml:space="preserve">
+    <value>Custom color text.</value>
+  </data>
+  <data name="CustomCommands" xml:space="preserve">
+    <value>Custom Commands</value>
+  </data>
+  <data name="CXPCapabilityConnected" xml:space="preserve">
+    <value>CXP Capability Connected</value>
+  </data>
+  <data name="DeckMatcher" xml:space="preserve">
+    <value>&amp;Deck Matcher</value>
+  </data>
+  <data name="Decks" xml:space="preserve">
+    <value>&amp;Decks</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="DefaultHLWidth" xml:space="preserve">
+    <value>Highlighter Width</value>
+  </data>
+  <data name="DefaultPenWidth" xml:space="preserve">
+    <value>Pen Width</value>
+  </data>
+  <data name="DefaultSettings" xml:space="preserve">
+    <value>Default Settings</value>
+  </data>
+  <data name="DeleteSlide" xml:space="preserve">
+    <value>Delete Slide</value>
+  </data>
+  <data name="DisableAdvertisementBroadcast" xml:space="preserve">
+    <value>Disable Instructor Advertisement &amp;Broadcast</value>
+  </data>
+  <data name="DisableNavigationIndInstructor" xml:space="preserve">
+    <value>Disable free navigation, link to the instructor's current slide.</value>
+  </data>
+  <data name="DisableStudentNavigation" xml:space="preserve">
+    <value>Disable independent Student Navigation.</value>
+  </data>
+  <data name="DisableStudentSubmissions" xml:space="preserve">
+    <value>Disable Student Submissions.</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+  <data name="Displays" xml:space="preserve">
+    <value>Displays</value>
+  </data>
+  <data name="DualMonitor" xml:space="preserve">
+    <value>Dual-Monitor</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>&amp;Edit</value>
+  </data>
+  <data name="EnableLogging" xml:space="preserve">
+    <value>Enable &amp;Logging</value>
+  </data>
+  <data name="EnableNavigationIndInstructor" xml:space="preserve">
+    <value>Enable free navigation independent of the instructor</value>
+  </data>
+  <data name="EnablePreviews" xml:space="preserve">
+    <value>Enable Previews</value>
+  </data>
+  <data name="EnableQuickPolling" xml:space="preserve">
+    <value>Enable QuickPolling</value>
+  </data>
+  <data name="EnableSecondMonitor" xml:space="preserve">
+    <value>Enable Dual-Monitor Output</value>
+  </data>
+  <data name="EnableStudentNavigation" xml:space="preserve">
+    <value>Enable independent Student Navigation.</value>
+  </data>
+  <data name="EnableStudentSubmissions" xml:space="preserve">
+    <value>Enable Student Submissions.</value>
+  </data>
+  <data name="EndQuickPoll" xml:space="preserve">
+    <value>End Quick Poll.</value>
+  </data>
+  <data name="EraseAllToolTip" xml:space="preserve">
+    <value>Erase all ink from the current slide.</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="ExportAsHTML" xml:space="preserve">
+    <value>Export As &amp;HTML...</value>
+  </data>
+  <data name="ExportAsImage" xml:space="preserve">
+    <value>Export As &amp;Image...</value>
+  </data>
+  <data name="ExportInk" xml:space="preserve">
+    <value>Export &amp;Ink...</value>
+  </data>
+  <data name="ExtendedCommand" xml:space="preserve">
+    <value>Extended Command:</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="FilmStrip" xml:space="preserve">
+    <value>Film Strip</value>
+  </data>
+  <data name="FilmStripAlignment" xml:space="preserve">
+    <value>Film Strip &amp;Alignment</value>
+  </data>
+  <data name="FilmStripWidth" xml:space="preserve">
+    <value>Film Strip Width</value>
+  </data>
+  <data name="ForceLinkedNavigation" xml:space="preserve">
+    <value>Force Linked Navigation</value>
+  </data>
+  <data name="ForwardErrorCorrection" xml:space="preserve">
+    <value>Forward error correction</value>
+  </data>
+  <data name="ForwardTooltipAddBlank" xml:space="preserve">
+    <value>Add blank whiteboard slide.</value>
+  </data>
+  <data name="ForwardTooltipNextSlide" xml:space="preserve">
+    <value>Go to the next slide.</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>&amp;Full Screen</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="GreenText" xml:space="preserve">
+    <value>Green text.</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="Highlighter" xml:space="preserve">
+    <value>HL</value>
+  </data>
+  <data name="InsertSlidesFromDeck" xml:space="preserve">
+    <value>Insert &amp;Slides from Deck...</value>
+  </data>
+  <data name="InstructorRole" xml:space="preserve">
+    <value>Instructor</value>
+  </data>
+  <data name="InstructorStartTCPServer" xml:space="preserve">
+    <value>Start TCP Server and Take Instructor Role</value>
+  </data>
+  <data name="InterpacketDelay" xml:space="preserve">
+    <value>Interpacket delay</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>&amp;IP Address</value>
+  </data>
+  <data name="IPAddressIs" xml:space="preserve">
+    <value>This computer's IP address is: </value>
+  </data>
+  <data name="JoinClassroom" xml:space="preserve">
+    <value>Join the Classroom of Instructor:</value>
+  </data>
+  <data name="JoinSelectedPresentation" xml:space="preserve">
+    <value>Join the Selected
+Instructor's Presentation</value>
+  </data>
+  <data name="LaunchGettingStartedGuid" xml:space="preserve">
+    <value>Launch Getting Started Guide...</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>&amp;License</value>
+  </data>
+  <data name="LightblueText" xml:space="preserve">
+    <value>Light blue text.</value>
+  </data>
+  <data name="LightgreenText" xml:space="preserve">
+    <value>Light green text.</value>
+  </data>
+  <data name="LogFilePath" xml:space="preserve">
+    <value>Log File Path:</value>
+  </data>
+  <data name="Logging" xml:space="preserve">
+    <value>Logging</value>
+  </data>
+  <data name="LoggingOptions" xml:space="preserve">
+    <value>Logging Options</value>
+  </data>
+  <data name="ManualConnectionVenues" xml:space="preserve">
+    <value>Manual Connection Venues</value>
+  </data>
+  <data name="MinimizeCurrentSlide" xml:space="preserve">
+    <value>"Minimize" the current slide to make room for notes around the outside.</value>
+  </data>
+  <data name="MonitorSetNote" xml:space="preserve">
+    <value>NOTE: For advanced users only. Modify only if you know what you are doing.</value>
+  </data>
+  <data name="MultiCast" xml:space="preserve">
+    <value>MultiCast</value>
+  </data>
+  <data name="MultiMonitorSwitching" xml:space="preserve">
+    <value>Multi-Monitor Switching</value>
+  </data>
+  <data name="Network" xml:space="preserve">
+    <value>Network</value>
+  </data>
+  <data name="NetworkedMode" xml:space="preserve">
+    <value>Networked</value>
+  </data>
+  <data name="NewSlide" xml:space="preserve">
+    <value>New Slide</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NonStandardMannulConnect" xml:space="preserve">
+    <value>Presenter is using a non-standard port number because another application was already using Presenter's normal port.  If students need to make manual connections, they should specify the port:</value>
+  </data>
+  <data name="NoSlide" xml:space="preserve">
+    <value>No Slide</value>
+  </data>
+  <data name="NotYetImplemented" xml:space="preserve">
+    <value>Not Yet Implemented!</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OneSlide" xml:space="preserve">
+    <value>1 Slide</value>
+  </data>
+  <data name="OnlineHelp" xml:space="preserve">
+    <value>Online &amp;Help...</value>
+  </data>
+  <data name="OpenDeck" xml:space="preserve">
+    <value>&amp;Open Deck</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>&amp;Options...</value>
+  </data>
+  <data name="PageSetup" xml:space="preserve">
+    <value>Page Set&amp;up...</value>
+  </data>
+  <data name="PagesPerSheet" xml:space="preserve">
+    <value>Pages Per Sheet</value>
+  </data>
+  <data name="Pen" xml:space="preserve">
+    <value>Pen</value>
+  </data>
+  <data name="PenColor" xml:space="preserve">
+    <value>Pen Color</value>
+  </data>
+  <data name="PenCustomColor" xml:space="preserve">
+    <value>Custom Color</value>
+  </data>
+  <data name="PenHeight" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="PenRoundShape" xml:space="preserve">
+    <value>Round</value>
+  </data>
+  <data name="PenShape" xml:space="preserve">
+    <value>Shape</value>
+  </data>
+  <data name="PenSquareShape" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="PenTip" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="PenType" xml:space="preserve">
+    <value>Pen Type</value>
+  </data>
+  <data name="PenWidth" xml:space="preserve">
+    <value>Width:</value>
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>percent</value>
+  </data>
+  <data name="PinkText" xml:space="preserve">
+    <value>Pink text.</value>
+  </data>
+  <data name="Poll" xml:space="preserve">
+    <value>&amp;Poll...</value>
+  </data>
+  <data name="PollType" xml:space="preserve">
+    <value>Poll Type</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="PresentationsInChosenVenue" xml:space="preserve">
+    <value>Presentations in Chosen Venue</value>
+  </data>
+  <data name="PresenterStartupStepThree" xml:space="preserve">
+    <value>Step 3: Start Presentation</value>
+  </data>
+  <data name="PresenterStartupStepTwo" xml:space="preserve">
+    <value>Step 2: Choose a Network Connection</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>&amp;Print...</value>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Printing</value>
+  </data>
+  <data name="PrintPreview" xml:space="preserve">
+    <value>Print Pre&amp;view</value>
+  </data>
+  <data name="PromptOnClose" xml:space="preserve">
+    <value>Prompt on Close</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="PublicDisplayRole" xml:space="preserve">
+    <value>Public Display</value>
+  </data>
+  <data name="QuickPoll" xml:space="preserve">
+    <value>QuickPoll</value>
+  </data>
+  <data name="QuickPollBoth" xml:space="preserve">
+    <value>Both</value>
+  </data>
+  <data name="QuickPollNeither" xml:space="preserve">
+    <value>Neither</value>
+  </data>
+  <data name="QuickPollNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="QuickPollYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>&amp;Redo</value>
+  </data>
+  <data name="RedoTooltipText" xml:space="preserve">
+    <value>Redo the most recently undone change.</value>
+  </data>
+  <data name="RedText" xml:space="preserve">
+    <value>Red text.</value>
+  </data>
+  <data name="Reenter" xml:space="preserve">
+    <value>Reenter</value>
+  </data>
+  <data name="RestoreDefaults" xml:space="preserve">
+    <value>Restore Defaults</value>
+  </data>
+  <data name="RestoreSlideSize" xml:space="preserve">
+    <value>Restore the slide to its original size.</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="RTPBeaconInterval" xml:space="preserve">
+    <value>RTP beacon interval</value>
+  </data>
+  <data name="RTPConnected" xml:space="preserve">
+    <value>RTP Connected:</value>
+  </data>
+  <data name="SaveAllDecks" xml:space="preserve">
+    <value>Save All Decks</value>
+  </data>
+  <data name="SaveAllDecksAs" xml:space="preserve">
+    <value>Save All Decks As...</value>
+  </data>
+  <data name="SaveDeck" xml:space="preserve">
+    <value>&amp;Save Deck</value>
+  </data>
+  <data name="SaveDeckAs" xml:space="preserve">
+    <value>Save Deck &amp;As...</value>
+  </data>
+  <data name="SavingFiles" xml:space="preserve">
+    <value>Saving Files</value>
+  </data>
+  <data name="ScribbleArea" xml:space="preserve">
+    <value>Scribble Area</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>Second</value>
+  </data>
+  <data name="SelectBlackPen" xml:space="preserve">
+    <value>Select the black pen.</value>
+  </data>
+  <data name="SelectBluePen" xml:space="preserve">
+    <value>Select the blue pen.</value>
+  </data>
+  <data name="SelectCustomColorHighlighter" xml:space="preserve">
+    <value>Select the custom color highlighter.</value>
+  </data>
+  <data name="SelectCustomColorPen" xml:space="preserve">
+    <value>Select the custom color pen.</value>
+  </data>
+  <data name="SelectCyanHighlighter" xml:space="preserve">
+    <value>Select the cyan highlighter.</value>
+  </data>
+  <data name="SelectEraser" xml:space="preserve">
+    <value>Select the Eraser.</value>
+  </data>
+  <data name="SelectGreenHighlighter" xml:space="preserve">
+    <value>Select the green highlighter.</value>
+  </data>
+  <data name="SelectGreenPen" xml:space="preserve">
+    <value>Select the green pen.</value>
+  </data>
+  <data name="SelectHighlighterStylus" xml:space="preserve">
+    <value>Select the Highlighter Stylus.</value>
+  </data>
+  <data name="SelectLightbluePen" xml:space="preserve">
+    <value>Select the light blue pen.</value>
+  </data>
+  <data name="SelectLightgreenPen" xml:space="preserve">
+    <value>Select the light green pen.</value>
+  </data>
+  <data name="SelectMagentaHighlighter" xml:space="preserve">
+    <value>Select the magenta highlighter.</value>
+  </data>
+  <data name="SelectOrangeHighlighter" xml:space="preserve">
+    <value>Select the orange highlighter.</value>
+  </data>
+  <data name="SelectPenStylus" xml:space="preserve">
+    <value>Select the Pen Stylus.</value>
+  </data>
+  <data name="SelectPinkPen" xml:space="preserve">
+    <value>Select the pink pen.</value>
+  </data>
+  <data name="SelectRedPen" xml:space="preserve">
+    <value>Select the red pen.</value>
+  </data>
+  <data name="SelectWhitePen" xml:space="preserve">
+    <value>Select the white pen.</value>
+  </data>
+  <data name="SelectYellowHighlighter" xml:space="preserve">
+    <value>Select the yellow highlighter.</value>
+  </data>
+  <data name="SelectYellowPen" xml:space="preserve">
+    <value>Select the yellow pen.</value>
+  </data>
+  <data name="ServerNameAddress" xml:space="preserve">
+    <value>Server name or address:</value>
+  </data>
+  <data name="SetDeckBkgColor" xml:space="preserve">
+    <value>Set Deck Background Color ...</value>
+  </data>
+  <data name="SetSlideBkgColor" xml:space="preserve">
+    <value>Set Slide Background Color ...</value>
+  </data>
+  <data name="SSDeckFilmStripWidth" xml:space="preserve">
+    <value>SS Deck Film Strip Width</value>
+  </data>
+  <data name="StandAloneInstrStartupStepTwo" xml:space="preserve">
+    <value>Step 2: Start Presentation</value>
+  </data>
+  <data name="StandAloneMode" xml:space="preserve">
+    <value>Stand Alone</value>
+  </data>
+  <data name="StartNewPresentation" xml:space="preserve">
+    <value>Start a New Presentation</value>
+  </data>
+  <data name="StartQuickPoll" xml:space="preserve">
+    <value>Start Quick Poll.</value>
+  </data>
+  <data name="StartupFormText" xml:space="preserve">
+    <value>Classroom Presenter 3: Connection Sequence</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>Help...</value>
+  </data>
+  <data name="StartupStepOne" xml:space="preserve">
+    <value>Step 1: Choose a Role</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>&amp;Student</value>
+  </data>
+  <data name="StudentRole" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="StudentSubmissions" xml:space="preserve">
+    <value>Student Submissions</value>
+  </data>
+  <data name="SwitchToNonWhiteboardDeck" xml:space="preserve">
+    <value>Switch to the last non-Whiteboard Deck.</value>
+  </data>
+  <data name="SwitchWhiteboardDeck" xml:space="preserve">
+    <value>Switch to the Whiteboard Deck.</value>
+  </data>
+  <data name="TCPClientAttemptingConnect" xml:space="preserve">
+    <value>TCP Client Attempting to Connect</value>
+  </data>
+  <data name="TCPClientConnected" xml:space="preserve">
+    <value>TCP Client Connected</value>
+  </data>
+  <data name="TCPServerConnected" xml:space="preserve">
+    <value>TCP Server Connected</value>
+  </data>
+  <data name="ThreeSlides" xml:space="preserve">
+    <value>3 Slides</value>
+  </data>
+  <data name="TitleRoleInstructor" xml:space="preserve">
+    <value>Instructor</value>
+  </data>
+  <data name="TitleRolePublic" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="TitleRoleStudent" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="Toolbar" xml:space="preserve">
+    <value>Toolbar</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="ToSaveDeck" xml:space="preserve">
+    <value>Would you like to save your decks?</value>
+  </data>
+  <data name="TwoSlides" xml:space="preserve">
+    <value>2 Slides</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>&amp;Undo</value>
+  </data>
+  <data name="UndoChanges" xml:space="preserve">
+    <value>Undo Changes</value>
+  </data>
+  <data name="UndoTooltipText" xml:space="preserve">
+    <value>Undo the most recent change.</value>
+  </data>
+  <data name="Unicast" xml:space="preserve">
+    <value>Unicast</value>
+  </data>
+  <data name="UnknownConnectionStatus" xml:space="preserve">
+    <value>Unknown Connection Status.</value>
+  </data>
+  <data name="UntitledPresentation" xml:space="preserve">
+    <value>(Untitled Presentation)</value>
+  </data>
+  <data name="UseCustomCommands" xml:space="preserve">
+    <value>Use Custom Commands</value>
+  </data>
+  <data name="UseLightColorSet" xml:space="preserve">
+    <value>Use Light Color Set</value>
+  </data>
+  <data name="UseWindowAPIs" xml:space="preserve">
+    <value>Use Window APIs</value>
+  </data>
+  <data name="UsingNonStandardPort" xml:space="preserve">
+    <value>Presenter is Using a Non-Standard Port</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VersionInfo" xml:space="preserve">
+    <value>&amp;Version Compatibility Info ...</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>&amp;View</value>
+  </data>
+  <data name="ViewerStartupStepThree" xml:space="preserve">
+    <value>Step 3: Join Presentation</value>
+  </data>
+  <data name="ViewerStartupStepTwo" xml:space="preserve">
+    <value>Step 2: Choose a Presentation</value>
+  </data>
+  <data name="WhiteBoard" xml:space="preserve">
+    <value>WhiteBoard</value>
+  </data>
+  <data name="WhiteText" xml:space="preserve">
+    <value>White Text.</value>
+  </data>
+  <data name="WidthOfPreview" xml:space="preserve">
+    <value>Width of Preview</value>
+  </data>
+  <data name="YellowText" xml:space="preserve">
+    <value>Yellow text.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ZoomSlide" xml:space="preserve">
+    <value>&amp;Zoom Slide</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="NeedRestart" xml:space="preserve">
+    <value>* Need restart to take effect</value>
+  </data>
+  <data name="QuickPollLocalVersionWarning" xml:space="preserve">
+    <value>The remote version does not support the QuickPoll feature.</value>
+  </data>
+  <data name="QuickPollVersionWarning" xml:space="preserve">
+    <value>The local version does not support the QuickPoll feature.</value>
+  </data>
+  <data name="AddEditImages" xml:space="preserve">
+    <value>Move/Resize Images.</value>
+  </data>
+  <data name="Clone" xml:space="preserve">
+    <value>Clone</value>
+  </data>
+  <data name="Extend" xml:space="preserve">
+    <value>Extend</value>
+  </data>
+  <data name="MoreInfo" xml:space="preserve">
+    <value>For more information, please visit </value>
+  </data>
+  <data name="SendSubmission" xml:space="preserve">
+    <value>Sending submission ...</value>
+  </data>
+  <data name="SubmissionFailed" xml:space="preserve">
+    <value>Submission failed!</value>
+  </data>
+  <data name="SubmissionReceived" xml:space="preserve">
+    <value>Submission received!</value>
+  </data>
+  <data name="Camera" xml:space="preserve">
+    <value>Camera:</value>
+  </data>
+  <data name="Capture" xml:space="preserve">
+    <value>Capture</value>
+  </data>
+  <data name="CaptureWindow" xml:space="preserve">
+    <value>Capture Pictures</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size:</value>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>&amp;Insert</value>
+  </data>
+  <data name="InsertImageFromCamera" xml:space="preserve">
+    <value>Insert Image From &amp;Camera</value>
+  </data>
+  <data name="InsertImageFromClipboard" xml:space="preserve">
+    <value>Insert Image From Clip&amp;Board</value>
+  </data>
+  <data name="InsertImageFromFile" xml:space="preserve">
+    <value>Insert Image From &amp;File</value>
+  </data>
+  <data name="InsertImageFromSnapshot" xml:space="preserve">
+    <value>Insert Image From Window &amp;Snapshot</value>
+  </data>
+  <data name="DuplicateSlide" xml:space="preserve">
+    <value>Duplicate Slide</value>
+  </data>
+  <data name="BackgroundPropertiesFormTitle" xml:space="preserve">
+    <value>Background Template Properties</value>
+  </data>
+  <data name="BkgChooseTemplate" xml:space="preserve">
+    <value>Choose background template</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="SetDeckBackgroundTemplate" xml:space="preserve">
+    <value>Set Deck Background Template ...</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="SetSlideBackgroundTemplate" xml:space="preserve">
+    <value>Set Slide Background Template ...</value>
+  </data>
+  <data name="NoBackgroundTemplate" xml:space="preserve">
+    <value>No Background Template</value>
+  </data>
+  <data name="CopyToPublic" xml:space="preserve">
+    <value>Copy Slide to Public Deck</value>
+  </data>
+  <data name="PublicSubmissions" xml:space="preserve">
+    <value>Public Submissions</value>
+  </data>
+  <data name="StudentClient" xml:space="preserve">
+    <value>Student Client</value>
+  </data>
+  <data name="SSTimerPropertiesGroup" xml:space="preserve">
+    <value>Student Submission Interval Timer</value>
+  </data>
+  <data name="SubmissionIntervalLabel" xml:space="preserve">
+    <value>Submission Interval(s)</value>
+  </data>
+  <data name="StudentSubmissionTimerProperties" xml:space="preserve">
+    <value>Student Submission Timer</value>
+  </data>
+  <data name="FullNavigation" xml:space="preserve">
+    <value>Full Navigation</value>
+  </data>
+  <data name="NoNavigation" xml:space="preserve">
+    <value>No Navigation</value>
+  </data>
+  <data name="StudentNavigationType" xml:space="preserve">
+    <value>StudentNavigationType</value>
+  </data>
+  <data name="UnvisitedSlide" xml:space="preserve">
+    <value>Unvisited Slide</value>
+  </data>
+  <data name="VisitedSlidesNavigation" xml:space="preserve">
+    <value>Visited Slides Navigation</value>
+  </data>
+  <data name="QuickPollABC" xml:space="preserve">
+    <value>ABC</value>
+  </data>
+  <data name="QuickPollABCD" xml:space="preserve">
+    <value>ABCD</value>
+  </data>
+  <data name="QuickPollABCDE" xml:space="preserve">
+    <value>ABCDE</value>
+  </data>
+  <data name="QuickPollC" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="QuickPollD" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Compatibility" xml:space="preserve">
+    <value>Compatibility</value>
+  </data>
+  <data name="ForMoreInformation" xml:space="preserve">
+    <value>For more information: </value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="RemoteNode" xml:space="preserve">
+    <value>Remote Node</value>
+  </data>
+  <data name="ThisClassroomPresenterVersion" xml:space="preserve">
+    <value>This Classroom Presenter Version: </value>
+  </data>
+  <data name="UnknownName" xml:space="preserve">
+    <value>Unknown Name</value>
+  </data>
+  <data name="UnknownVersion" xml:space="preserve">
+    <value>Unknown Version</value>
+  </data>
+  <data name="VersionCompatibilityInformation" xml:space="preserve">
+    <value>Version Compatibility Information</value>
+  </data>
+  <data name="VersionCompatibilityNoResponse" xml:space="preserve">
+    <value>The node has not responded to a version request.  It is probably a pre-release version.</value>
+  </data>
+</root>

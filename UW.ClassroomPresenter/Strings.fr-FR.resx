@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutClassroomPresenter" xml:space="preserve">
+    <value>A propos de Classroom Presenter</value>
+  </data>
+  <data name="AcceptStudentSubmissions" xml:space="preserve">
+    <value>Accepter les soumissions d'étudiant</value>
+  </data>
+  <data name="AdapterType" xml:space="preserve">
+    <value>Type d'adaptateur :</value>
+  </data>
+  <data name="AddEditText" xml:space="preserve">
+    <value>Ajouter/Editer du texte.</value>
+  </data>
+  <data name="AdvancedConnectionOptions" xml:space="preserve">
+    <value>Options de connexion avancées</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Appliquer</value>
+  </data>
+  <data name="AutoScroll" xml:space="preserve">
+    <value>Défilement automatique</value>
+  </data>
+  <data name="AvailablePresentations" xml:space="preserve">
+    <value>Présentations disponibles</value>
+  </data>
+  <data name="BackwardTooltipPreviousSlide" xml:space="preserve">
+    <value>Diapositive précédente.</value>
+  </data>
+  <data name="BlackText" xml:space="preserve">
+    <value>Texte noir.</value>
+  </data>
+  <data name="BlueText" xml:space="preserve">
+    <value>Texte bleu.</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>Bas</value>
+  </data>
+  <data name="BroadcastedPresentations" xml:space="preserve">
+    <value>Présentations diffusées</value>
+  </data>
+  <data name="BroadcastIP" xml:space="preserve">
+    <value>Diffusion IP</value>
+  </data>
+  <data name="BroadcastIPAddress" xml:space="preserve">
+    <value>Diffuser l'addresse IP</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Classmate" xml:space="preserve">
+    <value>Compagnon de classe</value>
+  </data>
+  <data name="Classroom" xml:space="preserve">
+    <value>Classe</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Mettre à zéro</value>
+  </data>
+  <data name="Clients" xml:space="preserve">
+    <value>Client(s)</value>
+  </data>
+  <data name="CloneCommand" xml:space="preserve">
+    <value>Commande pour cloner :</value>
+  </data>
+  <data name="CloseDeck" xml:space="preserve">
+    <value>Fermer l'espace...</value>
+  </data>
+  <data name="ConfirmRestoreDefaults" xml:space="preserve">
+    <value>Confirmer la reprise des valeurs par défaut</value>
+  </data>
+  <data name="ConfirmRestoreDialog" xml:space="preserve">
+    <value>Réinitialiser toutes les propriétés à leur valeur par défaut ?
+
+Les changements prendront effet immédiatement.</value>
+  </data>
+  <data name="ConnectToTCPServer" xml:space="preserve">
+    <value>Connexion au serveur TCP...</value>
+  </data>
+  <data name="CreateBlankWhiteboardDeck" xml:space="preserve">
+    <value>Créer un espace tableau blanc</value>
+  </data>
+  <data name="CustomColorText" xml:space="preserve">
+    <value>Texte en couleur personnalisée.</value>
+  </data>
+  <data name="CustomCommands" xml:space="preserve">
+    <value>Commandes personnalisées</value>
+  </data>
+  <data name="CXPCapabilityConnected" xml:space="preserve">
+    <value>Fonctionnalité CXP connectée</value>
+  </data>
+  <data name="DeckMatcher" xml:space="preserve">
+    <value>Chercheur d'espace</value>
+  </data>
+  <data name="Decks" xml:space="preserve">
+    <value>Espaces</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Défaut</value>
+  </data>
+  <data name="DefaultHLWidth" xml:space="preserve">
+    <value>Largeur du souligneur</value>
+  </data>
+  <data name="DefaultPenWidth" xml:space="preserve">
+    <value>Largeur du stylet</value>
+  </data>
+  <data name="DefaultSettings" xml:space="preserve">
+    <value>Paramètres par défaut</value>
+  </data>
+  <data name="DeleteSlide" xml:space="preserve">
+    <value>Détruire une diapositive</value>
+  </data>
+  <data name="DisableAdvertisementBroadcast" xml:space="preserve">
+    <value>Désactiver la diffusion d'avertissement par l'instructeur</value>
+  </data>
+  <data name="DisableNavigationIndInstructor" xml:space="preserve">
+    <value>Déactiver la navigation libre, rester lié à la diapositive courante de l'instructeur.</value>
+  </data>
+  <data name="DisableStudentNavigation" xml:space="preserve">
+    <value>Désactiver la navigation indépendante pour les étudiants.</value>
+  </data>
+  <data name="DisableStudentSubmissions" xml:space="preserve">
+    <value>Désactiver les soumissions d'étudiant.</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Déconnecté</value>
+  </data>
+  <data name="Displays" xml:space="preserve">
+    <value>Ecrans</value>
+  </data>
+  <data name="DualMonitor" xml:space="preserve">
+    <value>Double moniteur</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editer</value>
+  </data>
+  <data name="EnableLogging" xml:space="preserve">
+    <value>Autoriser la journalisation</value>
+  </data>
+  <data name="EnableNavigationIndInstructor" xml:space="preserve">
+    <value>Autoriser la navigation indépendamment de l'instructeur</value>
+  </data>
+  <data name="EnablePreviews" xml:space="preserve">
+    <value>Autoriser les aperçus</value>
+  </data>
+  <data name="EnableQuickPolling" xml:space="preserve">
+    <value>Autoriser le vote instantané</value>
+  </data>
+  <data name="EnableSecondMonitor" xml:space="preserve">
+    <value>Autoriser la sortie sur double moniteur</value>
+  </data>
+  <data name="EnableStudentNavigation" xml:space="preserve">
+    <value>Autoriser la navigation indépendante pour les étudiants.</value>
+  </data>
+  <data name="EnableStudentSubmissions" xml:space="preserve">
+    <value>Autoriser les soumissions d'étudiant.</value>
+  </data>
+  <data name="EndQuickPoll" xml:space="preserve">
+    <value>Mettre fin au vote instantané.</value>
+  </data>
+  <data name="EraseAllToolTip" xml:space="preserve">
+    <value>Effacer tout annotation de la diapositive courante.</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Sortir</value>
+  </data>
+  <data name="ExportAsHTML" xml:space="preserve">
+    <value>Exporter en HTML...</value>
+  </data>
+  <data name="ExportAsImage" xml:space="preserve">
+    <value>Exporter comme image...</value>
+  </data>
+  <data name="ExportInk" xml:space="preserve">
+    <value>Exporter les annotations...</value>
+  </data>
+  <data name="ExtendedCommand" xml:space="preserve">
+    <value>Commande d'extension :</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Fichier</value>
+  </data>
+  <data name="FilmStrip" xml:space="preserve">
+    <value>Zone de déroulement</value>
+  </data>
+  <data name="FilmStripAlignment" xml:space="preserve">
+    <value>Positionnement de la zone de déroulement</value>
+  </data>
+  <data name="FilmStripWidth" xml:space="preserve">
+    <value>Largeur de la zone de déroulement</value>
+  </data>
+  <data name="ForceLinkedNavigation" xml:space="preserve">
+    <value>Forcer la navigation liée</value>
+  </data>
+  <data name="ForwardErrorCorrection" xml:space="preserve">
+    <value>Correction d'erreur à la destination</value>
+  </data>
+  <data name="ForwardTooltipAddBlank" xml:space="preserve">
+    <value>Ajouter une diapositive tableau blanc.</value>
+  </data>
+  <data name="ForwardTooltipNextSlide" xml:space="preserve">
+    <value>Diapositive suivante.</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>Plein écran</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Général</value>
+  </data>
+  <data name="GreenText" xml:space="preserve">
+    <value>Texte vert.</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Aide</value>
+  </data>
+  <data name="Highlighter" xml:space="preserve">
+    <value>HL</value>
+  </data>
+  <data name="InsertSlidesFromDeck" xml:space="preserve">
+    <value>Insérer des diapositives à partir de l'espace...</value>
+  </data>
+  <data name="InstructorRole" xml:space="preserve">
+    <value>Instructeur</value>
+  </data>
+  <data name="InstructorStartTCPServer" xml:space="preserve">
+    <value>Démarrer le derveur TCP et tenir le rôle d'instructeur</value>
+  </data>
+  <data name="InterpacketDelay" xml:space="preserve">
+    <value>Délai inter-paquets</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>Addresse IP</value>
+  </data>
+  <data name="IPAddressIs" xml:space="preserve">
+    <value>L'addresse IP de cet ordinateur est : </value>
+  </data>
+  <data name="JoinClassroom" xml:space="preserve">
+    <value>Rejoindre la classe de l'instructeur :</value>
+  </data>
+  <data name="JoinSelectedPresentation" xml:space="preserve">
+    <value>Rejoindre la présentation 
+de l'instructeur sélectionné</value>
+  </data>
+  <data name="LaunchGettingStartedGuid" xml:space="preserve">
+    <value>Consulter le Guide Getting Started...</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>Gauche</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Licence</value>
+  </data>
+  <data name="LightblueText" xml:space="preserve">
+    <value>Texte bleu clair.</value>
+  </data>
+  <data name="LightgreenText" xml:space="preserve">
+    <value>Texte vert clair.</value>
+  </data>
+  <data name="LogFilePath" xml:space="preserve">
+    <value>Emplacement du fichier journal :</value>
+  </data>
+  <data name="Logging" xml:space="preserve">
+    <value>Journalisation</value>
+  </data>
+  <data name="LoggingOptions" xml:space="preserve">
+    <value>Options de Journalisation</value>
+  </data>
+  <data name="ManualConnectionVenues" xml:space="preserve">
+    <value>Lieux de connexion manuelle</value>
+  </data>
+  <data name="MinimizeCurrentSlide" xml:space="preserve">
+    <value>"Réduire la diapositive courante pour faire de la place pour des annotations autour.</value>
+  </data>
+  <data name="MonitorSetNote" xml:space="preserve">
+    <value>NOTE: Pour utilisateurs avertis seulement. Ne modifier que si vous savez ce que vous faites.</value>
+  </data>
+  <data name="MultiCast" xml:space="preserve">
+    <value>MultiCast</value>
+  </data>
+  <data name="MultiMonitorSwitching" xml:space="preserve">
+    <value>Commutation en mode moniteur multiple</value>
+  </data>
+  <data name="Network" xml:space="preserve">
+    <value>Réseau</value>
+  </data>
+  <data name="NetworkedMode" xml:space="preserve">
+    <value>En réseau</value>
+  </data>
+  <data name="NewSlide" xml:space="preserve">
+    <value>Nouvelle diapositive</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="NonStandardMannulConnect" xml:space="preserve">
+    <value>Presenter utilise un numéro de port non standard car une autre application utilise le port normal de Presenter.  Si les étudiants ont besoin de se connecter manuellement, ils doivent préciser le numéro de port :</value>
+  </data>
+  <data name="NoSlide" xml:space="preserve">
+    <value>Pas de diapositive</value>
+  </data>
+  <data name="NotYetI plemented" xml:space="preserve">
+    <value>Pas encore implémenté!</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OneSlide" xml:space="preserve">
+    <value>1 Diapositive</value>
+  </data>
+  <data name="OnlineHelp" xml:space="preserve">
+    <value>Aide en ligne...</value>
+  </data>
+  <data name="OpenDeck" xml:space="preserve">
+    <value>Ouvrir l'espace</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options...</value>
+  </data>
+  <data name="PageSetup" xml:space="preserve">
+    <value>Mise en page...</value>
+  </data>
+  <data name="PagesPerSheet" xml:space="preserve">
+    <value>Pages par feuille</value>
+  </data>
+  <data name="Pen" xml:space="preserve">
+    <value>Stylet</value>
+  </data>
+  <data name="PenColor" xml:space="preserve">
+    <value>Couleur du stylet</value>
+  </data>
+  <data name="PenCustomColor" xml:space="preserve">
+    <value>Couleur personnalisée</value>
+  </data>
+  <data name="PenHeight" xml:space="preserve">
+    <value>Hauteur :</value>
+  </data>
+  <data name="PenRoundShape" xml:space="preserve">
+    <value>Rond</value>
+  </data>
+  <data name="PenShape" xml:space="preserve">
+    <value>Forme</value>
+  </data>
+  <data name="PenSquareShape" xml:space="preserve">
+    <value>Carré</value>
+  </data>
+  <data name="PenTip" xml:space="preserve">
+    <value>Pointe</value>
+  </data>
+  <data name="PenType" xml:space="preserve">
+    <value>Type de stylet</value>
+  </data>
+  <data name="PenWidth" xml:space="preserve">
+    <value>Largeur :</value>
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>Pourcentage</value>
+  </data>
+  <data name="PinkText" xml:space="preserve">
+    <value>Texte Rose.</value>
+  </data>
+  <data name="Poll" xml:space="preserve">
+    <value>Vote...</value>
+  </data>
+  <data name="PollType" xml:space="preserve">
+    <value>Type de vote</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="PresentationsInChosenVenue" xml:space="preserve">
+    <value>Présentations dans l'emplacement choisi</value>
+  </data>
+  <data name="PresenterStartupStepThree" xml:space="preserve">
+    <value>Etape 3: Démarrer la présentation</value>
+  </data>
+  <data name="PresenterStartupStepTwo" xml:space="preserve">
+    <value>Etape 2: Choisir une connexion réseau</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Impression...</value>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Disposition</value>
+  </data>
+  <data name="PrintPreview" xml:space="preserve">
+    <value>Aperçu avant impression</value>
+  </data>
+  <data name="PromptOnClose" xml:space="preserve">
+    <value>Confirmation à la fermeture</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Propriétés</value>
+  </data>
+  <data name="PublicDisplayRole" xml:space="preserve">
+    <value>Projection publique</value>
+  </data>
+  <data name="QuickPoll" xml:space="preserve">
+    <value>Vote instantané</value>
+  </data>
+  <data name="QuickPollBoth" xml:space="preserve">
+    <value>Les deux</value>
+  </data>
+  <data name="QuickPollNeither" xml:space="preserve">
+    <value>Aucune</value>
+  </data>
+  <data name="QuickPollNo" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="QuickPollYes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>Refaire</value>
+  </data>
+  <data name="RedoTooltipText" xml:space="preserve">
+    <value>Refaire le dernier changement annulé.</value>
+  </data>
+  <data name="RedText" xml:space="preserve">
+    <value>Texte rouge.</value>
+  </data>
+  <data name="Reenter" xml:space="preserve">
+    <value>Entrer à nouveau</value>
+  </data>
+  <data name="RestoreDefaults" xml:space="preserve">
+    <value>Remettre les valeurs par défaut</value>
+  </data>
+  <data name="RestoreSlideSize" xml:space="preserve">
+    <value>Remettre la diapositive à sa taille originale.</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Droit</value>
+  </data>
+  <data name="RTPBeaconInterval" xml:space="preserve">
+    <value>Intervalle d'annonces RTP</value>
+  </data>
+  <data name="RTPConnected" xml:space="preserve">
+    <value>RTP Connecté:</value>
+  </data>
+  <data name="SaveAllDecks" xml:space="preserve">
+    <value>Enregistrer tous les espaces</value>
+  </data>
+  <data name="SaveAllDecksAs" xml:space="preserve">
+    <value>Enregistrer tous les espaces sous...</value>
+  </data>
+  <data name="SaveDeck" xml:space="preserve">
+    <value>Enregistrer l'espace</value>
+  </data>
+  <data name="SaveDeckAs" xml:space="preserve">
+    <value>Enregistrer l'espace sous...</value>
+  </data>
+  <data name="SavingFiles" xml:space="preserve">
+    <value>Sauvegarde des fichiers en cours</value>
+  </data>
+  <data name="ScribbleArea" xml:space="preserve">
+    <value>Zone pour griffonner</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>seconde</value>
+  </data>
+  <data name="SelectBlackPen" xml:space="preserve">
+    <value>Sélectionner le Stylet noir.</value>
+  </data>
+  <data name="SelectBluePen" xml:space="preserve">
+    <value>Sélectionner le Stylet bleu.</value>
+  </data>
+  <data name="SelectCustomColorHighlighter" xml:space="preserve">
+    <value>Sélectionner le souligneur d'une couleur personnalisée.</value>
+  </data>
+  <data name="SelectCustomColorPen" xml:space="preserve">
+    <value>Sélectionner le stylet d'une couleur personnalisée.</value>
+  </data>
+  <data name="SelectCyanHighlighter" xml:space="preserve">
+    <value>Sélectionner le Souligneur cyan.</value>
+  </data>
+  <data name="SelectEraser" xml:space="preserve">
+    <value>Sélectionner l'effaceur.</value>
+  </data>
+  <data name="SelectGreenHighlighter" xml:space="preserve">
+    <value>Sélectionner le souligneur vert.</value>
+  </data>
+  <data name="SelectGreenPen" xml:space="preserve">
+    <value>Sélectionner le Stylet vert.</value>
+  </data>
+  <data name="SelectHighlighterStylus" xml:space="preserve">
+    <value>Sélectionner le mode Souligneur.</value>
+  </data>
+  <data name="SelectLightbluePen" xml:space="preserve">
+    <value>Sélectionner le Stylet bleu clair.</value>
+  </data>
+  <data name="SelectLightgreenPen" xml:space="preserve">
+    <value>Sélectionner le Stylet vert clair.</value>
+  </data>
+  <data name="SelectMagentaHighlighter" xml:space="preserve">
+    <value>Sélectionner le Souligneur magenta.</value>
+  </data>
+  <data name="SelectOrangeHighlighter" xml:space="preserve">
+    <value>Sélectionner le Souligneur Orange.</value>
+  </data>
+  <data name="SelectPenStylus" xml:space="preserve">
+    <value>Sélectionner le mode Stylet.</value>
+  </data>
+  <data name="SelectPinkPen" xml:space="preserve">
+    <value>Sélectionner le Stylet rose.</value>
+  </data>
+  <data name="SelectRedPen" xml:space="preserve">
+    <value>Sélectionner le Stylet rouge.</value>
+  </data>
+  <data name="SelectWhitePen" xml:space="preserve">
+    <value>Sélectionner le Stylet blanc.</value>
+  </data>
+  <data name="SelectYellowHighlighter" xml:space="preserve">
+    <value>Sélectionner le Souligneur Jaune.</value>
+  </data>
+  <data name="SelectYellowPen" xml:space="preserve">
+    <value>Sélectionner le Stylet jaune.</value>
+  </data>
+  <data name="ServerNameAddress" xml:space="preserve">
+    <value>Nom ou adresse du serveur :</value>
+  </data>
+  <data name="SetDeckBkgColor" xml:space="preserve">
+    <value>Fixer la couleur de fond de l'espace ...</value>
+  </data>
+  <data name="SetSlideBkgColor" xml:space="preserve">
+    <value>Fixer la couleur de fond de la diapositive ...</value>
+  </data>
+  <data name="SSDeckFilmStripWidth" xml:space="preserve">
+    <value>Largeur de la zone de déroulement pour une soumission d'étudiant</value>
+  </data>
+  <data name="StandAloneInstrStartupStepTwo" xml:space="preserve">
+    <value>Etape 2: Démarrer la présentation</value>
+  </data>
+  <data name="StandAloneMode" xml:space="preserve">
+    <value>En local</value>
+  </data>
+  <data name="StartNewPresentation" xml:space="preserve">
+    <value>Démarrer une nouvelle présentation</value>
+  </data>
+  <data name="StartQuickPoll" xml:space="preserve">
+    <value>Démarrer un vote instantané.</value>
+  </data>
+  <data name="StartupFormText" xml:space="preserve">
+    <value>Classroom Presenter 3 : Etapes de connexion</value>
+  </data>
+  <data name="StartupHelp" xml:space="preserve">
+    <value>Aide...</value>
+  </data>
+  <data name="StartupStepOne" xml:space="preserve">
+    <value>Etape 1: Choisir un rôle</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Etudiant</value>
+  </data>
+  <data name="StudentRole" xml:space="preserve">
+    <value>Etudiant</value>
+  </data>
+  <data name="StudentSubmissions" xml:space="preserve">
+    <value>Soumissions d'étudiant</value>
+  </data>
+  <data name="SwitchToNonWhiteboardDeck" xml:space="preserve">
+    <value>Commuter vers le dernier espace non tableau blanc.</value>
+  </data>
+  <data name="SwitchWhiteboardDeck" xml:space="preserve">
+    <value>Commuter vers un espace tableau blanc.</value>
+  </data>
+  <data name="TCPClientAttemptingConnect" xml:space="preserve">
+    <value>Le client TCP cherche à se connecter</value>
+  </data>
+  <data name="TCPClientConnected" xml:space="preserve">
+    <value>Le client TCP est connecté</value>
+  </data>
+  <data name="TCPServerConnected" xml:space="preserve">
+    <value>Le serveur TCP est connecté</value>
+  </data>
+  <data name="ThreeSlides" xml:space="preserve">
+    <value>3 diapositives</value>
+  </data>
+  <data name="TitleRoleInstructor" xml:space="preserve">
+    <value>Instructeur</value>
+  </data>
+  <data name="TitleRolePublic" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="TitleRoleStudent" xml:space="preserve">
+    <value>Etudiant</value>
+  </data>
+  <data name="Toolbar" xml:space="preserve">
+    <value>Barre d'outils</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Outils</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Haut</value>
+  </data>
+  <data name="ToSaveDeck" xml:space="preserve">
+    <value>Voulez-vous sauvegarder vos espaces ?</value>
+  </data>
+  <data name="TwoSlides" xml:space="preserve">
+    <value>2 Diapositives</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="UndoChanges" xml:space="preserve">
+    <value>Annuler les changements</value>
+  </data>
+  <data name="UndoTooltipText" xml:space="preserve">
+    <value>Annuler le dernier changement.</value>
+  </data>
+  <data name="Unicast" xml:space="preserve">
+    <value>Unicast</value>
+  </data>
+  <data name="UnknownConnectionStatus" xml:space="preserve">
+    <value>Etat de connexion inconnu.</value>
+  </data>
+  <data name="UntitledPresentation" xml:space="preserve">
+    <value>(Présentation sans titre)</value>
+  </data>
+  <data name="UseCustomCommands" xml:space="preserve">
+    <value>Utiliser des commandes personnalisées</value>
+  </data>
+  <data name="UseLightColorSet" xml:space="preserve">
+    <value>Utiliser l'ensemble des couleurs claires</value>
+  </data>
+  <data name="UseWindowAPIs" xml:space="preserve">
+    <value>Utiliser les APIs Windows</value>
+  </data>
+  <data name="UsingNonStandardPort" xml:space="preserve">
+    <value>Presenter utlise un port non standard</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VersionInfo" xml:space="preserve">
+    <value>Information sur la compatibilité de version ...</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Affichage</value>
+  </data>
+  <data name="ViewerStartupStepThree" xml:space="preserve">
+    <value>Etape 3: Rejoindre une présentation</value>
+  </data>
+  <data name="ViewerStartupStepTwo" xml:space="preserve">
+    <value>Etape 2: Choisir une présentation</value>
+  </data>
+  <data name="WhiteBoard" xml:space="preserve">
+    <value>Tableau blanc</value>
+  </data>
+  <data name="WhiteText" xml:space="preserve">
+    <value>Texte blanc.</value>
+  </data>
+  <data name="WidthOfPreview" xml:space="preserve">
+    <value>Largeur de l'aperçu</value>
+  </data>
+  <data name="YellowText" xml:space="preserve">
+    <value>Texte jaune.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="ZoomSlide" xml:space="preserve">
+    <value>Zoomer la diapositive</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Langage</value>
+  </data>
+  <data name="NeedRestart" xml:space="preserve">
+    <value>* démarrage nécessaire pour prise en compte</value>
+  </data>
+  <data name="QuickPollLocalVersionWarning" xml:space="preserve">
+    <value>La version distante ne supporte pas la fonctionnalité de vote instantané.</value>
+  </data>
+  <data name="QuickPollVersionWarning" xml:space="preserve">
+    <value>La version locale ne supporte pas la fonctionnalité de vote instantané.</value>
+  </data>
+  <data name="AddEditImages" xml:space="preserve">
+    <value>Ajouter/Editer des Images.</value>
+  </data>
+  <data name="Clone" xml:space="preserve">
+    <value>Cloner</value>
+  </data>
+  <data name="Extend" xml:space="preserve">
+    <value>Etendre</value>
+  </data>
+  <data name="MoreInfo" xml:space="preserve">
+    <value>Pour plus d'information, visiter </value>
+  </data>
+  <data name="SendSubmission" xml:space="preserve">
+    <value>Sending submission ...</value>
+  </data>
+  <data name="SubmissionFailed" xml:space="preserve">
+    <value>Submission failed!</value>
+  </data>
+  <data name="SubmissionReceived" xml:space="preserve">
+    <value>Submission received!</value>
+  </data>
+</root>

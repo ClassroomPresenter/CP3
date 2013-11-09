@@ -1,0 +1,4 @@
+WAIT(3000);
+INKDRAWING("Test.isf","ViewerPresentationLayout\\MainSlideViewer");
+WAIT(10000);
+

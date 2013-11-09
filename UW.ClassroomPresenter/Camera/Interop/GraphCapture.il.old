@@ -1,0 +1,1748 @@
+﻿
+//  Microsoft (R) .NET Framework IL Disassembler.  Version 3.5.20706.1
+//  Copyright (c) Microsoft Corporation.  All rights reserved.
+
+
+
+// Metadata version: v2.0.50727
+.assembly extern mscorlib
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
+  .ver 2:0:0:0
+}
+.assembly extern stdole
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 7:0:3300:0
+}
+.assembly GraphCapture
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ImportedFromTypeLibAttribute::.ctor(string) = ( 01 00 0C 47 72 61 70 68 43 61 70 74 75 72 65 00   // ...GraphCapture.
+                                                                                                                 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibVersionAttribute::.ctor(int32,
+                                                                                                int32) = ( 01 00 01 00 00 00 00 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 39 37 31 39 36 61 35 64 2D 37 64 34 38   // ..$97196a5d-7d48
+                                                                                                  2D 34 64 34 30 2D 38 37 30 33 2D 30 65 37 38 33   // -4d40-8703-0e783
+                                                                                                  61 63 34 37 34 66 61 00 00 )                      // ac474fa..
+  .hash algorithm 0x00008004
+  .ver 1:0:0:0
+}
+.module GraphCapture.dll
+// MVID: {2DD53D74-F5A8-4396-86E0-61EF4DC87646}
+.imagebase 0x00400000
+.file alignment 0x00001000
+.stackreserve 0x00100000
+.subsystem 0x0003       // WINDOWS_CUI
+.corflags 0x00000001    //  ILONLY
+// Image base: 0x03310000
+
+
+// =============== CLASS MEMBERS DECLARATION ===================
+
+.class interface public abstract auto ansi import GraphCapture.IFilterGraph
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 36 41 38 36 38 39 46 2D 30 41 44 34   // ..$56A8689F-0AD4
+                                                                                                  2D 31 31 43 45 2D 42 30 33 41 2D 30 30 32 30 41   // -11CE-B03A-0020A
+                                                                                                  46 30 42 41 37 37 30 00 00 )                      // F0BA770..
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddFilter([in] class GraphCapture.IBaseFilter  marshal( interface ) pFilter,
+                                   [in] string  marshal( lpwstr) pName) runtime managed internalcall
+  {
+  } // end of method IFilterGraph::AddFilter
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveFilter([in] class GraphCapture.IBaseFilter  marshal( interface ) pFilter) runtime managed internalcall
+  {
+  } // end of method IFilterGraph::RemoveFilter
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  EnumFilters([out] class GraphCapture.IEnumFilters&  marshal( interface ) ppEnum) runtime managed internalcall
+  {
+  } // end of method IFilterGraph::EnumFilters
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  FindFilterByName([in] string  marshal( lpwstr) pName,
+                                          [out] class GraphCapture.IBaseFilter&  marshal( interface ) ppFilter) runtime managed internalcall
+  {
+  } // end of method IFilterGraph::FindFilterByName
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ConnectDirect([in] class GraphCapture.IPin  marshal( interface ) ppinOut,
+                                       [in] class GraphCapture.IPin  marshal( interface ) ppinIn,
+                                       [in] valuetype GraphCapture._AMMediaType& pmt) runtime managed internalcall
+  {
+  } // end of method IFilterGraph::ConnectDirect
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Reconnect([in] class GraphCapture.IPin  marshal( interface ) pPin) runtime managed internalcall
+  {
+  } // end of method IFilterGraph::Reconnect
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Disconnect([in] class GraphCapture.IPin  marshal( interface ) pPin) runtime managed internalcall
+  {
+  } // end of method IFilterGraph::Disconnect
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetDefaultSyncSource() runtime managed internalcall
+  {
+  } // end of method IFilterGraph::SetDefaultSyncSource
+
+} // end of class GraphCapture.IFilterGraph
+
+.class interface public abstract auto ansi import GraphCapture.IBaseFilter
+       implements GraphCapture.IMediaFilter
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 36 41 38 36 38 39 35 2D 30 41 44 34   // ..$56A86895-0AD4
+                                                                                                  2D 31 31 43 45 2D 42 30 33 41 2D 30 30 32 30 41   // -11CE-B03A-0020A
+                                                                                                  46 30 42 41 37 37 30 00 00 )                      // F0BA770..
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetClassID([out] valuetype [mscorlib]System.Guid& pClassID) runtime managed internalcall
+  {
+  } // end of method IBaseFilter::GetClassID
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Stop() runtime managed internalcall
+  {
+  } // end of method IBaseFilter::Stop
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Pause() runtime managed internalcall
+  {
+  } // end of method IBaseFilter::Pause
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Run(int64 tStart) runtime managed internalcall
+  {
+  } // end of method IBaseFilter::Run
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetState([in] uint32 dwMilliSecsTimeout,
+                                  [out] valuetype GraphCapture._FilterState& State) runtime managed internalcall
+  {
+  } // end of method IBaseFilter::GetState
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetSyncSource([in] class GraphCapture.IReferenceClock  marshal( interface ) pClock) runtime managed internalcall
+  {
+  } // end of method IBaseFilter::SetSyncSource
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetSyncSource([out] class GraphCapture.IReferenceClock&  marshal( interface ) pClock) runtime managed internalcall
+  {
+  } // end of method IBaseFilter::GetSyncSource
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  EnumPins([out] class GraphCapture.IEnumPins&  marshal( interface ) ppEnum) runtime managed internalcall
+  {
+  } // end of method IBaseFilter::EnumPins
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  FindPin([in] string  marshal( lpwstr) Id,
+                                 [out] class GraphCapture.IPin&  marshal( interface ) ppPin) runtime managed internalcall
+  {
+  } // end of method IBaseFilter::FindPin
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  QueryFilterInfo([out] valuetype GraphCapture._FilterInfo& pInfo) runtime managed internalcall
+  {
+  } // end of method IBaseFilter::QueryFilterInfo
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  JoinFilterGraph([in] class GraphCapture.IFilterGraph  marshal( interface ) pGraph,
+                                         [in] string  marshal( lpwstr) pName) runtime managed internalcall
+  {
+  } // end of method IBaseFilter::JoinFilterGraph
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  QueryVendorInfo([out] string&  marshal( lpwstr) pVendorInfo) runtime managed internalcall
+  {
+  } // end of method IBaseFilter::QueryVendorInfo
+
+} // end of class GraphCapture.IBaseFilter
+
+.class interface public abstract auto ansi import GraphCapture.IMediaFilter
+       implements GraphCapture.IPersist
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 36 41 38 36 38 39 39 2D 30 41 44 34   // ..$56A86899-0AD4
+                                                                                                  2D 31 31 43 45 2D 42 30 33 41 2D 30 30 32 30 41   // -11CE-B03A-0020A
+                                                                                                  46 30 42 41 37 37 30 00 00 )                      // F0BA770..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetClassID([out] valuetype [mscorlib]System.Guid& pClassID) runtime managed internalcall
+  {
+  } // end of method IMediaFilter::GetClassID
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Stop() runtime managed internalcall
+  {
+  } // end of method IMediaFilter::Stop
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Pause() runtime managed internalcall
+  {
+  } // end of method IMediaFilter::Pause
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Run(int64 tStart) runtime managed internalcall
+  {
+  } // end of method IMediaFilter::Run
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetState([in] uint32 dwMilliSecsTimeout,
+                                  [out] valuetype GraphCapture._FilterState& State) runtime managed internalcall
+  {
+  } // end of method IMediaFilter::GetState
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetSyncSource([in] class GraphCapture.IReferenceClock  marshal( interface ) pClock) runtime managed internalcall
+  {
+  } // end of method IMediaFilter::SetSyncSource
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetSyncSource([out] class GraphCapture.IReferenceClock&  marshal( interface ) pClock) runtime managed internalcall
+  {
+  } // end of method IMediaFilter::GetSyncSource
+
+} // end of class GraphCapture.IMediaFilter
+
+.class interface public abstract auto ansi import GraphCapture.IPersist
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 30 30 30 30 31 30 43 2D 30 30 30 30   // ..$0000010C-0000
+                                                                                                  2D 30 30 30 30 2D 43 30 30 30 2D 30 30 30 30 30   // -0000-C000-00000
+                                                                                                  30 30 30 30 30 34 36 00 00 )                      // 0000046..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetClassID([out] valuetype [mscorlib]System.Guid& pClassID) runtime managed internalcall
+  {
+  } // end of method IPersist::GetClassID
+
+} // end of class GraphCapture.IPersist
+
+.class public auto ansi sealed GraphCapture._FilterState
+       extends [mscorlib]System.Enum
+{
+  .field public specialname rtspecialname int32 value__
+  .field public static literal valuetype GraphCapture._FilterState State_Stopped = int32(0x00000000)
+  .field public static literal valuetype GraphCapture._FilterState State_Paused = int32(0x00000001)
+  .field public static literal valuetype GraphCapture._FilterState State_Running = int32(0x00000002)
+} // end of class GraphCapture._FilterState
+
+.class interface public abstract auto ansi import GraphCapture.IReferenceClock
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 36 41 38 36 38 39 37 2D 30 41 44 34   // ..$56A86897-0AD4
+                                                                                                  2D 31 31 43 45 2D 42 30 33 41 2D 30 30 32 30 41   // -11CE-B03A-0020A
+                                                                                                  46 30 42 41 37 37 30 00 00 )                      // F0BA770..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetTime([out] int64& pTime) runtime managed internalcall
+  {
+  } // end of method IReferenceClock::GetTime
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AdviseTime([in] int64 baseTime,
+                                    [in] int64 streamTime,
+                                    [in] uint32 hEvent,
+                                    [out] uint32& pdwAdviseCookie) runtime managed internalcall
+  {
+    .param [3]
+    .custom instance void [mscorlib]System.Runtime.InteropServices.ComAliasNameAttribute::.ctor(string) = ( 01 00 16 47 72 61 70 68 43 61 70 74 75 72 65 2E   // ...GraphCapture.
+                                                                                                            55 4C 4F 4E 47 5F 50 54 52 00 00 )                // ULONG_PTR..
+    .param [4]
+    .custom instance void [mscorlib]System.Runtime.InteropServices.ComAliasNameAttribute::.ctor(string) = ( 01 00 16 47 72 61 70 68 43 61 70 74 75 72 65 2E   // ...GraphCapture.
+                                                                                                            55 4C 4F 4E 47 5F 50 54 52 00 00 )                // ULONG_PTR..
+  } // end of method IReferenceClock::AdviseTime
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AdvisePeriodic([in] int64 startTime,
+                                        [in] int64 periodTime,
+                                        [in] uint32 hSemaphore,
+                                        [out] uint32& pdwAdviseCookie) runtime managed internalcall
+  {
+    .param [3]
+    .custom instance void [mscorlib]System.Runtime.InteropServices.ComAliasNameAttribute::.ctor(string) = ( 01 00 16 47 72 61 70 68 43 61 70 74 75 72 65 2E   // ...GraphCapture.
+                                                                                                            55 4C 4F 4E 47 5F 50 54 52 00 00 )                // ULONG_PTR..
+    .param [4]
+    .custom instance void [mscorlib]System.Runtime.InteropServices.ComAliasNameAttribute::.ctor(string) = ( 01 00 16 47 72 61 70 68 43 61 70 74 75 72 65 2E   // ...GraphCapture.
+                                                                                                            55 4C 4F 4E 47 5F 50 54 52 00 00 )                // ULONG_PTR..
+  } // end of method IReferenceClock::AdvisePeriodic
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Unadvise([in] uint32 dwAdviseCookie) runtime managed internalcall
+  {
+    .param [1]
+    .custom instance void [mscorlib]System.Runtime.InteropServices.ComAliasNameAttribute::.ctor(string) = ( 01 00 16 47 72 61 70 68 43 61 70 74 75 72 65 2E   // ...GraphCapture.
+                                                                                                            55 4C 4F 4E 47 5F 50 54 52 00 00 )                // ULONG_PTR..
+  } // end of method IReferenceClock::Unadvise
+
+} // end of class GraphCapture.IReferenceClock
+
+.class interface public abstract auto ansi import GraphCapture.IEnumPins
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 36 41 38 36 38 39 32 2D 30 41 44 34   // ..$56A86892-0AD4
+                                                                                                  2D 31 31 43 45 2D 42 30 33 41 2D 30 30 32 30 41   // -11CE-B03A-0020A
+                                                                                                  46 30 42 41 37 37 30 00 00 )                      // F0BA770..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  Next([in] uint32 cPins,
+                              [out] class GraphCapture.IPin&  marshal( interface ) ppPins,
+                              [out] uint32& pcFetched) runtime managed internalcall
+  {
+  } // end of method IEnumPins::Next
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Skip([in] uint32 cPins) runtime managed internalcall
+  {
+  } // end of method IEnumPins::Skip
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Reset() runtime managed internalcall
+  {
+  } // end of method IEnumPins::Reset
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Clone([out] class GraphCapture.IEnumPins&  marshal( interface ) ppEnum) runtime managed internalcall
+  {
+  } // end of method IEnumPins::Clone
+
+} // end of class GraphCapture.IEnumPins
+
+.class interface public abstract auto ansi import GraphCapture.IPin
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 36 41 38 36 38 39 31 2D 30 41 44 34   // ..$56A86891-0AD4
+                                                                                                  2D 31 31 43 45 2D 42 30 33 41 2D 30 30 32 30 41   // -11CE-B03A-0020A
+                                                                                                  46 30 42 41 37 37 30 00 00 )                      // F0BA770..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  Connect([in] class GraphCapture.IPin  marshal( interface ) pReceivePin,
+                                 [in] valuetype GraphCapture._AMMediaType& pmt) runtime managed internalcall
+  {
+  } // end of method IPin::Connect
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ReceiveConnection([in] class GraphCapture.IPin  marshal( interface ) pConnector,
+                                           [in] valuetype GraphCapture._AMMediaType& pmt) runtime managed internalcall
+  {
+  } // end of method IPin::ReceiveConnection
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Disconnect() runtime managed internalcall
+  {
+  } // end of method IPin::Disconnect
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ConnectedTo([out] class GraphCapture.IPin&  marshal( interface ) pPin) runtime managed internalcall
+  {
+  } // end of method IPin::ConnectedTo
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ConnectionMediaType([out] valuetype GraphCapture._AMMediaType& pmt) runtime managed internalcall
+  {
+  } // end of method IPin::ConnectionMediaType
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  QueryPinInfo([out] valuetype GraphCapture._PinInfo& pInfo) runtime managed internalcall
+  {
+  } // end of method IPin::QueryPinInfo
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  QueryDirection([out] valuetype GraphCapture._PinDirection& pPinDir) runtime managed internalcall
+  {
+  } // end of method IPin::QueryDirection
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  QueryId([out] string&  marshal( lpwstr) Id) runtime managed internalcall
+  {
+  } // end of method IPin::QueryId
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  QueryAccept([in] valuetype GraphCapture._AMMediaType& pmt) runtime managed internalcall
+  {
+  } // end of method IPin::QueryAccept
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  EnumMediaTypes([out] class GraphCapture.IEnumMediaTypes&  marshal( interface ) ppEnum) runtime managed internalcall
+  {
+  } // end of method IPin::EnumMediaTypes
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  QueryInternalConnections([out] class GraphCapture.IPin&  marshal( interface ) apPin,
+                                                  [in][out] uint32& nPin) runtime managed internalcall
+  {
+  } // end of method IPin::QueryInternalConnections
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  EndOfStream() runtime managed internalcall
+  {
+  } // end of method IPin::EndOfStream
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  BeginFlush() runtime managed internalcall
+  {
+  } // end of method IPin::BeginFlush
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  EndFlush() runtime managed internalcall
+  {
+  } // end of method IPin::EndFlush
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  NewSegment([in] int64 tStart,
+                                    [in] int64 tStop,
+                                    [in] float64 dRate) runtime managed internalcall
+  {
+  } // end of method IPin::NewSegment
+
+} // end of class GraphCapture.IPin
+
+.class public sequential ansi sealed beforefieldinit GraphCapture._AMMediaType
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field public valuetype [mscorlib]System.Guid majortype
+  .field public valuetype [mscorlib]System.Guid subtype
+  .field public int32 bFixedSizeSamples
+  .field public int32 bTemporalCompression
+  .field public uint32 lSampleSize
+  .field public valuetype [mscorlib]System.Guid formattype
+  .field public  marshal( iunknown ) object pUnk
+  .field public uint32 cbFormat
+  .field public native int pbFormat
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+} // end of class GraphCapture._AMMediaType
+
+.class public sequential ansi sealed beforefieldinit GraphCapture._PinInfo
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .field public  marshal( interface ) class GraphCapture.IBaseFilter pFilter
+  .field public valuetype GraphCapture._PinDirection dir
+  .field public  marshal( fixed array [128]) uint16[] achName
+} // end of class GraphCapture._PinInfo
+
+.class public auto ansi sealed GraphCapture._PinDirection
+       extends [mscorlib]System.Enum
+{
+  .field public specialname rtspecialname int32 value__
+  .field public static literal valuetype GraphCapture._PinDirection PINDIR_INPUT = int32(0x00000000)
+  .field public static literal valuetype GraphCapture._PinDirection PINDIR_OUTPUT = int32(0x00000001)
+} // end of class GraphCapture._PinDirection
+
+.class interface public abstract auto ansi import GraphCapture.IEnumMediaTypes
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 38 39 43 33 31 30 34 30 2D 38 34 36 42   // ..$89C31040-846B
+                                                                                                  2D 31 31 43 45 2D 39 37 44 33 2D 30 30 41 41 30   // -11CE-97D3-00AA0
+                                                                                                  30 35 35 35 39 35 41 00 00 )                      // 055595A..
+  .method public hidebysig newslot abstract virtual 
+          instance void  Next([in] uint32 cMediaTypes,
+                              [out] native int ppMediaTypes,
+                              [out] uint32& pcFetched) runtime managed internalcall
+  {
+  } // end of method IEnumMediaTypes::Next
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Skip([in] uint32 cMediaTypes) runtime managed internalcall
+  {
+  } // end of method IEnumMediaTypes::Skip
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Reset() runtime managed internalcall
+  {
+  } // end of method IEnumMediaTypes::Reset
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Clone([out] class GraphCapture.IEnumMediaTypes&  marshal( interface ) ppEnum) runtime managed internalcall
+  {
+  } // end of method IEnumMediaTypes::Clone
+
+} // end of class GraphCapture.IEnumMediaTypes
+
+.class public sequential ansi sealed beforefieldinit GraphCapture._FilterInfo
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .field public  marshal( fixed array [128]) uint16[] achName
+  .field public  marshal( interface ) class GraphCapture.IFilterGraph pGraph
+} // end of class GraphCapture._FilterInfo
+
+.class interface public abstract auto ansi import GraphCapture.IEnumFilters
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 36 41 38 36 38 39 33 2D 30 41 44 34   // ..$56A86893-0AD4
+                                                                                                  2D 31 31 43 45 2D 42 30 33 41 2D 30 30 32 30 41   // -11CE-B03A-0020A
+                                                                                                  46 30 42 41 37 37 30 00 00 )                      // F0BA770..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  Next([in] uint32 cFilters,
+                              [out] class GraphCapture.IBaseFilter&  marshal( interface ) ppFilter,
+                              [out] uint32& pcFetched) runtime managed internalcall
+  {
+  } // end of method IEnumFilters::Next
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Skip([in] uint32 cFilters) runtime managed internalcall
+  {
+  } // end of method IEnumFilters::Skip
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Reset() runtime managed internalcall
+  {
+  } // end of method IEnumFilters::Reset
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Clone([out] class GraphCapture.IEnumFilters&  marshal( interface ) ppEnum) runtime managed internalcall
+  {
+  } // end of method IEnumFilters::Clone
+
+} // end of class GraphCapture.IEnumFilters
+
+.class interface public abstract auto ansi import GraphCapture.IGraphBuilder
+       implements GraphCapture.IFilterGraph
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 36 41 38 36 38 41 39 2D 30 41 44 34   // ..$56A868A9-0AD4
+                                                                                                  2D 31 31 43 45 2D 42 30 33 41 2D 30 30 32 30 41   // -11CE-B03A-0020A
+                                                                                                  46 30 42 41 37 37 30 00 00 )                      // F0BA770..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddFilter([in] class GraphCapture.IBaseFilter  marshal( interface ) pFilter,
+                                   [in] string  marshal( lpwstr) pName) runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::AddFilter
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveFilter([in] class GraphCapture.IBaseFilter  marshal( interface ) pFilter) runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::RemoveFilter
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  EnumFilters([out] class GraphCapture.IEnumFilters&  marshal( interface ) ppEnum) runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::EnumFilters
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  FindFilterByName([in] string  marshal( lpwstr) pName,
+                                          [out] class GraphCapture.IBaseFilter&  marshal( interface ) ppFilter) runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::FindFilterByName
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ConnectDirect([in] class GraphCapture.IPin  marshal( interface ) ppinOut,
+                                       [in] class GraphCapture.IPin  marshal( interface ) ppinIn,
+                                       [in] valuetype GraphCapture._AMMediaType& pmt) runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::ConnectDirect
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Reconnect([in] class GraphCapture.IPin  marshal( interface ) pPin) runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::Reconnect
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Disconnect([in] class GraphCapture.IPin  marshal( interface ) pPin) runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::Disconnect
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetDefaultSyncSource() runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::SetDefaultSyncSource
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Connect([in] class GraphCapture.IPin  marshal( interface ) ppinOut,
+                                 [in] class GraphCapture.IPin  marshal( interface ) ppinIn) runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::Connect
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Render([in] class GraphCapture.IPin  marshal( interface ) ppinOut) runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::Render
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RenderFile([in] string  marshal( lpwstr) lpcwstrFile,
+                                    [in] string  marshal( lpwstr) lpcwstrPlayList) runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::RenderFile
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddSourceFilter([in] string  marshal( lpwstr) lpcwstrFileName,
+                                         [in] string  marshal( lpwstr) lpcwstrFilterName,
+                                         [out] class GraphCapture.IBaseFilter&  marshal( interface ) ppFilter) runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::AddSourceFilter
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetLogFile([in] uint32 hFile) runtime managed internalcall
+  {
+    .param [1]
+    .custom instance void [mscorlib]System.Runtime.InteropServices.ComAliasNameAttribute::.ctor(string) = ( 01 00 16 47 72 61 70 68 43 61 70 74 75 72 65 2E   // ...GraphCapture.
+                                                                                                            55 4C 4F 4E 47 5F 50 54 52 00 00 )                // ULONG_PTR..
+  } // end of method IGraphBuilder::SetLogFile
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Abort() runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::Abort
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ShouldOperationContinue() runtime managed internalcall
+  {
+  } // end of method IGraphBuilder::ShouldOperationContinue
+
+} // end of class GraphCapture.IGraphBuilder
+
+.class interface public abstract auto ansi import GraphCapture.IMediaSeeking
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 36 42 37 33 38 38 30 2D 43 32 43 38   // ..$36B73880-C2C8
+                                                                                                  2D 31 31 43 46 2D 38 42 34 36 2D 30 30 38 30 35   // -11CF-8B46-00805
+                                                                                                  46 36 43 45 46 36 30 00 00 )                      // F6CEF60..
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetCapabilities([out] uint32& pCapabilities) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::GetCapabilities
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  CheckCapabilities([in][out] uint32& pCapabilities) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::CheckCapabilities
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  IsFormatSupported([in] valuetype [mscorlib]System.Guid& pFormat) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::IsFormatSupported
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  QueryPreferredFormat([out] valuetype [mscorlib]System.Guid& pFormat) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::QueryPreferredFormat
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetTimeFormat([out] valuetype [mscorlib]System.Guid& pFormat) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::GetTimeFormat
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  IsUsingTimeFormat([in] valuetype [mscorlib]System.Guid& pFormat) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::IsUsingTimeFormat
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetTimeFormat([in] valuetype [mscorlib]System.Guid& pFormat) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::SetTimeFormat
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetDuration([out] int64& pDuration) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::GetDuration
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetStopPosition([out] int64& pStop) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::GetStopPosition
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetCurrentPosition([out] int64& pCurrent) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::GetCurrentPosition
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ConvertTimeFormat([out] int64& pTarget,
+                                           [in] valuetype [mscorlib]System.Guid& pTargetFormat,
+                                           [in] int64 Source,
+                                           [in] valuetype [mscorlib]System.Guid& pSourceFormat) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::ConvertTimeFormat
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetPositions([in][out] int64& pCurrent,
+                                      [in] uint32 dwCurrentFlags,
+                                      [in][out] int64& pStop,
+                                      [in] uint32 dwStopFlags) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::SetPositions
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetPositions([out] int64& pCurrent,
+                                      [out] int64& pStop) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::GetPositions
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetAvailable([out] int64& pEarliest,
+                                      [out] int64& pLatest) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::GetAvailable
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetRate([in] float64 dRate) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::SetRate
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetRate([out] float64& pdRate) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::GetRate
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetPreroll([out] int64& pllPreroll) runtime managed internalcall
+  {
+  } // end of method IMediaSeeking::GetPreroll
+
+} // end of class GraphCapture.IMediaSeeking
+
+.class interface public abstract auto ansi import GraphCapture.ICreateDevEnum
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 32 39 38 34 30 38 32 32 2D 35 42 38 34   // ..$29840822-5B84
+                                                                                                  2D 31 31 44 30 2D 42 44 33 42 2D 30 30 41 30 43   // -11D0-BD3B-00A0C
+                                                                                                  39 31 31 43 45 38 36 00 00 )                      // 911CE86..
+  .method public hidebysig newslot abstract virtual 
+          instance void  CreateClassEnumerator([in] valuetype [mscorlib]System.Guid& clsidDeviceClass,
+                                               [out] class GraphCapture.IEnumMoniker&  marshal( interface ) ppenumMoniker,
+                                               [in] uint32 dwFlags) runtime managed internalcall
+  {
+  } // end of method ICreateDevEnum::CreateClassEnumerator
+
+} // end of class GraphCapture.ICreateDevEnum
+
+.class interface public abstract auto ansi import GraphCapture.IEnumMoniker
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 30 30 30 30 31 30 32 2D 30 30 30 30   // ..$00000102-0000
+                                                                                                  2D 30 30 30 30 2D 43 30 30 30 2D 30 30 30 30 30   // -0000-C000-00000
+                                                                                                  30 30 30 30 30 34 36 00 00 )                      // 0000046..
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteNext([in] uint32 celt,
+                                    [out] class GraphCapture.IMoniker&  marshal( interface ) rgelt,
+                                    [out] uint32& pceltFetched) runtime managed internalcall
+  {
+  } // end of method IEnumMoniker::RemoteNext
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Skip([in] uint32 celt) runtime managed internalcall
+  {
+  } // end of method IEnumMoniker::Skip
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Reset() runtime managed internalcall
+  {
+  } // end of method IEnumMoniker::Reset
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Clone([out] class GraphCapture.IEnumMoniker&  marshal( interface ) ppEnum) runtime managed internalcall
+  {
+  } // end of method IEnumMoniker::Clone
+
+} // end of class GraphCapture.IEnumMoniker
+
+.class interface public abstract auto ansi import GraphCapture.IMoniker
+       implements GraphCapture.IPersistStream
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 30 30 30 30 30 30 46 2D 30 30 30 30   // ..$0000000F-0000
+                                                                                                  2D 30 30 30 30 2D 43 30 30 30 2D 30 30 30 30 30   // -0000-C000-00000
+                                                                                                  30 30 30 30 30 34 36 00 00 )                      // 0000046..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetClassID([out] valuetype [mscorlib]System.Guid& pClassID) runtime managed internalcall
+  {
+  } // end of method IMoniker::GetClassID
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  IsDirty() runtime managed internalcall
+  {
+  } // end of method IMoniker::IsDirty
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Load([in] class GraphCapture.IStream  marshal( interface ) pstm) runtime managed internalcall
+  {
+  } // end of method IMoniker::Load
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Save([in] class GraphCapture.IStream  marshal( interface ) pstm,
+                              [in] int32 fClearDirty) runtime managed internalcall
+  {
+  } // end of method IMoniker::Save
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetSizeMax([out] valuetype GraphCapture._ULARGE_INTEGER& pcbSize) runtime managed internalcall
+  {
+  } // end of method IMoniker::GetSizeMax
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteBindToObject([in] class GraphCapture.IBindCtx  marshal( interface ) pbc,
+                                            [in] class GraphCapture.IMoniker  marshal( interface ) pmkToLeft,
+                                            [in] valuetype [mscorlib]System.Guid& riidResult,
+                                            [out] object&  marshal( iunknown ) ppvResult) runtime managed internalcall
+  {
+  } // end of method IMoniker::RemoteBindToObject
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteBindToStorage([in] class GraphCapture.IBindCtx  marshal( interface ) pbc,
+                                             [in] class GraphCapture.IMoniker  marshal( interface ) pmkToLeft,
+                                             [in] valuetype [mscorlib]System.Guid& riid,
+                                             [out] object&  marshal( iunknown ) ppvObj) runtime managed internalcall
+  {
+  } // end of method IMoniker::RemoteBindToStorage
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Reduce([in] class GraphCapture.IBindCtx  marshal( interface ) pbc,
+                                [in] uint32 dwReduceHowFar,
+                                [in][out] class GraphCapture.IMoniker&  marshal( interface ) ppmkToLeft,
+                                [out] class GraphCapture.IMoniker&  marshal( interface ) ppmkReduced) runtime managed internalcall
+  {
+  } // end of method IMoniker::Reduce
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ComposeWith([in] class GraphCapture.IMoniker  marshal( interface ) pmkRight,
+                                     [in] int32 fOnlyIfNotGeneric,
+                                     [out] class GraphCapture.IMoniker&  marshal( interface ) ppmkComposite) runtime managed internalcall
+  {
+  } // end of method IMoniker::ComposeWith
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Enum([in] int32 fForward,
+                              [out] class GraphCapture.IEnumMoniker&  marshal( interface ) ppenumMoniker) runtime managed internalcall
+  {
+  } // end of method IMoniker::Enum
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  IsEqual([in] class GraphCapture.IMoniker  marshal( interface ) pmkOtherMoniker) runtime managed internalcall
+  {
+  } // end of method IMoniker::IsEqual
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Hash([out] uint32& pdwHash) runtime managed internalcall
+  {
+  } // end of method IMoniker::Hash
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  IsRunning([in] class GraphCapture.IBindCtx  marshal( interface ) pbc,
+                                   [in] class GraphCapture.IMoniker  marshal( interface ) pmkToLeft,
+                                   [in] class GraphCapture.IMoniker  marshal( interface ) pmkNewlyRunning) runtime managed internalcall
+  {
+  } // end of method IMoniker::IsRunning
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetTimeOfLastChange([in] class GraphCapture.IBindCtx  marshal( interface ) pbc,
+                                             [in] class GraphCapture.IMoniker  marshal( interface ) pmkToLeft,
+                                             [out] valuetype GraphCapture._FILETIME& pfiletime) runtime managed internalcall
+  {
+  } // end of method IMoniker::GetTimeOfLastChange
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Inverse([out] class GraphCapture.IMoniker&  marshal( interface ) ppmk) runtime managed internalcall
+  {
+  } // end of method IMoniker::Inverse
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  CommonPrefixWith([in] class GraphCapture.IMoniker  marshal( interface ) pmkOther,
+                                          [out] class GraphCapture.IMoniker&  marshal( interface ) ppmkPrefix) runtime managed internalcall
+  {
+  } // end of method IMoniker::CommonPrefixWith
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RelativePathTo([in] class GraphCapture.IMoniker  marshal( interface ) pmkOther,
+                                        [out] class GraphCapture.IMoniker&  marshal( interface ) ppmkRelPath) runtime managed internalcall
+  {
+  } // end of method IMoniker::RelativePathTo
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetDisplayName([in] class GraphCapture.IBindCtx  marshal( interface ) pbc,
+                                        [in] class GraphCapture.IMoniker  marshal( interface ) pmkToLeft,
+                                        [out] string&  marshal( lpwstr) ppszDisplayName) runtime managed internalcall
+  {
+  } // end of method IMoniker::GetDisplayName
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ParseDisplayName([in] class GraphCapture.IBindCtx  marshal( interface ) pbc,
+                                          [in] class GraphCapture.IMoniker  marshal( interface ) pmkToLeft,
+                                          [in] string  marshal( lpwstr) pszDisplayName,
+                                          [out] uint32& pchEaten,
+                                          [out] class GraphCapture.IMoniker&  marshal( interface ) ppmkOut) runtime managed internalcall
+  {
+  } // end of method IMoniker::ParseDisplayName
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  IsSystemMoniker([out] uint32& pdwMksys) runtime managed internalcall
+  {
+  } // end of method IMoniker::IsSystemMoniker
+
+} // end of class GraphCapture.IMoniker
+
+.class interface public abstract auto ansi import GraphCapture.IPersistStream
+       implements GraphCapture.IPersist
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 30 30 30 30 31 30 39 2D 30 30 30 30   // ..$00000109-0000
+                                                                                                  2D 30 30 30 30 2D 43 30 30 30 2D 30 30 30 30 30   // -0000-C000-00000
+                                                                                                  30 30 30 30 30 34 36 00 00 )                      // 0000046..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetClassID([out] valuetype [mscorlib]System.Guid& pClassID) runtime managed internalcall
+  {
+  } // end of method IPersistStream::GetClassID
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  IsDirty() runtime managed internalcall
+  {
+  } // end of method IPersistStream::IsDirty
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Load([in] class GraphCapture.IStream  marshal( interface ) pstm) runtime managed internalcall
+  {
+  } // end of method IPersistStream::Load
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Save([in] class GraphCapture.IStream  marshal( interface ) pstm,
+                              [in] int32 fClearDirty) runtime managed internalcall
+  {
+  } // end of method IPersistStream::Save
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetSizeMax([out] valuetype GraphCapture._ULARGE_INTEGER& pcbSize) runtime managed internalcall
+  {
+  } // end of method IPersistStream::GetSizeMax
+
+} // end of class GraphCapture.IPersistStream
+
+.class interface public abstract auto ansi import GraphCapture.IStream
+       implements GraphCapture.ISequentialStream
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 30 30 30 30 30 30 43 2D 30 30 30 30   // ..$0000000C-0000
+                                                                                                  2D 30 30 30 30 2D 43 30 30 30 2D 30 30 30 30 30   // -0000-C000-00000
+                                                                                                  30 30 30 30 30 34 36 00 00 )                      // 0000046..
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteRead([out] uint8& pv,
+                                    [in] uint32 cb,
+                                    [out] uint32& pcbRead) runtime managed internalcall
+  {
+  } // end of method IStream::RemoteRead
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteWrite([in] uint8& pv,
+                                     [in] uint32 cb,
+                                     [out] uint32& pcbWritten) runtime managed internalcall
+  {
+  } // end of method IStream::RemoteWrite
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteSeek([in] valuetype GraphCapture._LARGE_INTEGER dlibMove,
+                                    [in] uint32 dwOrigin,
+                                    [out] valuetype GraphCapture._ULARGE_INTEGER& plibNewPosition) runtime managed internalcall
+  {
+  } // end of method IStream::RemoteSeek
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetSize([in] valuetype GraphCapture._ULARGE_INTEGER libNewSize) runtime managed internalcall
+  {
+  } // end of method IStream::SetSize
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteCopyTo([in] class GraphCapture.IStream  marshal( interface ) pstm,
+                                      [in] valuetype GraphCapture._ULARGE_INTEGER cb,
+                                      [out] valuetype GraphCapture._ULARGE_INTEGER& pcbRead,
+                                      [out] valuetype GraphCapture._ULARGE_INTEGER& pcbWritten) runtime managed internalcall
+  {
+  } // end of method IStream::RemoteCopyTo
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Commit([in] uint32 grfCommitFlags) runtime managed internalcall
+  {
+  } // end of method IStream::Commit
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Revert() runtime managed internalcall
+  {
+  } // end of method IStream::Revert
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  LockRegion([in] valuetype GraphCapture._ULARGE_INTEGER libOffset,
+                                    [in] valuetype GraphCapture._ULARGE_INTEGER cb,
+                                    [in] uint32 dwLockType) runtime managed internalcall
+  {
+  } // end of method IStream::LockRegion
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  UnlockRegion([in] valuetype GraphCapture._ULARGE_INTEGER libOffset,
+                                      [in] valuetype GraphCapture._ULARGE_INTEGER cb,
+                                      [in] uint32 dwLockType) runtime managed internalcall
+  {
+  } // end of method IStream::UnlockRegion
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Stat([out] valuetype GraphCapture.tagSTATSTG& pstatstg,
+                              [in] uint32 grfStatFlag) runtime managed internalcall
+  {
+  } // end of method IStream::Stat
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Clone([out] class GraphCapture.IStream&  marshal( interface ) ppstm) runtime managed internalcall
+  {
+  } // end of method IStream::Clone
+
+} // end of class GraphCapture.IStream
+
+.class interface public abstract auto ansi import GraphCapture.ISequentialStream
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 43 37 33 33 41 33 30 2D 32 41 31 43   // ..$0C733A30-2A1C
+                                                                                                  2D 31 31 43 45 2D 41 44 45 35 2D 30 30 41 41 30   // -11CE-ADE5-00AA0
+                                                                                                  30 34 34 37 37 33 44 00 00 )                      // 044773D..
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteRead([out] uint8& pv,
+                                    [in] uint32 cb,
+                                    [out] uint32& pcbRead) runtime managed internalcall
+  {
+  } // end of method ISequentialStream::RemoteRead
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteWrite([in] uint8& pv,
+                                     [in] uint32 cb,
+                                     [out] uint32& pcbWritten) runtime managed internalcall
+  {
+  } // end of method ISequentialStream::RemoteWrite
+
+} // end of class GraphCapture.ISequentialStream
+
+.class public sequential ansi sealed beforefieldinit GraphCapture._LARGE_INTEGER
+       extends [mscorlib]System.ValueType
+{
+  .pack 8
+  .size 0
+  .field public int64 QuadPart
+} // end of class GraphCapture._LARGE_INTEGER
+
+.class public sequential ansi sealed beforefieldinit GraphCapture._ULARGE_INTEGER
+       extends [mscorlib]System.ValueType
+{
+  .pack 8
+  .size 0
+  .field public uint64 QuadPart
+} // end of class GraphCapture._ULARGE_INTEGER
+
+.class public sequential ansi sealed beforefieldinit GraphCapture.tagSTATSTG
+       extends [mscorlib]System.ValueType
+{
+  .pack 8
+  .size 0
+  .field public  marshal( lpwstr) string pwcsName
+  .field public uint32 'type'
+  .field public valuetype GraphCapture._ULARGE_INTEGER cbSize
+  .field public valuetype GraphCapture._FILETIME mtime
+  .field public valuetype GraphCapture._FILETIME ctime
+  .field public valuetype GraphCapture._FILETIME atime
+  .field public uint32 grfMode
+  .field public uint32 grfLocksSupported
+  .field public valuetype [mscorlib]System.Guid 'clsid'
+  .field public uint32 grfStateBits
+  .field public uint32 reserved
+} // end of class GraphCapture.tagSTATSTG
+
+.class public sequential ansi sealed beforefieldinit GraphCapture._FILETIME
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .field public uint32 dwLowDateTime
+  .field public uint32 dwHighDateTime
+} // end of class GraphCapture._FILETIME
+
+.class interface public abstract auto ansi import GraphCapture.IBindCtx
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 30 30 30 30 30 30 45 2D 30 30 30 30   // ..$0000000E-0000
+                                                                                                  2D 30 30 30 30 2D 43 30 30 30 2D 30 30 30 30 30   // -0000-C000-00000
+                                                                                                  30 30 30 30 30 34 36 00 00 )                      // 0000046..
+  .method public hidebysig newslot abstract virtual 
+          instance void  RegisterObjectBound([in] object  marshal( iunknown ) pUnk) runtime managed internalcall
+  {
+  } // end of method IBindCtx::RegisterObjectBound
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RevokeObjectBound([in] object  marshal( iunknown ) pUnk) runtime managed internalcall
+  {
+  } // end of method IBindCtx::RevokeObjectBound
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ReleaseBoundObjects() runtime managed internalcall
+  {
+  } // end of method IBindCtx::ReleaseBoundObjects
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteSetBindOptions([in] valuetype GraphCapture.tagBIND_OPTS2& pbindopts) runtime managed internalcall
+  {
+  } // end of method IBindCtx::RemoteSetBindOptions
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteGetBindOptions([in][out] valuetype GraphCapture.tagBIND_OPTS2& pbindopts) runtime managed internalcall
+  {
+  } // end of method IBindCtx::RemoteGetBindOptions
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetRunningObjectTable([out] class GraphCapture.IRunningObjectTable&  marshal( interface ) pprot) runtime managed internalcall
+  {
+  } // end of method IBindCtx::GetRunningObjectTable
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RegisterObjectParam([in] string  marshal( lpwstr) pszKey,
+                                             [in] object  marshal( iunknown ) pUnk) runtime managed internalcall
+  {
+  } // end of method IBindCtx::RegisterObjectParam
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetObjectParam([in] string  marshal( lpwstr) pszKey,
+                                        [out] object&  marshal( iunknown ) ppunk) runtime managed internalcall
+  {
+  } // end of method IBindCtx::GetObjectParam
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  EnumObjectParam([out] class GraphCapture.IEnumString&  marshal( interface ) ppEnum) runtime managed internalcall
+  {
+  } // end of method IBindCtx::EnumObjectParam
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RevokeObjectParam([in] string  marshal( lpwstr) pszKey) runtime managed internalcall
+  {
+  } // end of method IBindCtx::RevokeObjectParam
+
+} // end of class GraphCapture.IBindCtx
+
+.class public sequential ansi sealed beforefieldinit GraphCapture.tagBIND_OPTS2
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field public uint32 cbStruct
+  .field public uint32 grfFlags
+  .field public uint32 grfMode
+  .field public uint32 dwTickCountDeadline
+  .field public uint32 dwTrackFlags
+  .field public uint32 dwClassContext
+  .field public uint32 locale
+  .field public native int pServerInfo
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+} // end of class GraphCapture.tagBIND_OPTS2
+
+.class public sequential ansi sealed beforefieldinit GraphCapture._COSERVERINFO
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field public uint32 dwReserved1
+  .field public  marshal( lpwstr) string pwszName
+  .field public native int pAuthInfo
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field public uint32 dwReserved2
+} // end of class GraphCapture._COSERVERINFO
+
+.class public sequential ansi sealed beforefieldinit GraphCapture._COAUTHINFO
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field public uint32 dwAuthnSvc
+  .field public uint32 dwAuthzSvc
+  .field public  marshal( lpwstr) string pwszServerPrincName
+  .field public uint32 dwAuthnLevel
+  .field public uint32 dwImpersonationLevel
+  .field public native int pAuthIdentityData
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field public uint32 dwCapabilities
+} // end of class GraphCapture._COAUTHINFO
+
+.class public sequential ansi sealed beforefieldinit GraphCapture._COAUTHIDENTITY
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field public native int User
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field public uint32 UserLength
+  .field public native int Domain
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field public uint32 DomainLength
+  .field public native int Password
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field public uint32 PasswordLength
+  .field public uint32 Flags
+} // end of class GraphCapture._COAUTHIDENTITY
+
+.class interface public abstract auto ansi import GraphCapture.IRunningObjectTable
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 30 30 30 30 30 31 30 2D 30 30 30 30   // ..$00000010-0000
+                                                                                                  2D 30 30 30 30 2D 43 30 30 30 2D 30 30 30 30 30   // -0000-C000-00000
+                                                                                                  30 30 30 30 30 34 36 00 00 )                      // 0000046..
+  .method public hidebysig newslot abstract virtual 
+          instance void  Register([in] uint32 grfFlags,
+                                  [in] object  marshal( iunknown ) punkObject,
+                                  [in] class GraphCapture.IMoniker  marshal( interface ) pmkObjectName,
+                                  [out] uint32& pdwRegister) runtime managed internalcall
+  {
+  } // end of method IRunningObjectTable::Register
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Revoke([in] uint32 dwRegister) runtime managed internalcall
+  {
+  } // end of method IRunningObjectTable::Revoke
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  IsRunning([in] class GraphCapture.IMoniker  marshal( interface ) pmkObjectName) runtime managed internalcall
+  {
+  } // end of method IRunningObjectTable::IsRunning
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetObject([in] class GraphCapture.IMoniker  marshal( interface ) pmkObjectName,
+                                   [out] object&  marshal( iunknown ) ppunkObject) runtime managed internalcall
+  {
+  } // end of method IRunningObjectTable::GetObject
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  NoteChangeTime([in] uint32 dwRegister,
+                                        [in] valuetype GraphCapture._FILETIME& pfiletime) runtime managed internalcall
+  {
+  } // end of method IRunningObjectTable::NoteChangeTime
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetTimeOfLastChange([in] class GraphCapture.IMoniker  marshal( interface ) pmkObjectName,
+                                             [out] valuetype GraphCapture._FILETIME& pfiletime) runtime managed internalcall
+  {
+  } // end of method IRunningObjectTable::GetTimeOfLastChange
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  EnumRunning([out] class GraphCapture.IEnumMoniker&  marshal( interface ) ppenumMoniker) runtime managed internalcall
+  {
+  } // end of method IRunningObjectTable::EnumRunning
+
+} // end of class GraphCapture.IRunningObjectTable
+
+.class interface public abstract auto ansi import GraphCapture.IEnumString
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 30 30 30 30 31 30 31 2D 30 30 30 30   // ..$00000101-0000
+                                                                                                  2D 30 30 30 30 2D 43 30 30 30 2D 30 30 30 30 30   // -0000-C000-00000
+                                                                                                  30 30 30 30 30 34 36 00 00 )                      // 0000046..
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteNext([in] uint32 celt,
+                                    [out] string&  marshal( lpwstr) rgelt,
+                                    [out] uint32& pceltFetched) runtime managed internalcall
+  {
+  } // end of method IEnumString::RemoteNext
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Skip([in] uint32 celt) runtime managed internalcall
+  {
+  } // end of method IEnumString::Skip
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Reset() runtime managed internalcall
+  {
+  } // end of method IEnumString::Reset
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Clone([out] class GraphCapture.IEnumString&  marshal( interface ) ppEnum) runtime managed internalcall
+  {
+  } // end of method IEnumString::Clone
+
+} // end of class GraphCapture.IEnumString
+
+.class interface public abstract auto ansi import GraphCapture.ICaptureGraphBuilder2
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 39 33 45 35 41 34 45 30 2D 32 44 35 30   // ..$93E5A4E0-2D50
+                                                                                                  2D 31 31 44 32 2D 41 42 46 41 2D 30 30 41 30 43   // -11D2-ABFA-00A0C
+                                                                                                  39 43 36 45 33 38 44 00 00 )                      // 9C6E38D..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetFiltergraph([in] class GraphCapture.IGraphBuilder  marshal( interface ) pfg) runtime managed internalcall
+  {
+  } // end of method ICaptureGraphBuilder2::SetFiltergraph
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetFiltergraph([out] class GraphCapture.IGraphBuilder&  marshal( interface ) ppfg) runtime managed internalcall
+  {
+  } // end of method ICaptureGraphBuilder2::GetFiltergraph
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetOutputFileName([in] valuetype [mscorlib]System.Guid& pType,
+                                           [in] string  marshal( lpwstr) lpstrFile,
+                                           [out] class GraphCapture.IBaseFilter&  marshal( interface ) ppf,
+                                           [out] class GraphCapture.IFileSinkFilter&  marshal( interface ) ppSink) runtime managed internalcall
+  {
+  } // end of method ICaptureGraphBuilder2::SetOutputFileName
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteFindInterface([in] valuetype [mscorlib]System.Guid& pCategory,
+                                             [in] valuetype [mscorlib]System.Guid& pType,
+                                             [in] class GraphCapture.IBaseFilter  marshal( interface ) pf,
+                                             [in] valuetype [mscorlib]System.Guid& riid,
+                                             [out] object&  marshal( iunknown ) ppint) runtime managed internalcall
+  {
+  } // end of method ICaptureGraphBuilder2::RemoteFindInterface
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RenderStream([in] valuetype [mscorlib]System.Guid& pCategory,
+                                      [in] valuetype [mscorlib]System.Guid& pType,
+                                      [in] object  marshal( iunknown ) pSource,
+                                      [in] class GraphCapture.IBaseFilter  marshal( interface ) pfCompressor,
+                                      [in] class GraphCapture.IBaseFilter  marshal( interface ) pfRenderer) runtime managed internalcall
+  {
+  } // end of method ICaptureGraphBuilder2::RenderStream
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ControlStream([in] valuetype [mscorlib]System.Guid& pCategory,
+                                       [in] valuetype [mscorlib]System.Guid& pType,
+                                       [in] class GraphCapture.IBaseFilter  marshal( interface ) pFilter,
+                                       [in] int64& pstart,
+                                       [in] int64& pStop,
+                                       [in] uint16 wStartCookie,
+                                       [in] uint16 wStopCookie) runtime managed internalcall
+  {
+  } // end of method ICaptureGraphBuilder2::ControlStream
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AllocCapFile([in] string  marshal( lpwstr) 'lpstr',
+                                      [in] uint64 dwlSize) runtime managed internalcall
+  {
+  } // end of method ICaptureGraphBuilder2::AllocCapFile
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  CopyCaptureFile([in] string  marshal( lpwstr) lpwstrOld,
+                                         [in] string  marshal( lpwstr) lpwstrNew,
+                                         [in] int32 fAllowEscAbort,
+                                         [in] class GraphCapture.IAMCopyCaptureFileProgress  marshal( interface ) pCallback) runtime managed internalcall
+  {
+  } // end of method ICaptureGraphBuilder2::CopyCaptureFile
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  FindPin([in] object  marshal( iunknown ) pSource,
+                                 [in] valuetype GraphCapture._PinDirection pindir,
+                                 [in] valuetype [mscorlib]System.Guid& pCategory,
+                                 [in] valuetype [mscorlib]System.Guid& pType,
+                                 [in] int32 fUnconnected,
+                                 [in] int32 num,
+                                 [out] class GraphCapture.IPin&  marshal( interface ) ppPin) runtime managed internalcall
+  {
+  } // end of method ICaptureGraphBuilder2::FindPin
+
+} // end of class GraphCapture.ICaptureGraphBuilder2
+
+.class interface public abstract auto ansi import GraphCapture.IFileSinkFilter
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 41 32 31 30 34 38 33 30 2D 37 43 37 30   // ..$A2104830-7C70
+                                                                                                  2D 31 31 43 46 2D 38 42 43 45 2D 30 30 41 41 30   // -11CF-8BCE-00AA0
+                                                                                                  30 41 33 46 31 41 36 00 00 )                      // 0A3F1A6..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetFileName([in] string  marshal( lpwstr) pszFileName,
+                                     [in] valuetype GraphCapture._AMMediaType& pmt) runtime managed internalcall
+  {
+  } // end of method IFileSinkFilter::SetFileName
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetCurFile([out] string&  marshal( lpwstr) ppszFileName,
+                                    [out] valuetype GraphCapture._AMMediaType& pmt) runtime managed internalcall
+  {
+  } // end of method IFileSinkFilter::GetCurFile
+
+} // end of class GraphCapture.IFileSinkFilter
+
+.class interface public abstract auto ansi import GraphCapture.IAMCopyCaptureFileProgress
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 37 30 44 31 44 32 30 2D 41 30 36 38   // ..$670D1D20-A068
+                                                                                                  2D 31 31 44 30 2D 42 33 46 30 2D 30 30 41 41 30   // -11D0-B3F0-00AA0
+                                                                                                  30 33 37 36 31 43 35 00 00 )                      // 03761C5..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  Progress([in] int32 iProgress) runtime managed internalcall
+  {
+  } // end of method IAMCopyCaptureFileProgress::Progress
+
+} // end of class GraphCapture.IAMCopyCaptureFileProgress
+
+.class interface public abstract auto ansi import GraphCapture.ISampleGrabber
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 42 36 35 32 46 46 46 2D 31 31 46 45   // ..$6B652FFF-11FE
+                                                                                                  2D 34 46 43 45 2D 39 32 41 44 2D 30 32 36 36 42   // -4FCE-92AD-0266B
+                                                                                                  35 44 37 43 37 38 46 00 00 )                      // 5D7C78F..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetOneShot(int32 OneShot) runtime managed internalcall
+  {
+  } // end of method ISampleGrabber::SetOneShot
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetMediaType(valuetype GraphCapture._AMMediaType& pType) runtime managed internalcall
+  {
+  } // end of method ISampleGrabber::SetMediaType
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetConnectedMediaType(valuetype GraphCapture._AMMediaType& pType) runtime managed internalcall
+  {
+  } // end of method ISampleGrabber::GetConnectedMediaType
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetBufferSamples(int32 BufferThem) runtime managed internalcall
+  {
+  } // end of method ISampleGrabber::SetBufferSamples
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetCurrentBuffer([in][out] int32& pBufferSize,
+                                          native int pBuffer) runtime managed internalcall
+  {
+  } // end of method ISampleGrabber::GetCurrentBuffer
+
+  .method public hidebysig newslot abstract virtual 
+          instance class GraphCapture.IMediaSample 
+          marshal( interface ) 
+          GetCurrentSample() runtime managed internalcall
+  {
+  } // end of method ISampleGrabber::GetCurrentSample
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetCallback(class GraphCapture.ISampleGrabberCB  marshal( interface ) pCallback,
+                                     int32 WhichMethodToCallback) runtime managed internalcall
+  {
+  } // end of method ISampleGrabber::SetCallback
+
+} // end of class GraphCapture.ISampleGrabber
+
+.class interface public abstract auto ansi import GraphCapture.IMediaSample
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 36 41 38 36 38 39 41 2D 30 41 44 34   // ..$56A8689A-0AD4
+                                                                                                  2D 31 31 43 45 2D 42 30 33 41 2D 30 30 32 30 41   // -11CE-B03A-0020A
+                                                                                                  46 30 42 41 37 37 30 00 00 )                      // F0BA770..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetPointer([out] native int ppBuffer) runtime managed internalcall
+  {
+  } // end of method IMediaSample::GetPointer
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  GetSize() runtime managed preservesig internalcall
+  {
+  } // end of method IMediaSample::GetSize
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetTime([out] int64& pTimeStart,
+                                 [out] int64& pTimeEnd) runtime managed internalcall
+  {
+  } // end of method IMediaSample::GetTime
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetTime([in] int64& pTimeStart,
+                                 [in] int64& pTimeEnd) runtime managed internalcall
+  {
+  } // end of method IMediaSample::SetTime
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  IsSyncPoint() runtime managed internalcall
+  {
+  } // end of method IMediaSample::IsSyncPoint
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetSyncPoint(int32 bIsSyncPoint) runtime managed internalcall
+  {
+  } // end of method IMediaSample::SetSyncPoint
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  IsPreroll() runtime managed internalcall
+  {
+  } // end of method IMediaSample::IsPreroll
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetPreroll(int32 bIsPreroll) runtime managed internalcall
+  {
+  } // end of method IMediaSample::SetPreroll
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  GetActualDataLength() runtime managed preservesig internalcall
+  {
+  } // end of method IMediaSample::GetActualDataLength
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetActualDataLength(int32 __MIDL__IMediaSample0000) runtime managed internalcall
+  {
+  } // end of method IMediaSample::SetActualDataLength
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetMediaType([out] native int& ppMediaType) runtime managed internalcall
+  {
+  } // end of method IMediaSample::GetMediaType
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetMediaType(valuetype GraphCapture._AMMediaType& pMediaType) runtime managed internalcall
+  {
+  } // end of method IMediaSample::SetMediaType
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  IsDiscontinuity() runtime managed internalcall
+  {
+  } // end of method IMediaSample::IsDiscontinuity
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetDiscontinuity(int32 bDiscontinuity) runtime managed internalcall
+  {
+  } // end of method IMediaSample::SetDiscontinuity
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetMediaTime([out] int64& pTimeStart,
+                                      [out] int64& pTimeEnd) runtime managed internalcall
+  {
+  } // end of method IMediaSample::GetMediaTime
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetMediaTime([in] int64& pTimeStart,
+                                      [in] int64& pTimeEnd) runtime managed internalcall
+  {
+  } // end of method IMediaSample::SetMediaTime
+
+} // end of class GraphCapture.IMediaSample
+
+.class interface public abstract auto ansi import GraphCapture.ISampleGrabberCB
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 35 37 39 31 35 34 41 2D 32 42 35 33   // ..$0579154A-2B53
+                                                                                                  2D 34 39 39 34 2D 42 30 44 30 2D 45 37 37 33 31   // -4994-B0D0-E7731
+                                                                                                  34 38 45 46 46 38 35 00 00 )                      // 48EFF85..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  SampleCB(float64 SampleTime,
+                                  class GraphCapture.IMediaSample  marshal( interface ) pSample) runtime managed internalcall
+  {
+  } // end of method ISampleGrabberCB::SampleCB
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  BufferCB(float64 SampleTime,
+                                  uint8& pBuffer,
+                                  int32 BufferLen) runtime managed internalcall
+  {
+  } // end of method ISampleGrabberCB::BufferCB
+
+} // end of class GraphCapture.ISampleGrabberCB
+
+.class interface public abstract auto ansi import GraphCapture.IAMVideoControl
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 41 32 45 30 36 37 30 2D 32 38 45 34   // ..$6A2E0670-28E4
+                                                                                                  2D 31 31 44 30 2D 41 31 38 43 2D 30 30 41 30 43   // -11D0-A18C-00A0C
+                                                                                                  39 31 31 38 39 35 36 00 00 )                      // 9118956..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetCaps([in] class GraphCapture.IPin  marshal( interface ) pPin,
+                                 [out] int32& pCapsFlags) runtime managed internalcall
+  {
+  } // end of method IAMVideoControl::GetCaps
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetMode([in] class GraphCapture.IPin  marshal( interface ) pPin,
+                                 [in] int32 Mode) runtime managed internalcall
+  {
+  } // end of method IAMVideoControl::SetMode
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetMode([in] class GraphCapture.IPin  marshal( interface ) pPin,
+                                 [out] int32& Mode) runtime managed internalcall
+  {
+  } // end of method IAMVideoControl::GetMode
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetCurrentActualFrameRate([in] class GraphCapture.IPin  marshal( interface ) pPin,
+                                                   [out] int64& ActualFrameRate) runtime managed internalcall
+  {
+  } // end of method IAMVideoControl::GetCurrentActualFrameRate
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetMaxAvailableFrameRate([in] class GraphCapture.IPin  marshal( interface ) pPin,
+                                                  [in] int32 iIndex,
+                                                  [in] valuetype GraphCapture.tagSIZE Dimensions,
+                                                  [out] int64& MaxAvailableFrameRate) runtime managed internalcall
+  {
+  } // end of method IAMVideoControl::GetMaxAvailableFrameRate
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetFrameRateList([in] class GraphCapture.IPin  marshal( interface ) pPin,
+                                          [in] int32 iIndex,
+                                          [in] valuetype GraphCapture.tagSIZE Dimensions,
+                                          [out] int32& ListSize,
+                                          [out] native int FrameRates) runtime managed internalcall
+  {
+  } // end of method IAMVideoControl::GetFrameRateList
+
+} // end of class GraphCapture.IAMVideoControl
+
+.class public sequential ansi sealed beforefieldinit GraphCapture.tagSIZE
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .field public int32 cx
+  .field public int32 cy
+} // end of class GraphCapture.tagSIZE
+
+.class interface public abstract auto ansi import GraphCapture.IAMVideoProcAmp
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 43 36 45 31 33 33 36 30 2D 33 30 41 43   // ..$C6E13360-30AC
+                                                                                                  2D 31 31 44 30 2D 41 31 38 43 2D 30 30 41 30 43   // -11D0-A18C-00A0C
+                                                                                                  39 31 31 38 39 35 36 00 00 )                      // 9118956..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetRange([in] int32 Property,
+                                  [out] int32& pMin,
+                                  [out] int32& pMax,
+                                  [out] int32& pSteppingDelta,
+                                  [out] int32& pDefault,
+                                  [out] int32& pCapsFlags) runtime managed internalcall
+  {
+  } // end of method IAMVideoProcAmp::GetRange
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Set([in] int32 Property,
+                             [in] int32 lValue,
+                             [in] int32 Flags) runtime managed internalcall
+  {
+  } // end of method IAMVideoProcAmp::Set
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Get([in] int32 Property,
+                             [out] int32& lValue,
+                             [out] int32& Flags) runtime managed internalcall
+  {
+  } // end of method IAMVideoProcAmp::Get
+
+} // end of class GraphCapture.IAMVideoProcAmp
+
+.class interface public abstract auto ansi import GraphCapture.IAMStreamConfig
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 43 36 45 31 33 33 34 30 2D 33 30 41 43   // ..$C6E13340-30AC
+                                                                                                  2D 31 31 44 30 2D 41 31 38 43 2D 30 30 41 30 43   // -11D0-A18C-00A0C
+                                                                                                  39 31 31 38 39 35 36 00 00 )                      // 9118956..
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetFormat([in] valuetype GraphCapture._AMMediaType& pmt) runtime managed internalcall
+  {
+  } // end of method IAMStreamConfig::SetFormat
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetFormat([out] native int& ppmt) runtime managed internalcall
+  {
+  } // end of method IAMStreamConfig::GetFormat
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetNumberOfCapabilities([out] int32& piCount,
+                                                 [out] int32& piSize) runtime managed internalcall
+  {
+  } // end of method IAMStreamConfig::GetNumberOfCapabilities
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetStreamCaps([in] int32 iIndex,
+                                       [out] native int& ppmt,
+                                       [in] native int pSCC) runtime managed internalcall
+  {
+  } // end of method IAMStreamConfig::GetStreamCaps
+
+} // end of class GraphCapture.IAMStreamConfig
+
+.class interface public abstract auto ansi import GraphCapture.IAMVfwCaptureDialogs
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 44 38 44 37 31 35 41 30 2D 36 45 35 45   // ..$D8D715A0-6E5E
+                                                                                                  2D 31 31 44 30 2D 42 33 46 30 2D 30 30 41 41 30   // -11D0-B3F0-00AA0
+                                                                                                  30 33 37 36 31 43 35 00 00 )                      // 03761C5..
+  .method public hidebysig newslot abstract virtual 
+          instance void  HasDialog([in] int32 iDialog) runtime managed internalcall
+  {
+  } // end of method IAMVfwCaptureDialogs::HasDialog
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ShowDialog([in] int32 iDialog,
+                                    [in] valuetype GraphCapture._RemotableHandle& hwnd) runtime managed internalcall
+  {
+    .param [2]
+    .custom instance void [mscorlib]System.Runtime.InteropServices.ComAliasNameAttribute::.ctor(string) = ( 01 00 15 47 72 61 70 68 43 61 70 74 75 72 65 2E   // ...GraphCapture.
+                                                                                                            77 69 72 65 48 57 4E 44 00 00 )                   // wireHWND..
+  } // end of method IAMVfwCaptureDialogs::ShowDialog
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SendDriverMessage([in] int32 iDialog,
+                                           [in] int32 uMsg,
+                                           [in] int32 dw1,
+                                           [in] int32 dw2) runtime managed internalcall
+  {
+  } // end of method IAMVfwCaptureDialogs::SendDriverMessage
+
+} // end of class GraphCapture.IAMVfwCaptureDialogs
+
+.class public sequential ansi sealed beforefieldinit GraphCapture._RemotableHandle
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .field public int32 fContext
+  .field public valuetype GraphCapture.__MIDL_IWinTypes_0009 u
+} // end of class GraphCapture._RemotableHandle
+
+.class public explicit ansi sealed GraphCapture.__MIDL_IWinTypes_0009
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .field [0] public int32 hInproc
+  .field [0] public int32 hRemote
+} // end of class GraphCapture.__MIDL_IWinTypes_0009
+
+.class interface public abstract auto ansi import GraphCapture.IPropertyBag
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 35 32 37 32 41 30 30 2D 34 32 43 42   // ..$55272A00-42CB
+                                                                                                  2D 31 31 43 45 2D 38 31 33 35 2D 30 30 41 41 30   // -11CE-8135-00AA0
+                                                                                                  30 34 42 42 38 35 31 00 00 )                      // 04BB851..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoteRead([in] string  marshal( lpwstr) pszPropName,
+                                    [out] object&  marshal( struct) pVar,
+                                    [in] class GraphCapture.IErrorLog  marshal( interface ) pErrorLog,
+                                    [in] uint32 varType,
+                                    [in] object  marshal( iunknown ) pUnkObj) runtime managed internalcall
+  {
+  } // end of method IPropertyBag::RemoteRead
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Write([in] string  marshal( lpwstr) pszPropName,
+                               [in] object&  marshal( struct) pVar) runtime managed internalcall
+  {
+  } // end of method IPropertyBag::Write
+
+} // end of class GraphCapture.IPropertyBag
+
+.class interface public abstract auto ansi import GraphCapture.IErrorLog
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 31 32 37 43 41 34 30 2D 34 34 36 45   // ..$3127CA40-446E
+                                                                                                  2D 31 31 43 45 2D 38 31 33 35 2D 30 30 41 41 30   // -11CE-8135-00AA0
+                                                                                                  30 34 42 42 38 35 31 00 00 )                      // 04BB851..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddError([in] string  marshal( lpwstr) pszPropName,
+                                  [in] valuetype [stdole]stdole.EXCEPINFO& pExcepInfo) runtime managed internalcall
+  {
+  } // end of method IErrorLog::AddError
+
+} // end of class GraphCapture.IErrorLog
+
+
+// =============================================================
+
+// *********** DISASSEMBLY COMPLETE ***********************
+// WARNING: Created Win32 resource file E:\Visual Studio 2008\Projects\Presenter\UW.ClassroomPresenter\Camera\Interop\GraphCapture.res

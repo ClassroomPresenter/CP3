@@ -1,0 +1,46 @@
+Document Index
+--------------
+Archiving.doc -- Design document for ink archiving and playback mechanisms in
+                 Presenter 3.0
+
+Broadcast and Sync.doc -- Design document for ink broadcast, multi-monitor 
+                          behavior, viewports, and synchronization.
+
+DeckBuilder.rtf -- Design Document for the features and UI of DeckBuilder.
+
+DeckMatcher Design.doc -- Design Document for the user experience and 
+                          implementation of the deck matcher.
+
+menus.doc -- Complete list of menu items
+
+Milestone Tasks.doc -- Complete list of tasks that must be completed for each
+                       milestone.
+
+Model.rtf -- Tutorial for correctly writing code that listens to and modifies the
+             "Model" classes in Presenter.
+
+Networkig.rtf -- Design document giving user-level experience with network as well
+                 as API level specifications of behavior.
+
+NetworkMessages.doc -- Listing and description of the network message hierarchy. 
+                       For each message there is given: 
+                       1) a brief description, 
+                       2) a list of when it is sent, and 
+                       3) a description of the behavior when it is received.
+
+SlideDecks.doc -- Design for high-level behavior of slide decks, deck matching, 
+                  and student submission decks.
+
+StudentSubmissions Design.doc -- Design specification for the user experience 
+                                 with student submissions.
+
+Threading.rtf -- Guidelines for dealing with threading and multi-threaded 
+                 access to the "Model" classes in presenter.
+
+UI.doc -- User-level description of the user interface experience in Presenter.
+
+UML.vdx -- Original UML diagrams
+
+UML_Visio2002.vdx -- UML.vdx that will hopefully crash less with Visio 2002 (SP1), also contains a user interface UML model.
+
+Use_cases.rtf -- A list of use cases for Presenter.

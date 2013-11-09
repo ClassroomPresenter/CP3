@@ -1,0 +1,176 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}{\f1\fmodern\fprq1\fcharset0 Courier New;}{\f2\fnil\fcharset0 Arial;}{\f3\fswiss\fprq2\fcharset0 Arial;}{\f4\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Msftedit 5.41.15.1507;}\viewkind4\uc1\pard\b\f0\fs20 The Classroom Presenter Model\b0\par
+\f1 $Id: Model.rtf 213 2005-07-14 20:34:56Z pediddle $\par
+\f0\par
+The \i PresenterModel\i0  class is the root of a hierarchy supporting all "global" state used by the Classroom Presenter application.\par
+\par
+Each member of the hierarchy extends \i PropertyPublisher\i0 , which is a framework that automatically creates events for all "published" properties of the object.  (Published properties are declared with the \i [Published]\i0  attribute.)\par
+\par
+The Classroom Presenter UI and backend components should route \i all\i0  inter-component communication through the model by changing its state variables.  Any interested parties will then "listen" to the changes and react accordingly, updating UI components or performing work on the backend.\par
+\par
+For example, changing the stylus's color via a UI control on the toolbar sets the \i DrawingAttributes\i0  property of the current \i StylusModel\i0 .  This necessitates "unpressing" the other stylus-color buttons.  But rather than the UI control logic unpressing them directly, the buttons listen to changes in the \i DrawingAttributes \i0 property, which is published by \i StylusModel\i0 , and "unpress" \i themselves\i0 .  At the same time, the \i SlideView\i0  component listens to the change and updates the color it uses to draw new ink strokes, and the networking backend broadcasts the change to interested remote clients (well, that is if anyone is interested in your current stylus color\f2\'85).  None of these components know anything about the other, and their only connection is that they all listen to the same \i StylusModel\i0  events.\par
+\par
+\par
+\par
+\b A Short Cut-'n'-Pasteable Tutorial\b0\par
+\par
+Consider the top-level \i PresenterModel\i0  object.  It publishes a \i Network\i0  property, which publishes a list of \i Protocols\i0 .  Each \i ProtocolModel\i0  object publishes a list of \i Classrooms\i0 , each represented by a \i ClassroomModel\i0 .  Each classroom publishes a \i HumanName\i0  string.  Suppose you want to build a real-time list of all the \i HumanName\i0 s for all the classrooms in the entire \i PresenterModel\i0  hierarchy.  Let's start from the top-down.\par
+\par
+Suppose you are given a \i ClassroomModel\i0 , and you want to add its \i HumanName\i0  to your list.  It is not enough just to add the name, because since it is a published property, its value may change in the future and it is expected that your list will update itself accordingly.  Therefore, when you are given the \i ClassroomModel\i0  object (called \i classroom\i0 ), you must register an event listener.\par
+\par
+\pard\li720\f1 classroom.Changed["HumanName"].Add(\par
+\pard\li1080 new PropertyEventHandler(this.HandleHumanNameChanged));\par
+\pard\f2\par
+This delegate will be invoked whenever the \i HumanName\i0  property of the \i classroom\i0  changes.\par
+\par
+And of course you must write some code to react when the \i HumanName\i0  changes:\par
+\pard\li720\par
+\f1 private void HandleHumanNameChanged(object sender, PropertyEventArgs args) \{\par
+\pard\li1080 // The "sender" will be the ClassroomModel whose HumanName changed.\par
+// The "args" *might* be an instance of PropertyChangeEventArgs, containing \par
+// the NewValue and OldValue if you are interested; or, you can access\par
+// the new HumanName from the sender directly.\par
+\par
+ClassroomModel classroom = sender as ClassroomModel;\par
+\par
+if(classroom == null) \{\par
+\pard\li1440 // In this case, we don't know which classroom's HumanName changed.\par
+// If practical, we need to refresh the *entire* list to ensure that\par
+// we get the change.  The rest of this tutorial will hint at how\par
+// to do this, in a way that would require only one or two lines here.\par
+\par
+\pard\li1080\} else \{\par
+\pard\li1440 // In this case, we update the appropriate element of our list\par
+// (we'll have to keep a mapping of ClassroomModels to indices,\par
+// or search the list for the correct element) using \par
+// classroom.HumanName.  Alternatively, cast the PropertyEventArgs\par
+// to a PropertyChangeEventArgs and access its NewValue property.\par
+\pard\li1080\}\par
+\pard\li720\}\par
+\pard\f2\par
+But how do we obtain the \i ClassroomModel\i0 ?  Most simple UI or backend controls will be limited in scope and will only need to worry about a single at a time \i ClassroomModel\i0   \emdash  so suppose for a moment that we are not worried about the whole list.  If that is the case, then the classroom should be passed as an argument to the control's constructor, or given via the setter for a property of the control.  In the former case, register the event listener in the constructor, and unregister it in a \i Dispose\i0  method (see \i A Few Guidelines\i0  below).  In the latter case, both register and unregister the event listener in the setter, and also make sure that the \i Dispose\i0  method unregisters the listener by setting the property to \i null\i0  (again, see below).\par
+\par
+But to obtain the \i ClassroomModel\i0  from the collection of classrooms in a \i ProtocolModel\i0 , we must do a little more work.  Suppose we have an instance of \i ProtocolModel\i0  called \i protocol\i0  (remember that there are potentially many protocols, so we will have to repeat this logic to obtain one).  We must listen for changes to \i ProtocolModel.Classrooms\i0 , reacting whenever a classroom is added or removed, and we must also initialize any existing classrooms and be prepared to "destruct" the list when either the protocol is removed or our control is disposed.\par
+\par
+This can all be done for you by the helper class \i PropertyCollectionHelper\i0 .  To use it, create a nested subclass of it, overriding the \i SetUpMember\i0  and \i TearDownMember\i0  to do your work.  For example, here is an implementation that, given a \i ProtocolModel\i0 , will register the \i HumanName\i0  listener we required above whenever a classroom is added to the protocol's \i Classrooms\i0  collection:\par
+\par
+\pard\li720\f1 private class ClassroomCollectionHelper : PropertyCollectionHelper \{\par
+\pard\li1080 public ClassroomCollectionHelper(ProtocolModel protocol) : base(protocol, "Classrooms") \{\par
+\pard\li1440 base.InitializeMembers(); // Remember to do this!\par
+\pard\li1080\}\par
+\par
+protected override object SetUpMember(int index, object member) \{\par
+\pard\li1440 classroom.Changed["HumanName"].Add(\par
+\pard\li1800 new PropertyEventHandler(this.HandleHumanNameChanged));\par
+\pard\li1440 // Do whatever else you need to initialize the list entry.\par
+// You can return arbitrary data for this method, which you can\par
+// then retrieve as the "tag" parameter to TearDownMember (below);\par
+// for example, you can use this to store the index in the list.\par
+return null; // or return index;\par
+\pard\li1080\}\par
+\par
+protected override void TearDownMember(int index, object member, object tag) \{\par
+\pard\li1440 classroom.Changed["HumanName"].Add(\par
+\pard\li1800 new PropertyEventHandler(this.HandleHumanNameChanged));\par
+\pard\li1440 // If needed, use the tag to perform other destruction.\par
+\pard\li1080\}\par
+\pard\li720\}\f2\par
+\pard\par
+Getting the \i ProtocolModel\i0 s is just like getting the \i ClassroomModel\i0 s, only we listen for changes to the \i Protocols\i0  property of the top-level \i NetworkModel\i0 .  Whenever a protocol is added or removed, we create a new \i ClassroomCollectionHelper\i0  to do most of the dirty work.\par
+\par
+\pard\li720\cf1\f1 private class ProtocolCollectionHelper : PropertyCollectionHelper \{\par
+\pard\li1080 public ProtocolCollectionHelper(NetworkModel network) : base(network, "Protocols") \{\par
+\pard\li1440 base.InitializeMembers(); // Remember to do this!\par
+\pard\li1080\}\par
+\par
+protected override object SetUpMember(int index, object member) \{\par
+\pard\li1440 return new ClassroomCollectionHelper(this.m_Parent, ((ProtocolModel) member));\par
+\pard\li1080\}\par
+\par
+protected override void TearDownMember(int index, object member, object tag) \{\par
+\pard\li1440 // PropertyCollectionHelper implements IDisposable, and its\par
+// Dispose method unregisters all of its event listeners.\par
+if(tag != null) ((ClassroomCollectionHelper) tag).Dispose();\par
+\pard\li1080\}\par
+\pard\li720\}\par
+\pard\cf0\f2\par
+Finally, we need to worry about initializing and destructing the list of protocols.  This is done by instantiating a \i ProtocolConnectionHelper\i0  using the top-level \i NetworkModel\i0  in our class's constructor, and by invoking \i ProtocolConnectionHelper.Dispose()\i0  in our class's \i Dispose\i0  method.\b\f0\par
+\par
+\b0 And like magic, we have a fully dynamic list of \i HumanNames\i0 .  A little "reflection" goes a long way!\par
+\par
+\par
+\b Writing Code Against the Model: A Few Guidelines\b0\par
+\par
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-720\li720\i Always\i0  remember to unregister event listeners when you are done with model objects.  Otherwise the model will keep a reference to your delegate, preventing garbage collection.\par
+\pard\par
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-720\li1080 For example, if the listener was added via\par
+\pard\li1440\par
+\f1 this.m_Model.Changed["Foo"].Add(new PropertyEventHandler(...));\par
+\f0\par
+\pard\li1080 in your class's constructor, you need to\i  \i0 override the \i Dispose\i0  method to unregister the listener as follows:\par
+\pard\li1440\par
+\f1 private bool m_Disposed;\par
+\par
+protected override void Dispose(bool disposing) \{\par
+\pard\li1800 if(this.m_Disposed) return;\par
+try \{\par
+\pard\li2160 if(disposing) \{\par
+\pard\li2520 // Unregister event listeners, and release any other \par
+// managed resources which implement IDisposable**.\par
+\par
+this.m_Model.Changed["Foo"].Remove(new PropertyEventHandler(...));\par
+\pard\li2160\}\par
+\par
+// Release any unmanaged resources such as network connections.\par
+\pard\li1800\} finally \{\par
+\pard\li2160 base.Dispose(disposing);\par
+\pard\li1800\}\par
+\par
+this.m_Disposed = true;\par
+\pard\li1440\}\f0\par
+\pard\li1080\par
+** Child controls of Windows Forms containers are automatically disposed by the base class, but ImageLists are not, for example.  When in doubt, it can't hurt to err on the side of disposing, but don't go overboard.\par
+\par
+\f3 If your class does not already implement \i IDisposable\i0  (ie., it is not a Windows Forms control), make it implement \i IDisposable\i0  by adding a deconstructor and a public \i Dispose\i0  method as follows (and also make the above method \i virtual\i0  instead of \i override\i0 , and remove the call to the base class):\par
+\pard\li1440\f0\par
+\f1 ~MyClassName() \{\par
+\pard\li1800 this.Dispose(false);\par
+\pard\li1440\}\par
+\par
+protected override void Dispose(bool disposing) \{\par
+\pard\li1800 this.Dispose(true);\par
+GC.SuppressFinalize(this);\par
+\pard\li1440\}\par
+\pard\li1080\f0\par
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-720\li1080 If the listener is added in a \i set\i0  method for some property, you must unregister listeners from the previous value of the property before setting.  For example,\par
+\pard\li1080\par
+\pard\li1440\f1 public SomeModel MyProperty \{\par
+\pard\li1800 set \{\par
+\pard\li2160 if(this.m_MyProperty != null) \{\par
+\pard\li2520 // Unregister event listeners.\par
+this.m_MyProperty.Changed["Foo"].Remove(new PropertyEventHandler(...));\par
+\pard\li2160\}\par
+\par
+this.m_MyProperty = value;\par
+\par
+if(this.m_MyProperty != null) \{\par
+\pard\li2520 // Register event listeners.\par
+this.m_m_MyProperty.Changed["Foo"].Add(new PropertyEventHandler(...));\par
+\pard\li2160\}\par
+\pard\li1800\}\par
+\pard\li1440\}\par
+\pard\li1080\par
+\f0 Also, just as in the previous case, make your class implement \i IDisposable\i0  (if it does not already) and add a dispose method just like above.  But, instead of unregistering the event listener in \i Dispose\i0 , utilize the \i set\i0  method to do the same by simply setting the property to \i null\i0 :\par
+\f1\par
+\pard\li1440 this.MyProperty = null;\par
+\pard\li1080\par
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-720\li1080\f0 If the listener is added when you receive the model when it is added to a collection property, you must unregister event listeners when the model is removed from the collection (or when you are done with the collection itself).  See the example in \i A Short Tutorial\i0  above.  By far the easiest way to do this is using \i SetUpMember\i0  and \i TearDownMember\i0  of \i PropertyCollectionHelper\i0 .  Remember that the \i PropertyCollectionHelper\i0  base constructor registers event listeners of its own, so you need to call \i PropertyCollectionHelper.Dispose()\i0  when you're done with it.\par
+\pard\par
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-720\li720 UI and backend components should be as loosely coupled as possible by routing messages through the model.  However, do not modify the model to achieve something purely related to the UI \f2\emdash  the model should represent the \i essence\i0  of Classroom Presenter's functionality, irrespective of UI implementation details.\f0\par
+\pard\par
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-720\li720\i Never\i0  rely on the order in which events are dispatched.\par
+\pard\par
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-720\li720 Be careful about infinite feedback loops.  If your listener for a property causes the property to be set, you'll likely get a stack overflow.  \i PropertyPublisher\i0  tries to be "smart" by not firing events when a property's setter is invoked with the same value (as determined by \f1 ==\f0 ), but that's not a foolproof solution (as I've discovered several times myself).\par
+}
+ 

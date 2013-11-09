@@ -1,0 +1,1142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D7BEDB4-91E8-4A14-B1F2-A99C3C23955F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>UW.ClassroomPresenter</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UW.ClassroomPresenter</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;DEBUG_LOCK_TRACE LOGGING</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'RTPDebug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\RTPDebug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUG_LOCK_TRACE LOGGING RTP_BUILD</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'RTPRelease|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\RTPRelease\</OutputPath>
+    <DefineConstants>TRACE;RTP_BUILD</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Conference, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Conference.dll</HintPath>
+    </Reference>
+    <Reference Include="ConferenceXPInterfaces, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\ConferenceXPInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphCapture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Camera\Interop\GraphCapture.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.NETCONLib">
+      <HintPath>..\Libraries\Interop.NETCONLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.NetFwTypeLib">
+      <HintPath>..\Libraries\Interop.NetFwTypeLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="LSTCommon, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\LSTCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Ink, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Microsoft.Ink.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MSR.LST.Net.Rtp, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\MSR.LST.Net.Rtp.dll</HintPath>
+    </Reference>
+    <Reference Include="NetworkingBasics, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\NetworkingBasics.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QuartzTypeLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Camera\Interop\QuartzTypeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Security">
+      <Name>System.Security</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Camera\CaptureGraphForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeckMatcher\DeckMatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DeckMatcher\DeckMatcherService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DeckMatcher\DeckTraversalMatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DeckMatcher\InkSheetMatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DeckMatcher\RealTimeInkSheetMatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DeckMatcher\SheetMatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DeckMatcher\SlideMatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DeckMatcher\TableOfContentsMatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Decks\DeckMarshalService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Decks\DibGraphicsBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Decks\OpenDeckDialog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Decks\PPTDeckIO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Decks\PPTLibrary\TagDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Decks\PPTPaneManagement\PPTPaneManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Decks\SaveDeckDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decks\XPSDeckIO.cs" />
+    <Compile Include="Diagnostics\NetworkPerformanceFile.cs" />
+    <Compile Include="Misc\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\AccurateTiming.cs" />
+    <Compile Include="Misc\BackgroundTemplateXmlService.cs" />
+    <Compile Include="Misc\DispalyControlHelpers.cs" />
+    <Compile Include="Misc\ExtensionWrapper.cs" />
+    <Compile Include="Misc\Gdi32.cs" />
+    <Compile Include="Misc\ImageListHelper.cs" />
+    <Compile Include="Misc\LicenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\LicenseForm.Designer.cs">
+      <DependentUpon>LicenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\LoggingService.cs" />
+    <Compile Include="Misc\MenuShortcutHelper.cs" />
+    <Compile Include="Misc\PrintingService.cs" />
+    <Compile Include="Misc\ProgressBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\RegistryService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\TextInputMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\User32.cs" />
+    <Compile Include="Misc\VersionCompatibilityInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\VersionCompatibilityInfoForm.Designer.cs">
+      <DependentUpon>VersionCompatibilityInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\ViewerStateService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\WindowSnapshotWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Background\BackgroundTemplate.cs" />
+    <Compile Include="Model\Background\SerializablePenBrush.cs" />
+    <Compile Include="Model\Background\IBackgroundPrimitive.cs" />
+    <Compile Include="Model\Background\IteratorPrimitive.cs" />
+    <Compile Include="Model\Background\LinePrimitive.cs" />
+    <Compile Include="Model\Collection.cs" />
+    <Compile Include="Model\CollectionMirror.cs" />
+    <Compile Include="Model\ControlEventQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\EventQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Network\ClassroomModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Network\InstructorModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Network\LinkedDeckTraversalModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Network\NetworkModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Network\ParticipantModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Network\ProtocolModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Network\PublicModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Network\RoleModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Network\StudentModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Network\SubmissionStatusModel.cs" />
+    <Compile Include="Model\Network\VersionExchangeModel.cs" />
+    <Compile Include="Model\Presentation\DeckDisposition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\DeckModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\DeckTraversalModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\EditableSheetModel.cs" />
+    <Compile Include="Model\Presentation\ImageResourcesModel.cs" />
+    <Compile Include="Model\Presentation\ImageSheetModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\InkSheetModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\LocalId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\PresentationModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\QuickPollModel.cs" />
+    <Compile Include="Model\Presentation\QuickPollSheetModel.cs" />
+    <Compile Include="Model\Presentation\RealTimeInkSheetModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\SheetDisposition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\SheetModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\SlideDisposition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\SlideModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\TableOfContentsModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\TextSheetModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Presentation\XPSPageSheetModel.cs" />
+    <Compile Include="Model\PresenterModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Property.cs" />
+    <Compile Include="Model\PropertyCollectionHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\PropertyPublisher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Stylus\EraserStylusModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Stylus\ImageStylusModel.cs" />
+    <Compile Include="Model\Stylus\LassoStylusModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Stylus\PenStylusModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Stylus\StylusModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Stylus\TextStylusModel.cs" />
+    <Compile Include="Model\Synchronizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ThreadEventQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Undo\UndoModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Viewer\DiagnosticModel.cs" />
+    <Compile Include="Model\Viewer\PenStateModel.cs" />
+    <Compile Include="Model\Viewer\SlideDisplayModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Viewer\ViewerStateModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Workspace\DeckPairModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Workspace\WorkspaceModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Beacons\BeaconService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Beacons\BridgeBeaconService.cs" />
+    <Compile Include="Network\Beacons\DefaultBeaconService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Broadcast\BroadcastListener.cs" />
+    <Compile Include="Network\Broadcast\BroadcastManager.cs" />
+    <Compile Include="Network\Broadcast\BroadcastMessages.cs" />
+    <Compile Include="Network\Broadcast\BroadcastSender.cs" />
+    <Compile Include="Network\Chunking\Chunk.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Chunking\ChunkAssembler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Chunking\DisjointSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Chunking\FrameBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\ConnectionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\CXP\CXPCapabilityMessageReceiver.cs" />
+    <Compile Include="Network\CXP\CXPCapabilityMessageSender.cs" />
+    <Compile Include="Network\Groups\Group.cs" />
+    <Compile Include="Network\Groups\SingletonGroup.cs" />
+    <Compile Include="Network\IGenericSerializable.cs" />
+    <Compile Include="Network\Messages\Message.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Network\GroupMessages.cs" />
+    <Compile Include="Network\Messages\Network\InstructorNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Network\ParticipantNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Network\RoleMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Network\RoleNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Network\ScriptingMessages.cs" />
+    <Compile Include="Network\Messages\Network\ScriptingNetworkService.cs" />
+    <Compile Include="Network\Messages\Network\StudentNetworkService.cs" />
+    <Compile Include="Network\Messages\Network\SynchronizationNetworkService.cs" />
+    <Compile Include="Network\Messages\Network\SyncMessages.cs" />
+    <Compile Include="Network\Messages\Network\VersionExchangeMessages.cs" />
+    <Compile Include="Network\Messages\Network\VersionExchangeNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\DeckMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\DeckNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\DeckSlideContentMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\DeckTraversalMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\DeckTraversalNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\ImageSheetMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\INetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\ImageSheetNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\InkSheetMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\InkSheetNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\PresentationMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\PresentationNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\QuickPollMessages.cs" />
+    <Compile Include="Network\Messages\Presentation\QuickPollNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\QuickPollResultNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\QuickPollSheetMessage.cs" />
+    <Compile Include="Network\Messages\Presentation\QuickPollSheetNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\RealTimeInkSheetMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\RealTimeInkSheetNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\SheetMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\SheetNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\SlideMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\SlideNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\SSDeckNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\SSDeckTraversalNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\SSInkSheetNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\SSPresentationNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\SSRealTimeInkSheetNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\SSSheetNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\SSSlideNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\StudentPresentationNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\StudentQuickPollNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\StudentSubmissionMessages.cs" />
+    <Compile Include="Network\Messages\Presentation\SubmissionStatusMessage.cs" />
+    <Compile Include="Network\Messages\Presentation\SubmissionStatusNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\TableOfContentsEntryMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\TableOfContentsNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\TextSheetMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\Presentation\TextSheetNetworkService.cs" />
+    <Compile Include="Network\Messages\Presentation\XPSPageSheetMessage.cs" />
+    <Compile Include="Network\Messages\PresenterNetworkService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\ReceiveContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\SendingQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Messages\StudentSubmissionNetworkService.cs" />
+    <Compile Include="Network\NetworkAssociationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\NetworkStatus.cs" />
+    <Compile Include="Network\PacketTypes.cs" />
+    <Compile Include="Network\RTP\IRTPMessageSender.cs" />
+    <Compile Include="Network\RTP\RTPClassroomManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\RTP\RTPConnectionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\RTP\RtpLocalParticipant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\RTP\RTPMessageReceiver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\RTP\RTPMessageSender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\RTP\RTPNackManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\RTP\RtpNackMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\RTP\RTPVenueManager.cs" />
+    <Compile Include="Network\TCP\ClientUnicastToMulticastBridge.cs" />
+    <Compile Include="Network\TCP\TCPClientClassroomManager.cs" />
+    <Compile Include="Network\TCP\TCPHeartbeatMessage.cs" />
+    <Compile Include="Network\TCP\TCPInterfaces.cs" />
+    <Compile Include="Network\TCP\TCPClassroomManager.cs" />
+    <Compile Include="Network\TCP\TCPClient.cs" />
+    <Compile Include="Network\TCP\TCPHandshakeMessages.cs" />
+    <Compile Include="Network\TCP\TCPMessageReceiver.cs" />
+    <Compile Include="Network\TCP\TCPServer.cs" />
+    <Compile Include="Network\TCP\TCPServerSender.cs" />
+    <Compile Include="Network\TCP\TCPServerSendQueue.cs" />
+    <Compile Include="Network\TCP\UnicastToMulticastBridge.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting\Events\ClickEvent.cs" />
+    <Compile Include="Scripting\Events\InkDrawingEvent.cs" />
+    <Compile Include="Scripting\Events\MenuClickEvent.cs" />
+    <Compile Include="Scripting\Events\RandomWaitEvent.cs" />
+    <Compile Include="Scripting\Events\WaitEvent.cs" />
+    <Compile Include="Scripting\MessageSender.cs" />
+    <Compile Include="Scripting\Script.cs" />
+    <Compile Include="Scripting\ScriptEvent.cs" />
+    <Compile Include="Scripting\ScriptExecutionService.cs" />
+    <Compile Include="Scripting\SendInputInterop.cs" />
+    <Compile Include="Network\TCP\TCPConnectionManager.cs" />
+    <Compile Include="Network\TCP\TCPMessageSender.cs" />
+    <Compile Include="Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Undo\DeckUndoService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Undo\ImageSheetUndoService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Undo\InkSheetUndoService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Undo\SheetUndoService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Undo\SlideUndoService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Undo\TextSheetUndoService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Undo\WorkspaceUndoService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Background\BackgroundTemplateRenderer.cs" />
+    <Compile Include="Viewer\Background\IteratorPrimitiveRenderer.cs" />
+    <Compile Include="Viewer\Background\LinePrimitiveRenderer.cs" />
+    <Compile Include="Viewer\Background\PrimitiveRenderer.cs" />
+    <Compile Include="Viewer\Classrooms\ClassroomBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\Classrooms\ClassroomsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Classrooms\ConnectTCPRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Classrooms\ManualConnectionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Classrooms\PresentationsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Classrooms\PresentationsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Classrooms\StartJoinButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Classrooms\StartJoinButton2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Classrooms\StartupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\Classrooms\UDPPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\DeckMatcherForm\DeckMatcherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\DeckMatcherForm\MatchedControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\DeckMatcherForm\UnmatchedControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\FilmStrips\DeckStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\FilmStrips\FilmStripContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\FilmStrips\FilmStripSlideViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\FilmStrips\LinkedSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\FilmStrips\MultiColumnFilmStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\FilmStrips\PreviewTraversalModelAdater.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\FilmStrips\SlidePreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\Inking\EraserPlugin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Inking\InkAnnotationCollector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Inking\InkSheetAdapter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Inking\InkTransformFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Inking\LassoPlugin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Inking\StylusInputSelector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Inking\TransformableDynamicRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\ClassroomMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\CloseDeckMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\ConnectTCPMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\DecksMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\EditMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\FileMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\HelpMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\InsertMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\MainMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\OpenDeckMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\RoleMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\SaveDeckMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\StudentMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\ToolsMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\Menus\ViewMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\PresentationLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\PresenterCapability.cs" />
+    <Compile Include="Viewer\PropertiesForm\BackgroundPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\PropertiesForm\DisplaysPropertiesPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\PropertiesForm\GeneralPropertiesPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\PropertiesForm\LoggingPropertiesPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\PropertiesForm\NetworkPropertiesPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\PropertiesForm\PenPropertiesPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\PropertiesForm\PropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\SecondMonitor\FullScreenAdapter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\SecondMonitor\FullScreenButtons.cs" />
+    <Compile Include="Viewer\SecondMonitor\SecondMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\SecondMonitor\SecondMonitorSlideViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\Slides\ImageSheetRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Slides\InkSheetRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Slides\MainSlideViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\Slides\QuickPollSheetRenderer.cs" />
+    <Compile Include="Viewer\Slides\RealTimeInkSheetRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Slides\RoleSynchronizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Slides\SheetRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Slides\SlideRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Slides\SlideViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\Slides\TextSheetRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\Slides\XPSPageRenderer.cs" />
+    <Compile Include="Viewer\SSOrganizer\SSOrganizerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewer\TextAndImageEditing\ImageIt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\TextAndImageEditing\PresentItBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\TextAndImageEditing\TextItBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Viewer\TextAndImageEditing\TextItText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\ToolBars\DeckNavigationToolBarButtons.cs">
+    </Compile>
+    <Compile Include="Viewer\ToolBars\DrawingAttributesToolBarButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\ToolBars\InstructorToolBarButtons.cs">
+    </Compile>
+    <Compile Include="Viewer\ToolBars\MainToolBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\ToolBars\MainToolBars.cs">
+    </Compile>
+    <Compile Include="Viewer\ToolBars\SlideToolBarButtons.cs">
+    </Compile>
+    <Compile Include="Viewer\ToolBars\StudentToolBarButtons.cs">
+    </Compile>
+    <Compile Include="Viewer\ToolBars\StylusToolBarButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\ToolBars\StylusToolBarButtons.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Viewer\ToolBars\UndoToolBarButtons.cs">
+    </Compile>
+    <Compile Include="Viewer\Touch\TouchGestureHandler.cs" />
+    <Compile Include="Viewer\Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Viewer\WebPerformanceModel.cs" />
+    <Compile Include="Web\Model\SimpleModelHistory.cs" />
+    <Compile Include="Web\Model\SimpleWebModel.cs" />
+    <Compile Include="Web\Network\DeckTraversalWebService.cs" />
+    <Compile Include="Web\Network\DeckWebService.cs" />
+    <Compile Include="Web\Network\InkSheetWebService.cs" />
+    <Compile Include="Web\Network\InstructorWebService.cs" />
+    <Compile Include="Web\Network\PresentationWebService.cs" />
+    <Compile Include="Web\Network\QuickPollWebService.cs" />
+    <Compile Include="Web\Network\SheetWebService.cs" />
+    <Compile Include="Web\Network\SlideWebService.cs" />
+    <Compile Include="Web\Network\TableOfContentsWebService.cs" />
+    <Compile Include="Web\Network\WebPerformanceWebService.cs" />
+    <Compile Include="Web\WebService.cs">
+    </Compile>
+    <EmbeddedResource Include="Misc\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\ProgressBarForm.resx">
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\TextInputMessageBox.resx">
+      <DependentUpon>TextInputMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FilmStrips\DeckStrip.resx">
+      <DependentUpon>DeckStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\FilmStrips\LinkedSplitter.resx">
+      <DependentUpon>LinkedSplitter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Menus\ClassroomMenu.resx">
+      <DependentUpon>ClassroomMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Menus\DecksMenu.resx">
+      <DependentUpon>DecksMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Menus\EditMenu.resx">
+      <DependentUpon>EditMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Menus\FileMenu.resx">
+      <DependentUpon>FileMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Menus\HelpMenu.resx">
+      <DependentUpon>HelpMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Menus\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Menus\OpenDeckMenuItem.resx">
+      <DependentUpon>OpenDeckMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Menus\RoleMenu.resx">
+      <DependentUpon>RoleMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Menus\SaveDeckMenuItem.resx">
+      <DependentUpon>SaveDeckMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\PresentationLayout.resx">
+      <DependentUpon>PresentationLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\PropertiesForm\PropertiesForm.resx">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Slides\SlideViewer.resx">
+      <DependentUpon>SlideViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\ToolBars\DrawingAttributesToolBarButton.resx">
+      <DependentUpon>DrawingAttributesToolBarButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\ToolBars\MainToolBar.resx">
+      <DependentUpon>MainToolBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\ToolBars\StylusToolBarButton.resx">
+      <DependentUpon>StylusToolBarButton.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\whiteboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\minimize.png" />
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\slideerase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\lasso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\left.png" />
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\buttontemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\submission.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Viewer\TextAndImageEditing\TextItText.resx">
+      <DependentUpon>TextItText.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\linked.png" />
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\submission_off.png" />
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\submission_on.png" />
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\unlinked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Classrooms\ClassroomBrowser.resx">
+      <DependentUpon>ClassroomBrowser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Classrooms\ClassroomsList.resx">
+      <DependentUpon>ClassroomsList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\Classrooms\PresentationsList.resx">
+      <DependentUpon>PresentationsList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\text.gif" />
+    <EmbeddedResource Include="Viewer\Viewer.resx">
+      <DependentUpon>Viewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Viewer\TextAndImageEditing\privatesubmission.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Viewer\TextAndImageEditing\publicsubmission.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Viewer\ToolBars\Icons\singleslide.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Viewer\ToolBars\Icons\doubleslide.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Camera\CaptureGraphForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CaptureGraphForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\LicenseForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LicenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\VersionCompatibilityInfoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VersionCompatibilityInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenter.ico" />
+    <EmbeddedResource Include="Strings.el-GR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.es-ES.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="BackgroundTemplate.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Strings.zh-TW.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\image.png" />
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\quickpoll_off.png" />
+    <EmbeddedResource Include="Viewer\ToolBars\Icons\quickpoll_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

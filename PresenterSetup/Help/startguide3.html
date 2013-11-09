@@ -1,0 +1,517 @@
+<HTML>
+<HEAD>
+		<TITLE>Getting Started with Classroom Presenter 3</TITLE>
+		<LINK href="startguide3_files/style.css" type="text/css" rel="stylesheet"></HEAD>
+	<BODY vLink="#800080" aLink="#ff0000" link="#0000ff">
+		<table cellSpacing="0" cellPadding="6" border="0">
+
+			<tr>
+				<td vAlign="middle" align="center" colSpan="2">
+					<h1>Welcome to Classroom Presenter 3!</h1>
+				</td>
+			</tr>
+
+			<tr>
+			<td vAlign="top" align="left">
+				<table id="TABLE1" cellSpacing="0" cellPadding="3" border="0">
+					<tr>
+						<td><b>Basic Guide</b></td>
+					</tr><tr>
+						<td><a href="#general">General</a></td>
+					</tr><tr>
+						<td><a href="#set-up-requirements">Set-Up Requirements</a></td>
+					</tr><tr>
+						<td><a href="#projecting">Projecting</a></td>
+					</tr><tr>
+						<td><a href="#starting">Starting Classroom Presenter</a></td>
+					</tr><tr>
+						<td><a href="#networking">Networking</a></td>
+					</tr><tr>
+						<td><a href="#create">Creating a Slide Deck</a></td>
+					</tr><tr>
+						<td><a href="#instructor-only-notes">Instructor-Only Notes</a></td>
+					</tr><tr>
+						<td><a href="#controls">Presenter Controls</a></td>
+					</tr><tr>
+						<td><a href="#saving">Saving Slide Decks</a></td>
+					</tr><tr>
+						<td><a href="#exporting">Exporting to html</a></td>
+					</tr><tr>
+						<td><a href="#customizing">Customizing Options</a></td>
+					</tr><tr>
+					<tr>
+						<td><b>Additional Help</b></td>
+					</tr><tr>
+						<td><a href="adhoc-cp3.html">Ad Hoc Networks</a></td>
+					</tr><tr>
+						<td><a href="ssubs-cp3.html">Student Submissions</a></td>
+					</tr><tr>
+						<td><a href="qp-cp3.html">Quick Polling</a></td>
+					</tr>
+				</table>
+				</td>
+
+<td>
+
+<h2 id="general">General</h2>
+
+<p>A mailing list [presenter-profs] has been set up for users of
+Presenter. If you want to be added to the list, send mail
+to <a href="mailto:anderson@cs.washington.edu"> Richard
+Anderson</a>.</p>
+
+<h2 id="set-up-requirements">Set-Up Requirements</h2>
+
+<h3>Instructor Requirements</h3>
+
+<p>There are two different instructor set-up options: stationary and
+mobile.  For a stationary presentation you will need a Tablet PC
+running WindowsXP or Vista connected directly to a data projector.
+For a mobile presentation you will need two machines: you will be able
+to move freely about the classroom with your Tablet PC, but you will
+need a second computer (does not have to be a tablet, but a tablet
+will work) in the <a href="#public">Public role</a> that should be
+connected directly to the projector.  This set up is enough if you
+only want to take advantage of instructor inking on slides.</p>
+
+<h3>Student Requirements</h3>
+
+<p>To take advantage of Presenter's student interaction features,
+students will need machines running WindowsXP or Vista with Classroom
+Presenter installed.  To use Presenter's student inking capabilities,
+students will need Tablet PCs.  For how to connect to the students,
+please see <a href="#networking"> Networking</a>.  For how to use
+Presenter's student interaction features, please see the
+<a href="ssubs-cp3.html"> student submission help page</a>.</p>
+
+<h2 id="projecting">Projecting</h2>
+
+<p>Projecting may be done with the tablet from which you are
+lecturing, or a second computer in the <a href="#public">Public
+role</a>.  If you use a machine in the public role, it does not need
+to be a tablet because all the inking is done from the instructor
+tablet.</p>
+
+<p>In both cases, you will first need to physically connect the projector
+to the computer.  If you're projecting the lecture from your tablet,
+you need to "attach" a second display.  To do this, go to
+the <b>Control Panel</b> and open <b>Display</b>.  Under
+the <b>Settings</b> tab, you'll see two boxes, 1 and 2.  Click box 2
+and check the option "Extend my Windows desktop onto this monitor."
+(In Vista, you access display settings by going to 
+<b>Control Panel->Personalization->Display Settings</b>.)</p>
+
+<IMG src="startguide3_files/attaching_monitor.jpg" border="0">
+
+<p>Now the computer knows you want to show the lecture on a separate
+	display (the projector).</p>
+
+<p>To display with a second machine, you might need to change the
+computer to display "internal and external."  The computer has three
+settings, internal only, external only, and internal and external.  To
+cycle through them, look for a button with two concentric rectangles,
+or an oval within a rectangle.  On HP Tablets, the button is by the
+power button.  On many laptops, it's often on the keyboard.  It may
+take a few seconds for the display to update.</p>
+
+<p>If nothing is projected, try cycling through the projector's input
+settings. </p>
+
+<p>The mechanism for setting the display to extended desktop (or dual
+display) varies between different Tablet PCs, for example on Motion
+Computing machines, this is a setting found in the "Dashboard", and on
+an HP 4200 Tablet PC this is accessed via graphics options on the
+display context menu.  If you did not select the <b>Enable Dual
+Monitor Output</b> checkbox at startup time, you may also select it
+from <b>Tools->Options->General</b> on
+the <a href="#customizing">Properties Dialog box</a> as discussed
+below.</p>
+
+<h2 id="starting">Starting Classroom Presenter</h2>
+
+<p>This section covers starting Presenter as an Instructor in both 
+<a href="#instructor-stand-alone">stand alone</a> and 
+<a href="#instructor-networked">networked</a> modes, as well as
+<a href="#student">student</a> and 
+<a href="#public">public display</a> roles.  
+<a href="#instructor-stand-alone">Stand alone</a> 
+mode should be used if
+you are giving a presentation from a Tablet PC connected directly to a
+projector.  In this scenario, only one device is involved and no
+networking is required.  
+<a href="#instructor-networked">Networked</a> mode should be used if
+you need the instructor machine to interact with other machines
+running in either student or public display roles.  Only one machine
+should be in instructor role.</p>
+
+<h3 id="instructor-stand-alone">Instructor - in Stand Alone Mode</h3>
+
+<p>You can start Classroom Presenter either from the start menu (under
+UW CSE) or by double clicking on a .cp3 file.  In either case, you
+will first see the <b>Connection Sequence dialog box</b>.</p>
+
+<p><b>Step 1:</b> Select the <b>Instructor</b> role under <b>Stand
+Alone</b>.  Select the
+<b>Enable Dual-Monitor Output</b> checkbox if you wish to display from your
+extended desktop (see <a href="#projecting">Projecting</a> for more information).</p>
+
+<p><b>Step 2:</b> Click the <b>Start a New Presentation</b> button at
+	the bottom of the page.</p>
+
+<IMG src="startguide3_files/start-instr-SA-01.jpg" border="0"> 
+
+<p>If you clicked on a cp3 file to start Presenter the file will be
+automatically loaded for you.  Otherwise, choose <b>Open Deck</b> from the
+<b>File</b> menu.  Both PowerPoint and .cp3 files can be selected and
+loaded directly into Presenter.</p>
+
+<IMG src="startguide3_files/start-instr-SA-02.jpg" border="0"> 
+
+<h3 id="instructor-networked">Instructor - in Networked Mode</h3>
+
+<p>You can start Classroom Presenter either from the start menu (under
+UW CSE) or by double clicking on a .cp3 file.  In either case, you
+will first see the <b>Connection Sequence dialog box</b>.</p>
+
+<p><b>Step 1:</b> Select <b>Instructor</b> role
+under <b>Networked</b>.  Select the <b>Enable Dual-Monitor Output</b>
+checkbox if you wish to display from your extended desktop
+(see <a href="#projecting">Projecting</a> for more information).</p>
+ 
+<p><b>Step 2:</b> Select <b>Start TCP Server and Take Instructor
+	Role</b> after it appears.</p>
+
+<IMG src="startguide3_files/start-instr-N-01.jpg" border="0"> 
+
+<p><b>Step 3:</b> Once the <b>Start a New Presentation</b> button at
+	the bottom of the page is enabled, click it.</p>
+
+<p>If you clicked on a cp3 file to start Presenter the file will be
+automatically loaded for you.  Otherwise, choose <b>Open Deck</b> from the
+<b>File</b> menu.  Both PowerPoint and .cp3 files can be selected and
+loaded directly into Presenter.  The instructor may choose to open a
+deck at any time while students are starting Presenter on their
+machines, although broadcast of slides to student machines will be
+faster if the instructor opens their deck after student machines have
+connected.</p>
+
+<IMG src="startguide3_files/start-instr-N-02.jpg" border="0"> 
+
+<h3 id="student">Student</h3>
+
+<p>Start Classroom Presenter from the start menu (under UW CSE).  You
+	will first see the <b>Connection Sequence dialog box</b>.</p>
+
+<p><b>Step 1:</b> Select <b>Student</b> role under <b>Networked</b>.
+If student machines are on the same subnet as the instructor, then the
+instructor's presentation should show up under the <b>Broadcasted
+Presentations</b> tab.</p>
+
+<p><b>Step 2:</b> Select the instructor's presentation
+from <b>Available Presentations</b> after it appears.  If the
+instructor's presentation does not appear,
+use <a href="#alternate-step-2">Alternate Step 2</a> below.</p>
+
+<IMG src="startguide3_files/start-stud-01.jpg" border="0"> 
+
+<p id="alternate-step-2">
+<b>Alternate Step 2:</b> Under <b>Advanced Connection Options</b>,
+choose <b>Connect to TCP Server</b>.  A dialog box will appear asking
+for the student to enter the instructor's IP address, and port if
+necessary.  The default port will be correct unless a dialog box also
+appeared on the instructor's machine when it was connecting, telling
+the instructor that an alternate port was used.  The instructor can
+find their IP address by going to <b>Help->IP Address</b>.  After
+entering the instructor's IP address, the presentation should appear
+under <b>Presentations in Chosen Venue</b>.  Select the
+presentation.</p>
+
+<IMG src="startguide3_files/start-stud-02.jpg" border="0"> 
+
+<p><b>Step 3:</b> Once the <b>Join the Selected Instructor's
+	Presentation</b> button at the bottom of the page is enabled, click
+	it.</p>
+ 
+<h3 id="public">Public Display</h3>
+
+<p>If you would like to connect a machine other than the instructor's
+tablet to the projector, you should start it in the <b>Public Display</b>
+role.  The connection sequence for this is identical to the
+<a href="#student">student</a> sequence above with the exception that
+the <b>Public Display</b> role should be selected.</p>
+
+<h2 id="networking">Networking</h2>
+
+<p>If the students will be using Tablet PCs to follow along or send
+student submissions, you will need to set up a network.  If only the
+instructor will be running Presenter, no networking is needed.</p>
+
+<p>To connect the student and instructor PCs, you can either connect
+to the Internet or set up your own network isolated from the Internet.
+To connect through the Internet, the classroom needs either wired or
+wireless access.  Your campus's classroom support service should be
+able to tell you where the Internet is available.</p>
+
+<h3>Wired</h3>
+
+<p>There are two options for a wired network.  Either you can use a
+pre-existing connection and have every machine connected to the
+Internet.  Or you can use a switch or router to connect all the
+computers to each other (but not the outside world).  If you have a
+lot of computers in one classroom, a wired connection can get
+cluttered because each machine needs its own wire.  However, the
+performance on a wired network is very reliable.</p>
+
+<h3>Wireless Internet</h3>
+
+<p>With a wireless Internet available (an access point), each machine
+	can connect to the Internet and access the instructor machine.</p>
+
+<h3>Wireless Router (without connection to the Internet)</h3>
+
+<p>You may also set up your own network using a wireless router (base
+station) without connecting to the Internet.  In this case, the
+instructor machine as well as the student machines should be connected
+to the network associated with the router.</p>
+
+<h3>Ad hoc network</h3>
+
+<p>One final option is to create an <i>ad hoc</i> network between
+machines without the use of an router.  The easiest way to use an ad
+hoc network is to have the instructor create one for the class and let
+the students connect to it.
+	<a href="adhoc-cp3.html">Click here for instructions on setting up an ad
+	hoc network</a>.</p>
+
+<h2 id="create">Creating a Slide Deck</h2>
+
+<h3>1. Using a PowerPoint deck directly</h3>
+
+<p>Classroom Presenter 3 allows you to load a PowerPoint file directly
+into Classroom Presenter.  If you would like to add 
+<a href="#instructor-only-notes">instructor-only notes</a> to your
+presentation, you will need to install the PowerPoint Plugin available
+from the <a href="http://classroompresenter.cs.washington.edu/">
+Classroom Presenter web page</a> and described below.  PowerPoint
+files containing instructor notes may also be loaded directly into
+Classroom Presenter.</p>
+
+<h3>2. Creating a cp3 file from a set of images (using DeckBuilder)</h3>
+
+<p>You may also create slide decks from a set of images (without the use
+of PowerPoint) using the DeckBuilder application.  This is useful for
+creating cp3 decks from slide images created using Latex or other
+applications.  DeckBuilder is included along with the installation
+under <b>Start->All Programs->UW CSE->Presenter 3.0->DeckBuilder 3.0</b>.
+Within DeckBuilder, use <b>Edit->Insert Image Set</b> to create a slide deck
+from a folder of images.  One slide will be created from each image in
+the selected folder in alphabetical/numeric order.  Then select
+<b>File->Save</b> to save your deck in cp3 format.  Several options on the
+<b>Edit</b> menu also allow you to insert or delete individual slides
+from the slide deck.</p>
+
+<h2 id="instructor-only-notes">Instructor-Only Notes</h2>
+
+<p>Using the PowerPoint Plugin
+(<a href="http://classroompresenter.cs.washington.edu/">download
+here</a>), instructors can add notes (or any other PowerPoint object)
+to their slides that are only visible in the instructor's view and
+never seen on the students' tablets or projected view.</p>
+ 
+<p>The Plugin provides two pairs of buttons to view and create
+instructor-only content.  These pairs of buttons allow you to 1)
+toggle your view of the slide deck between the projected and
+instructor views, and to 2) set the visibility level of individual
+PowerPoint objects on a slide.</p>
+
+<h3>1. Toggle Slide Deck View: </h3>
+
+<p>The pair of buttons on the left indicate whether the slide deck is
+currently being shown to the PowerPoint user in its <b>Projected
+View</b> (as it would be projected to the class or seen on student
+machines) or in its <b>Instructor View</b> (as it would be shown on
+the Instructor's tablet).</p>
+
+<p>Unless you are interested in creating instructor-only notes, you
+should be sure that when editing your slides you are viewing the deck
+in the <b>Projected View</b> as seen below:</p>
+
+<IMG src="startguide3_files/instr-notes-01.jpg" border="0"> 
+
+<p>If you would like to view the entire slide deck as it would be
+visible only on the instructor's machine, you may switch to
+the <b>Instructor View</b> as seen below:</p>
+
+<IMG src="startguide3_files/instr-notes-02.jpg" border="0"> 
+
+<p>Note how this slide deck contains several objects that will only be
+visible on the instructor's machine.  On the slide shown above, the
+yellow box in the upper right corner and the text in green at the
+bottom of the slide will not appear on the projected view or on
+student devices.  If you are using a single machine in dual monitor
+mode, instructor-only content will be visible on the instructor's view
+but not on the view projected from the second desktop.</p>
+
+<h3>2. Set Object Visibility:</h3>
+
+<p>The second pair of buttons indicates the visibility level of the
+selected PowerPoint object.  In the two pictures above, no object has
+been selected so the buttons are grayed out.  In the picture below the
+green text at the bottom of the page has been selected.  The object
+visibility button indicates that this object (a text box) has been
+tagged as an <b>Instructor Note</b> and will be visible only on the
+instructor's machine:</p>
+
+<IMG src="startguide3_files/instr-notes-03.jpg" border="0"> 
+
+<p>The text on the left of the slide selected in the picture below has
+	been tagged as <b>Unrestricted</b> content that will be seen on all
+	devices.</p>
+
+<IMG src="startguide3_files/instr-notes-04.jpg" border="0"> 
+
+<p>You may change the visibility level of an object by selecting it
+	and toggling between <b>Unrestricted</b> and <b>Instructor Note</b>
+	settings.</p>
+ 
+<p>By default, PowerPoint objects you create while in a certain view
+(<b>Projected</b> vs. <b>Instructor</b>) will have their visibility
+set to that level (<b>Unrestricted</b> vs. <b>Instructor Note</b>).
+This means that if you are seeing the <b>Instructor View</b>, all
+PowerPoint objects, <i>including content on new slides you insert</i>,
+will have their visibility level set to be an <b>Instructor Note</b>
+by default.  It is a good idea to toggle between <b>Projected</b>
+and <b>Instructor</b> views occasionally to be sure you have not
+inadvertently created content as <b>Instructor Notes</b>.</p>
+
+<h2 id="controls">Presenter Controls</h2>
+
+<h3>Instructor</h3>
+
+<p>With the Presenter control buttons, instructors can: </p>
+
+<ul>
+	<li>Change the pen color, </li>
+	<li>Switch between pen, highlighter, eraser, and text note modes
+	(ink and text notes will be visible on student devices),</li>
+	<p> </p>
+
+<li>Erase all (clear the slide of all your ink and inserted text
+	notes), </li>
+<li>Toggle between the full slide view and one with the slide
+	minimized for additional writing space,</li>
+<li>Undo and Redo ink strokes or erasing,</li>
+	<p> </p>
+
+<li>Enable/disable student devices from submitting student
+submissions, </li>
+<li>Disable/enable students' ability to navigate freely through your
+	slide decks on their machines,</li>
+	<p> </p>
+
+	<li>Create and toggle to and from to a deck of blank slides (a white
+	board deck), </li>
+<li>Navigate the presentation via the arrow buttons (or by selecting a
+	slide in the filmstrip),</li>
+	<li>Switch between multiple slide decks using the tabs next to the
+	filmstrip </li>
+</ul>
+
+<p>Instructor button controls:</p>
+
+<IMG src="startguide3_files/controls-instr-01.jpg" border="0"> 
+
+<br id="preview">
+Holding the pen down on the filmstrip generates a small <b>preview</b>
+window (not projected or seen on student machines):</p>
+
+<IMG src="startguide3_files/slide-preview.jpg" border="0"> 
+
+<h3>Student</h3>
+
+<p>With the Presenter control buttons, students can: </p>
+
+<ul>
+	<li>Change the pen color, </li>
+	<li>Switch between pen, highlighter, eraser, and text note mode, </li>
+	<p> </p>
+
+<li>Submit the contents of the current slide (ink and text notes) to
+	the instructor as a student submission,</li>
+	<li>Erase all (clear the slide of all your ink and inserted text notes), </li>
+	<li>Undo and Redo ink strokes or erasing,</li>
+	<p> </p>
+
+<li>(If enabled by the instructor) Link or unlink from the
+	instructor's slide navigation actions,</li>
+	<p> </p>
+
+<li>(If enabled by the instructor, and unlinked from the instructor)
+Navigate the presentation via the arrow buttons (or by selecting a
+	slide in the filmstrip),</li>
+<li>(If enabled by the instructor, and unlinked from the instructor)
+Switch between multiple slide decks using the tabs next to the
+	filmstrip</li>
+</ul> 
+
+<p>Student button controls:</p>
+
+<IMG src="startguide3_files/controls-stud-01.jpg" border="0"> 
+
+<p>Student view with free navigation enabled:</p>
+
+<IMG src="startguide3_files/controls-stud-02.jpg" border="0"> 
+
+<h2 id="closing">Closing Slide Decks</h2>
+
+<p>To ensure that you close the deck you intend to close, you must select
+one of the slides from that deck so that it is visible in the main
+window.  Clicking the tab to the side of the filmstrip will not select
+	the deck!  To close the selected deck, go to <b>File->Close Deck</b>.</p>
+
+<h2 id="saving">Saving Slide Decks (as cp3 files)</h2>
+
+<p>Instructors can save their inked presentation decks, student
+submission decks, and inked whiteboard decks.  Students can also save
+presentation decks including instructor ink and student ink.  All
+slide decks are saved as Classroom Presenter 3 slide decks (cp3 file
+extension).</p>
+
+<p>To ensure that you save the deck you intend to save, you must
+select one of the slides from that deck so that it is visible in the
+main window.  Clicking the tab to the side of the filmstrip will not
+select the deck!  To save the selected deck, go to <b>File->Save
+Deck</b>.  You may save all decks at once using <b>File->Save All
+Decks</b>.</p>
+
+<p>You can turn on a prompt that will ask if you want to save before
+	closing.  See <a href="#customizing">Customizing Options</a>.</p>
+
+<h2 id="exporting">Exporting Slide Decks (as html files and images)</h2>
+
+<p>Instructors can create an html page containing JPEG images of all of
+their inked slides from a selected deck.  To create a web page go to
+<b>File->Export as HTML</b>.  You will then be prompted for a filename
+for the web page.</p>
+ 
+<p>To create only the image files, select <b>File->Export as
+	Image</b>.  You will then be prompted for a folder where the images
+	will be placed.</p>
+ 
+<p>(There is also an option for saving just the ink as a binary .isf
+file.  This option does not save the slide background and is not
+needed for general use.)</p>
+
+<h2 id="customizing">Customizing Options</h2>
+
+<p>Several aspects of Classroom Presenter can be customized via the
+Properties dialog box, accessible from <b>Tools->Options</b>.  Most
+options of interest are on the General tab.</p>
+
+<IMG src="startguide3_files/customizing.jpg" border="0"> 
+
+				</td>
+			</tr>
+		</table>
+	</BODY>
+</HTML>
