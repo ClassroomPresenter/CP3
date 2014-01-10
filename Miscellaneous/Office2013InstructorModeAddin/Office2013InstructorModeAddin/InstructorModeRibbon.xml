@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabAddIns">
+        <group id="CP3Group" label="Classroom Presenter 3.0">
+          <box id="box1" boxStyle="vertical">
+            <toggleButton id="ProjectedView"
+                          size="normal"
+                          label="Projected View"
+                          screentip="Set the slide to show the projected view of the slide"
+                          getPressed="OnGetPressed"
+                          getEnabled="OnGetEnabled"
+                          onAction="OnClick" />
+            <toggleButton id="InstructorView"
+                          size="normal"
+                          label="Instructor View"
+                          screentip="Set the slide to show the instructors view of the slide"
+                          getPressed="OnGetPressed"
+                          getEnabled="OnGetEnabled"
+                          onAction="OnClick" />
+          </box>
+          <separator id="separator1"/>
+          <box id="box2" boxStyle="vertical">
+            <toggleButton id="ProjectedSet"
+                          size="normal"
+                          label="Unrestricted"
+                          screentip="Set the selected objects to be viewable in the projected view"
+                          getPressed="OnGetPressed"
+                          getEnabled="OnGetEnabled"
+                          onAction="OnClick" />
+            <toggleButton id="InstructorSet"
+                          size="normal"
+                          label="Instructor Note"
+                          screentip="Set the selected objects to be viewable only by the instructor"
+                          getPressed="OnGetPressed"
+                          getEnabled="OnGetEnabled"
+                          onAction="OnClick" />
+          </box>       
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+
