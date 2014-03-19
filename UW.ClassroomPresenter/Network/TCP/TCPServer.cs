@@ -23,7 +23,8 @@ namespace UW.ClassroomPresenter.Network.TCP {
     public class TCPServer : PropertyPublisher, IDisposable, ITCPSender, ITCPReceiver  {
         #region Public Static
 
-        public static readonly int DefaultPort = 5664; //FIXME: Don't hardcode.
+        public static readonly int DefaultPort = 5664;
+        public static int TCPListenPort = DefaultPort; 
 
         #endregion Public Static
 
@@ -82,6 +83,11 @@ namespace UW.ClassroomPresenter.Network.TCP {
 
         public TCPServer(IPEndPoint localEP, PresenterModel model, ClassroomModel classroom,
             InstructorModel instructor) {
+            string portStr = System.Configuration.ConfigurationManager.AppSettings[this.GetType().ToString() + ".TCPListenPort"];
+            int p;
+            if (Int32.TryParse(portStr, out p)) {
+                TCPListenPort = p;
+            }
             RestoreConfig();
             m_ClientConnected = new ManualResetEvent(false);
             m_Participant = model.Participant;
@@ -100,7 +106,7 @@ namespace UW.ClassroomPresenter.Network.TCP {
                 if ((!Socket.OSSupportsIPv4) && (Socket.OSSupportsIPv6)) {
                     ip = IPAddress.IPv6Any;
                 }
-                this.m_ListenEP = new IPEndPoint(ip, DefaultPort); 
+                this.m_ListenEP = new IPEndPoint(ip, TCPListenPort); 
             }
 
             m_AllClients = new Hashtable();
