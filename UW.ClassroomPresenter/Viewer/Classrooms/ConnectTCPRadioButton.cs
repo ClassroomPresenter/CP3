@@ -150,7 +150,7 @@ namespace UW.ClassroomPresenter.Viewer.Classrooms {
             Label label2 = new Label();
             label2.FlatStyle = FlatStyle.System;
             label2.Font = Model.Viewer.ViewerStateModel.StringFont2;
-            label2.Text = Strings.Port;
+            label2.Text = Strings.Port + " (default: " + TCPServer.DefaultPort.ToString() + ")";
             using (Graphics graphics = label.CreateGraphics())
                 label2.ClientSize = Size.Add(new Size(10, 0),
                     graphics.MeasureString(label2.Text, label2.Font).ToSize());
@@ -160,7 +160,15 @@ namespace UW.ClassroomPresenter.Viewer.Classrooms {
             portInput.Font = Model.Viewer.ViewerStateModel.StringFont2;
             portInput.Size = new Size((4 / 3) * sizeConst, sizeConst / 2);
             portInput.Location = new Point(addressInput.Left, label2.Top);
-            portInput.Text = TCPServer.DefaultPort.ToString();
+
+            using (Synchronizer.Lock(this.m_Model.ViewerState.SyncRoot)) {
+                if (this.m_Model.ViewerState.TCPport != 0) {
+                    portInput.Text = this.m_Model.ViewerState.TCPport.ToString();
+                }
+                else {
+                    portInput.Text = TCPServer.DefaultPort.ToString();
+                }
+            }
 
             Button okay = new Button();
             okay.FlatStyle = FlatStyle.System;
@@ -196,6 +204,9 @@ namespace UW.ClassroomPresenter.Viewer.Classrooms {
                     int port = 0;
                     if (!Int32.TryParse(portInput.Text, out port)) {
                         port = TCPServer.DefaultPort;
+                    }
+                    using (Synchronizer.Lock(this.m_Model.ViewerState.SyncRoot)) {
+                        this.m_Model.ViewerState.TCPport = port;
                     }
                     IPEndPoint ep = new IPEndPoint(ipaddress, port);
                     this.m_ClassroomManager.RemoteServerEndPoint = ep;

@@ -64,6 +64,7 @@ namespace UW.ClassroomPresenter.Model.Viewer {
         private bool m_Advanced;
         private String m_ManualConnectionButtonName;
         private string m_TCPaddress;
+        private int m_TCPport = UW.ClassroomPresenter.Network.TCP.TCPServer.DefaultPort;
         private bool m_ShowIP;
 
         // Printing
@@ -429,10 +430,23 @@ namespace UW.ClassroomPresenter.Model.Viewer {
         /// <summary>
         /// In the connection sequence, which TCP address has the user input?
         /// </summary>
-        [Published][Saved] public string TCPaddress {
+        [Published]
+        [Saved]
+        public string TCPaddress {
             get { return this.GetPublishedProperty("TCPaddress", ref this.m_TCPaddress); }
             set { this.SetPublishedProperty("TCPaddress", ref this.m_TCPaddress, value); }
         }
+
+        /// <summary>
+        /// TCP Port used for a manual connection
+        /// </summary>
+        [Published]
+        [Saved]
+        public int TCPport {
+            get { return this.GetPublishedProperty("TCPport", ref this.m_TCPport); }
+            set { this.SetPublishedProperty("TCPport", ref this.m_TCPport, value); }
+        }
+
         [Published]
         [Saved]
         public bool ShowIP {
