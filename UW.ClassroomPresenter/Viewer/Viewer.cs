@@ -63,6 +63,7 @@ namespace UW.ClassroomPresenter.Viewer {
         private FullScreenAdapter m_FullScreenAdapter;
 
         public List<string> OpenInputFiles = null;
+        public bool StandAlone = false;
 
         /// <summary>
         /// determines whether key input is allowed in a slide.
@@ -425,7 +426,12 @@ namespace UW.ClassroomPresenter.Viewer {
         void ShowStartup(object sender, EventArgs ea) {
             //We only want this to be called the first time it's activated...  look for a better event to use here.
             this.Activated -= this.ShowStartup;
-            this.m_StartupForm.ShowDialog();
+            if (this.StandAlone) {
+                this.m_StartupForm.StandaloneStartup();
+            }
+            else {
+                this.m_StartupForm.ShowDialog();
+            }
 
             if (this.OpenInputFiles != null) {
                 foreach (string inputFile in this.OpenInputFiles) {
@@ -759,7 +765,7 @@ namespace UW.ClassroomPresenter.Viewer {
         [System.Runtime.InteropServices.DllImport("kernel32.dll")]
         public static extern bool SetProcessWorkingSetSize(IntPtr proc, int min, int max);
 
-        public static void ViewerThreadStart(List<string> inputFiles) {
+        public static void ViewerThreadStart(List<string> inputFiles, bool standalone) {
             Trace.WriteLine("ViewerThreadStart starting");
             //FIXME: Initialize model from values in registry.
             Application.EnableVisualStyles();
@@ -836,7 +842,8 @@ namespace UW.ClassroomPresenter.Viewer {
 
                                                     // Set the Initial Deck to Load if we are Loading from an Icon
                                                     viewer.OpenInputFiles = inputFiles;
-                                                    Trace.WriteLine("Ready ot run viewer");
+                                                    viewer.StandAlone = standalone;
+                                                    Trace.WriteLine("Ready to run viewer");
 
                                                     Application.Run(viewer);
 

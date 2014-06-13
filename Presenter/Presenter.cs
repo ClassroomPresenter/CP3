@@ -57,6 +57,7 @@ namespace UW.ClassroomPresenter {
             //Parse the input arguments
 
             List<string> inputFiles = new List<string>();
+            bool standalone = false;
             for (int i = 0; i < args.Length; i++) {
                 if ("--input".StartsWith(args[i])) {
                     if ((i + 1) >= args.Length) {
@@ -75,13 +76,16 @@ namespace UW.ClassroomPresenter {
                     }
                     inputFiles.Add(inputFile);
                 }
+                else if ("--standalone".StartsWith(args[i])) {
+                    standalone = true;
+                }
                 else {
                     Usage("Invalid argument: " + args[i]);
                     return;
                 }
             }
 
-            UW.ClassroomPresenter.Viewer.ViewerForm.ViewerThreadStart(inputFiles);
+            UW.ClassroomPresenter.Viewer.ViewerForm.ViewerThreadStart(inputFiles, standalone);
         }
 
         private static void Usage(string err) {

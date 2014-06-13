@@ -161,6 +161,22 @@ namespace UW.ClassroomPresenter.Viewer.Classrooms {
             }
         }
 
+        /// <summary>
+        /// Configure the model for stand-alone instructor mode without displaying the startup form.
+        /// </summary>
+        public void StandaloneStartup() {
+            using (Synchronizer.Lock(this.m_Model.Participant.SyncRoot)) {
+                if (!(this.m_Model.Participant.Role is InstructorModel)) {
+                    this.m_Model.Participant.Role = new InstructorModel(Guid.NewGuid());
+                }
+            }
+            using (Synchronizer.Lock(this.m_Model.ViewerState.SyncRoot)) {
+                this.m_Model.ViewerState.iRole = 0;
+            }
+            this.m_StartJoinButton.Association = null;
+            StartJoinButton2.StartEmptyPresentation(this.m_Model);
+        }
+
         protected override void Dispose(bool disposing) {
             if (disposing) {
                 this.m_Model.ViewerState.Changed["iRole"].Remove(this.m_RoleChangedDispatcher.Dispatcher);
