@@ -5,6 +5,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 using UW.ClassroomPresenter;
+using System.Collections.Generic;
 
 namespace UW.ClassroomPresenter {
     class Presenter {
@@ -55,7 +56,7 @@ namespace UW.ClassroomPresenter {
 
             //Parse the input arguments
 
-            string inputFile = null;
+            List<string> inputFiles = new List<string>();
             for (int i = 0; i < args.Length; i++) {
                 if ("--input".StartsWith(args[i])) {
                     if ((i + 1) >= args.Length) {
@@ -66,12 +67,13 @@ namespace UW.ClassroomPresenter {
                         Usage("Missing file argument for --input");
                         return;
                     }
-                    inputFile = args[i + 1];
+                    string inputFile = args[i + 1];
                     i++;
                     if (!File.Exists(inputFile)) {
                         Usage("File not found: " + inputFile);
                         return;
                     }
+                    inputFiles.Add(inputFile);
                 }
                 else {
                     Usage("Invalid argument: " + args[i]);
@@ -79,7 +81,7 @@ namespace UW.ClassroomPresenter {
                 }
             }
 
-            UW.ClassroomPresenter.Viewer.ViewerForm.ViewerThreadStart(inputFile);
+            UW.ClassroomPresenter.Viewer.ViewerForm.ViewerThreadStart(inputFiles);
         }
 
         private static void Usage(string err) {

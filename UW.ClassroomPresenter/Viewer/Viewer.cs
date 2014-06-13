@@ -32,6 +32,7 @@ using UW.ClassroomPresenter.Viewer.Menus;
 using UW.ClassroomPresenter.Network.Broadcast;
 using System.Text;
 using UW.ClassroomPresenter.Model.Viewer;
+using System.Collections.Generic;
 #if RTP_BUILD
 using MSR.LST.ConferenceXP;
 using UW.ClassroomPresenter.Network.CXP;
@@ -61,7 +62,7 @@ namespace UW.ClassroomPresenter.Viewer {
         private DeckMarshalService m_Marshal;
         private FullScreenAdapter m_FullScreenAdapter;
 
-        public string OpenFromIconInputFile = null;
+        public List<string> OpenInputFiles = null;
 
         /// <summary>
         /// determines whether key input is allowed in a slide.
@@ -426,11 +427,13 @@ namespace UW.ClassroomPresenter.Viewer {
             this.Activated -= this.ShowStartup;
             this.m_StartupForm.ShowDialog();
 
-            // FIX BUG 827, 1009: Load any initial decks at this point (after we have connected)
-            // We were doing this before we connected and so clients weren't getting the deck.
-            if( this.OpenFromIconInputFile != null && this.OpenFromIconInputFile != "" ) {
-                Decks.OpenDeckDialog odd = new OpenDeckDialog( this.m_Model, this.m_Marshal );
-                odd.OpenDeck( new FileInfo( this.OpenFromIconInputFile ) );
+            if (this.OpenInputFiles != null) {
+                foreach (string inputFile in this.OpenInputFiles) {
+                    if (inputFile != null && inputFile != "") {
+                        Decks.OpenDeckDialog odd = new OpenDeckDialog(this.m_Model, this.m_Marshal);
+                        odd.OpenDeck(new FileInfo(inputFile));
+                    }
+                }
             }
         }
 
@@ -756,7 +759,7 @@ namespace UW.ClassroomPresenter.Viewer {
         [System.Runtime.InteropServices.DllImport("kernel32.dll")]
         public static extern bool SetProcessWorkingSetSize(IntPtr proc, int min, int max);
 
-        public static void ViewerThreadStart(string inputFile) {
+        public static void ViewerThreadStart(List<string> inputFiles) {
             Trace.WriteLine("ViewerThreadStart starting");
             //FIXME: Initialize model from values in registry.
             Application.EnableVisualStyles();
@@ -832,7 +835,7 @@ namespace UW.ClassroomPresenter.Viewer {
                                                 using (DeckMatcherService deckMatcher = new DeckMatcherService(viewer.m_EventQueue, model)) {
 
                                                     // Set the Initial Deck to Load if we are Loading from an Icon
-                                                    viewer.OpenFromIconInputFile = inputFile;
+                                                    viewer.OpenInputFiles = inputFiles;
                                                     Trace.WriteLine("Ready ot run viewer");
 
                                                     Application.Run(viewer);
