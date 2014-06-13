@@ -97,8 +97,9 @@ namespace UW.ClassroomPresenter {
             Console.WriteLine("Arguments:");
             Console.WriteLine("--input      Specify a PPT or CP3 file to open with Presenter");
             String msg = err +  "\r\n " + thisExe + " (Version " + version + ")\r\n" + 
-                "Usage: " + thisExe + " [--input <file>] \r\n" +
-                "Arguments:\r\n" + "--input      Specify a PPT or CP3 file to open with Presenter";
+                "Usage: " + thisExe + " [--input <file>] [--standalone]\r\n" +
+                "Arguments:\r\n" + "--input      Specify a PPT or CP3 file to open with Presenter\r\n" +
+                "--standalone       Start up in disconnected instructor mode.";
             MessageBox.Show(msg, "Usage", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
