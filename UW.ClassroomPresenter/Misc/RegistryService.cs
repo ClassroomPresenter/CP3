@@ -55,10 +55,7 @@ namespace UW.ClassroomPresenter.Misc {
             this.m_PropertyPublisher = toSave;
 
             // Get the registry key and if it doesn't exist the create it
-            this.m_RegistryKey = Registry.CurrentUser.OpenSubKey( RegistryService.m_szRegistryString, true );
-            if( this.m_RegistryKey == null ) {
-                this.m_RegistryKey = Registry.CurrentUser.CreateSubKey( RegistryService.m_szRegistryString );
-            }
+            this.m_RegistryKey = Registry.CurrentUser.CreateSubKey( RegistryService.m_szRegistryString );
 
             // Get all the properties that are supposed to be saved and add listeners to them
             foreach( PropertyInfo property in this.m_PropertyPublisher.GetType().GetProperties() ) {

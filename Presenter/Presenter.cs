@@ -26,9 +26,7 @@ namespace UW.ClassroomPresenter {
             CultureInfo cultureInfo;
 
             // Check the registry for a language setting
-            regkey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\\UW CSE\\Presenter\\V3", true);
-            if( regkey == null )
-                regkey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey( "Software\\UW CSE\\Presenter\\V3" );
+            regkey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(UW.ClassroomPresenter.Misc.RegistryService.m_szRegistryString);
             if( regkey != null )
                 o = regkey.GetValue("Language");
             if (o != null)

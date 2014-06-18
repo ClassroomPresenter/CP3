@@ -33,6 +33,8 @@ using UW.ClassroomPresenter.Network.Broadcast;
 using System.Text;
 using UW.ClassroomPresenter.Model.Viewer;
 using System.Collections.Generic;
+using Microsoft.Win32;
+using System.Globalization;
 #if RTP_BUILD
 using MSR.LST.ConferenceXP;
 using UW.ClassroomPresenter.Network.CXP;
@@ -77,6 +79,8 @@ namespace UW.ClassroomPresenter.Viewer {
         private readonly EventQueue.PropertyEventDispatcher m_VersionExchangePopUpListener;
 
         private bool m_Saved = false;
+
+        private static RegistryKey cp3RegKey = Registry.CurrentUser.CreateSubKey(RegistryService.m_szRegistryString);
 
         public static int white_board_num = 0;
         // TODO: Figure out what slide bounds should be, merge with DecksMenu.CreateBlankWhiteboardDeckMenuItem,
@@ -123,12 +127,9 @@ namespace UW.ClassroomPresenter.Viewer {
             System.Reflection.Assembly thisExe = System.Reflection.Assembly.GetExecutingAssembly();
             this.Icon = new Icon( thisExe.GetManifestResourceStream( "UW.ClassroomPresenter.Presenter.ico" ) );
 
-            // The form should fill 5/6 of the screen by default.
-            // FIXME: Load/Store previous window size from/in the registry.
-            this.Size = new Size(SystemInformation.WorkingArea.Size.Width * 5 / 6,
-                SystemInformation.WorkingArea.Size.Height * 5 / 6);
-            // the form should be no smaller than 1/2 it's original size
-            this.MinimumSize = new Size(this.Size.Width / 2, this.Size.Height / 2);
+            this.StartPosition = FormStartPosition.Manual;
+            this.loadRegSettings();
+            this.MinimumSize = new Size(440, 330);
 
             Menus.FileMenu.CloseFormDelegate cfd = new UW.ClassroomPresenter.Viewer.Menus.FileMenu.CloseFormDelegate(this.Close);
             this.Menu = new Menus.ViewerMainMenu(this.m_EventQueue, this.m_Model, m_Loader, cfd);
@@ -345,12 +346,9 @@ namespace UW.ClassroomPresenter.Viewer {
 
             this.Icon = new Icon( thisExe.GetManifestResourceStream( "UW.ClassroomPresenter.Presenter.ico" ) );
 
-            // The form should fill 5/6 of the screen by default.
-            // FIXME: Load/Store previous window size from/in the registry.
-            this.Size = new Size(SystemInformation.WorkingArea.Size.Width * 5 / 6,
-                SystemInformation.WorkingArea.Size.Height * 5 / 6);
-            // the form should be no smaller than 1/2 it's original size
-            this.MinimumSize = new Size(this.Size.Width / 2, this.Size.Height / 2);
+            this.StartPosition = FormStartPosition.Manual;
+            this.loadRegSettings();
+            this.MinimumSize = new Size(440, 330);
 
             Menus.FileMenu.CloseFormDelegate cfd = new UW.ClassroomPresenter.Viewer.Menus.FileMenu.CloseFormDelegate(this.Close);
             this.Menu = new Menus.ViewerMainMenu(this.m_EventQueue, this.m_Model, loader, cfd);
@@ -423,6 +421,66 @@ namespace UW.ClassroomPresenter.Viewer {
 
         }
 
+        private void loadRegSettings() {
+            try {
+                // Load the form location and size from the registry
+                object val;
+
+                if ((val = cp3RegKey.GetValue("Width")) != null) {
+                    this.Width = Convert.ToInt32(val, CultureInfo.InvariantCulture);
+                }
+                else {
+                    this.Width = SystemInformation.WorkingArea.Size.Width * 5 / 6;
+                }
+
+                if ((val = cp3RegKey.GetValue("Height")) != null) {
+                    this.Height = Convert.ToInt32(val, CultureInfo.InvariantCulture);
+                }
+                else {
+                    this.Height = SystemInformation.WorkingArea.Size.Height * 5 / 6;
+                }
+
+                if ((val = cp3RegKey.GetValue("Top")) != null) {
+                    this.Top = Convert.ToInt32(val, CultureInfo.InvariantCulture);
+                }
+                else {
+                    this.Top = SystemInformation.WorkingArea.Top + 20;
+                }
+
+                if ((val = cp3RegKey.GetValue("Left")) != null) {
+                    this.Left = Convert.ToInt32(val, CultureInfo.InvariantCulture);
+                }
+                else {
+                    this.Left = SystemInformation.WorkingArea.Left + 20;
+                }
+
+                if (((val = cp3RegKey.GetValue("Maximized")) != null) &&
+                    (Convert.ToString(val) == "true")) {
+                        this.WindowState = FormWindowState.Maximized;
+                }
+
+            }
+            catch {
+                this.Size = new Size(SystemInformation.WorkingArea.Size.Width * 5 / 6,
+                                     SystemInformation.WorkingArea.Size.Height * 5 / 6);
+                this.Top = SystemInformation.WorkingArea.Top + 20;
+                this.Left = SystemInformation.WorkingArea.Left + 20;
+            }
+        }
+
+        private void saveRegSettings() {
+            if (this.WindowState == FormWindowState.Maximized) {
+                cp3RegKey.SetValue("Maximized", "true");
+            }
+            else {
+                cp3RegKey.SetValue("Maximized", "false");
+                cp3RegKey.SetValue("Top", this.Top);
+                cp3RegKey.SetValue("Left", this.Left);
+                cp3RegKey.SetValue("Width", this.Width);
+                cp3RegKey.SetValue("Height", this.Height);
+            }
+        }
+
         void ShowStartup(object sender, EventArgs ea) {
             //We only want this to be called the first time it's activated...  look for a better event to use here.
             this.Activated -= this.ShowStartup;
@@ -478,6 +536,7 @@ namespace UW.ClassroomPresenter.Viewer {
                 }
             }
 #endif
+            this.saveRegSettings();
         }
 
         private bool Dirty() {
@@ -502,8 +561,6 @@ namespace UW.ClassroomPresenter.Viewer {
         private void NetworkStatusChanged(object o, PropertyEventArgs args) {
             this.UpdateTitle();
         }
-
-        #region Julia's Code EDIT
 
         /// <summary>
         /// if the stylus becomes a text stylus, we should not allow any sort of funky
@@ -619,8 +676,6 @@ namespace UW.ClassroomPresenter.Viewer {
             this.Text = title.ToString();
         }
 
-        #endregion
-
  
         protected override void Dispose(bool disposing) {
 #if RTP_BUILD
@@ -713,47 +768,6 @@ namespace UW.ClassroomPresenter.Viewer {
             }
         }
 
-//        /// <summary>
-//        /// The main entry point for the application.
-//        /// </summary>
-//        [STAThread]
-//        static void Main(string[] args) {
-//#if LAUNCH_TWO_VIEWERS
-//            Thread second = new Thread(new ThreadStart(ViewerThreadStart));
-//            second.Name = "Second Viewer";
-//            second.Start();
-//#endif
-//            //Parse the input arguments
-//            string inputFile = null;
-//            for (int i = 0; i < args.Length; i++) {
-//                if ("--input".StartsWith(args[i])) {
-//                    if ((i + 1) >= args.Length) {
-//                        Console.WriteLine("Missing file argument for --input");
-//                        Usage();
-//                        return;
-//                    }
-//                    if ("--".StartsWith(args[i+1])) {
-//                        Console.WriteLine("Missing file argument for --input");
-//                        Usage();
-//                        return;
-//                    }
-//                    inputFile = args[i+1];
-//                    i++;
-//                    if (!File.Exists(inputFile)) {
-//                        Console.WriteLine("File not found: " + inputFile);
-//                        Usage();
-//                        return;
-//                    }
-//                } else {
-//                    Console.WriteLine("Invalid argument: " + args[i]);
-//                    Usage();
-//                    return;
-//                }
-//            }
-
-//            ViewerThreadStart(inputFile);
-//        }
-
 #if LAUNCH_TWO_VIEWERS
         /// <summary>
         /// For use when <c>LAUNCH_TWO_VIEWERS</c> is <c>#define</c>d.
@@ -767,7 +781,6 @@ namespace UW.ClassroomPresenter.Viewer {
 
         public static void ViewerThreadStart(List<string> inputFiles, bool standalone) {
             Trace.WriteLine("ViewerThreadStart starting");
-            //FIXME: Initialize model from values in registry.
             Application.EnableVisualStyles();
             Application.DoEvents();
             Process p = Process.GetCurrentProcess();

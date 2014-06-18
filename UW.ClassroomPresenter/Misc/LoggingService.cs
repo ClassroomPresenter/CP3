@@ -89,12 +89,8 @@ namespace UW.ClassroomPresenter.Misc {
         public LoggingService() {
             bool bEnabled = false;
             // Check in the registry for the logging value and if it's enabled
-            RegistryKey properties = Registry.CurrentUser.OpenSubKey( RegistryService.m_szRegistryString,true );
-            if (properties == null) {
-                //If this is the first time we have run the app:
-                properties = Registry.CurrentUser.CreateSubKey(RegistryService.m_szRegistryString);
-                bEnabled = true;
-            }
+            RegistryKey properties = Registry.CurrentUser.CreateSubKey(RegistryService.m_szRegistryString);
+            bEnabled = true;
 
             // Check if we are enabled
             string enabled = RegistryService.GetStringRegistryValue( properties, "LoggingEnabled" );
