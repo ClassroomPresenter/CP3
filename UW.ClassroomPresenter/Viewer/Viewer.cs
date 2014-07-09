@@ -368,6 +368,18 @@ namespace UW.ClassroomPresenter.Viewer {
             this.m_PresentationLayout.Dock = DockStyle.Fill;
 
             this.Controls.Add(this.m_PresentationLayout);
+
+            // Hack: toggle the second monitor to make it scale correctly when using Surface Pro 3.
+            // Bounds need to be set after the ViewerPresentationLayout control is added,
+            // Otherwise DPI scaling appears to be done incorrectly.  This issue so far
+            // appears to be unique to the Surface Pro 3.
+            using (Synchronizer.Lock(model.ViewerState.SyncRoot)) {
+                if (model.ViewerState.SecondMonitorEnabled) {
+                    model.ViewerState.SecondMonitorEnabled = false;
+                    model.ViewerState.SecondMonitorEnabled = true;
+                }
+            }
+
             //this.Controls.Add(this.m_ClassroomBrowser);
             this.m_StartupForm.Visible = false;
 
