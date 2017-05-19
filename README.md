@@ -9,8 +9,6 @@ Classroom Presenter is licensed under the Apache License v 2.0.
 
 To build Classroom Presenter we recommend Visual Studio 2010.  
 
-Classroom Presenter Home with binary downloads and documentation: http://classroompresenter.cs.washington.edu
-
 See also related projects:
 
 * [ConferenceXP](http://github.com/conferencexp/conferencexp)
